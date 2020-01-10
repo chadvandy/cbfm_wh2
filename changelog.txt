@@ -1,6 +1,7 @@
 AHOY! This textfile here is a list of all changes currently included with the Community Bugfix Mod, down to each db file and script.
 
 
+
     == DB CHANGES ==
 
         zzz_lord_horde_mount_fix - Fixes the current issue where Nakai's lords don't have access to some of their mounts; they can unlock the skill, but can't equip the 
