@@ -2,6 +2,16 @@ AHOY! This textfile here is a list of all changes currently included with the Co
 
 
 
-    == DB CHANGES ==
+== DB TABLES ==
 
-        zzz_lord_horde_mount_fix - Fixes the current issue where Nakai's lords don't have access to some of their mounts; they can unlock the skill, but can't equip the 
+    zzz_lord_horde_mount_fix - Fixes the current issue where Nakai's lords don't have access to some of their mounts; they can unlock the skill, but can't equip the mounts created.
+        Links the missing mounts to the necessary subtypes
+
+    zzz_amber_amulet_fix - Fixes Morathi's amulet getting lost. 
+        `transferrable` set to false.
+
+    zzz_def_master_followers_fix - Fixes the Master hero not having access to follower ancillaries
+        Links all of the def followers to `champion` agent_type.
+
+    Jhuutom's_brightstone_mine_fix - Fixes the Brightstone mine being unbuildable for Skaven in Mount Gunbad.
+        Links the `wh_main_special_brightstone_mine_skv` building chain to the `wh2_main_bas_skv` availability set
