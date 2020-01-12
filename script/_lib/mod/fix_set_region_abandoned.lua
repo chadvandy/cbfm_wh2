@@ -31,7 +31,7 @@ function campaign_manager:set_region_abandoned(region_name)
     end
 
     if not region:is_abandoned() then
-        local faction_key = region:faction():name()
+        local faction_key = region:owning_faction():name()
         
         self.game_interface:set_region_abandoned(region_name)
 
