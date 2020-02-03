@@ -31,3 +31,11 @@ emp_archer fixes
 
 
 Restores missing textures (archer body diffuse and mask) so that base Emp Archers use their own stuff instead of borrowing from Deathjacks. Edits the Emp Archers unused body materials to use these textures. Edits the Emp Archer vmd to use wsmodels.
+
+
+
+AK_durkits
+
+=== fixes wrong unit caste for ROR Squig Hoppers.
+
+melee infantry to melee cavalry.

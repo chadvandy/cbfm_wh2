@@ -1,6 +1,5 @@
 local function override_hag_graef_listener()
     local malus_obj = cm:get_faction("wh2_main_def_hag_graef")
-    local malekith_obj = cm:get_faction("wh2_main_def_naggarond")
 
     if not malus_obj:is_null_interface() and malus_obj:is_human() then
         -- remove the vanilla listener
@@ -18,7 +17,7 @@ local function override_hag_graef_listener()
 
                 if choice == 0 then
                     hag_graef_region_change();	
-                    local secondary_army = cm:get_closest_character_to_position_from_faction(malus_faction, 195, 612, true, false);
+                    local secondary_army = cm:get_closest_character_to_position_from_faction("wh2_main_def_hag_graef", 195, 612, true, false);
                     
                     local x, y = secondary_army:logical_position_x(), secondary_army:logical_position_y()
 
