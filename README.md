@@ -1,6 +1,6 @@
 # community_bug_fix_mod
 
-This is the Community Bug Fix Mod's GitHub repo, to make it a little bit easier to collaborate and work together on updating the mod.
+This is the [Community Bug Fix Mod's](https://steamcommunity.com/sharedfiles/filedetails/?id=1234481316) GitHub repo, to make it a little bit easier to collaborate and work together on updating the mod.
 
 Will likely continue to use Trello as an organizational tool for tracking what bugs are out there, which are fixed or unfixed, and who is working on what. The purpose of this GitHub repository is to make it far easier to update the mod in a group, instead of passing around a billion .pack files.
 
