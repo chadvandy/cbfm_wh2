@@ -24,7 +24,9 @@ local ulthuan_regions = {
 			["wh2_main_cothique_mistnar"] = true,
 			["wh2_main_cothique_tor_koruali"] = true,
 			["wh2_main_yvresse_tor_yvresse"] = true,
-			["wh2_main_yvresse_elessaeli"] = true
+			["wh2_main_yvresse_elessaeli"] = true,
+			["wh2_main_yvresse_shrine_of_loec"] = true,
+			["wh2_main_yvresse_tralinia"] = true
 		},
 		["inner"] = {
 			["wh2_main_eataine_lothern"] = true,
