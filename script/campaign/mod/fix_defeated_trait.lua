@@ -58,8 +58,10 @@ local LEGENDARY_LORD_DEFEATED_TRAITS = {
 	["wh2_dlc14_brt_repanse"] = 				"wh2_dlc14_trait_defeated_repanse",						-- Repanse de Lyonese
 	["wh2_dlc14_def_malus_darkblade"] =			"wh2_dlc14_trait_defeated_malus",						-- Malus Darkblade
 	["wh2_dlc14_skv_deathmaster_snikch"] =		"wh2_dlc14_trait_defeated_snikch",						-- Deathmaster Snikch
-	["wh2_pro08_neu_gotrek"] =					"wh2_dlc14_trait_defeated_gotrek"						-- Gotrek
-	
+	["wh2_pro08_neu_gotrek"] =					"wh2_dlc14_trait_defeated_gotrek",						-- Gotrek
+	["wh2_dlc15_hef_imrik"] = 					"wh2_dlc15_trait_defeated_imrik",						-- Imrik
+	["wh2_dlc15_hef_eltharion"] = 				"wh2_dlc15_trait_defeated_eltharion",					-- Eltharion the Grim
+	["wh2_dlc15_grn_grom_the_paunch"] = 		"wh2_dlc15_trait_defeated_grom"							-- Grom the Paunch
 };
 
 
