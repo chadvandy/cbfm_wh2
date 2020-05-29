@@ -16,7 +16,7 @@ And now you have the entire repository of CBFM installed onto your PC. I recomme
 ### Making Edits
 
 Before you get started making edits to the CBFM mod, you've gotta do two things. First off, in GitHub Desktop, where it says "Current repository", make sure it says the CBFM repo. And in "Current branch", select it and press "New branch", to make your own new "branch" of data. This will help us with merging all the different flows of changes; if several people edit the same table or file, we'll be able to see who did what and how to combine them.
-Then, in RPFM, open up your CBFM MyMod, clear out everything within it, and use "Add Folder... ->", and target the community_bug_fix_mod MyMod folder. This will make sure your local copy of RPFM is up-to-date with the latest release of CBFM retail before you get working.
+Then, in RPFM, open up your CBFM MyMod, clear out everything within it, and use "Add Folder... ->", and target the community_bugfix_mod MyMod folder. This will make sure your local copy of RPFM is up-to-date with the latest release of CBFM retail before you get working.
 
 At that point, your RPFM .pack is 100% up-to-date with CBFM's live version, and you can start making edits within RPFM. 
 Once you're done and have tested, simply right click your .pack in RPFM, press "Extract", and everything will automatically be sent to the MyMod folder.
