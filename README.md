@@ -9,7 +9,7 @@ Will likely continue to use Trello as an organizational tool for tracking what b
 To get ready to work on the CBFM, you just need to have a GitHub account and the [GitHub Desktop](https://desktop.github.com/) application installed on your PC.
 
 Once the two above are done, open up GitHub Desktop and login to your account. Should be in "File -> Options". Then, in GitHub Desktop, press "File -> Clone Repository". This will make a "clone" of the CBFM repository of data on your own computer, which you can edit and change at will, locally.
-Select "URL", decide a local path, and then in the URL slot type in "chadvandy/community_bug_fix_mod". Press "Clone", and it will be added onto your PC on the path decided!
+Select "URL", decide a local path, and then in the URL slot type in "chadvandy/community_bugfix_mod". Press "Clone", and it will be added onto your PC on the path decided!
 
 And now you have the entire repository of CBFM installed onto your PC. I recommend setting the "local path" as the `community_bugfix_mod` folder in your MyMod folder, to make everything even easier.
 
