@@ -21,7 +21,7 @@ Then, in RPFM, open up your CBFM MyMod, clear out everything within it, and use 
 At that point, your RPFM .pack is 100% up-to-date with CBFM's live version, and you can start making edits within RPFM. 
 Once you're done and have tested, simply right click your .pack in RPFM, press "Extract", and everything will automatically be sent to the MyMod folder.
 
-**VERY IMPORTANT:** If you delete and file in RPFM and use extract, *RPFM will not delete the file locally*, and so GitHub won't know to delete the file. You can just wipe the entire MyMod local folder prior to extracting the contents in RPFM, so you can assure your .pack file's contents are the only things on the repo.
+**VERY IMPORTANT:** If you delete a file in RPFM and use extract, *RPFM will not delete the file locally*, and so GitHub won't know to delete the file. You can just wipe the entire MyMod local folder prior to extracting the contents in RPFM, so you can assure your .pack file's contents are the only things on the repo.
 
 Once you've made your changes there, make a "Commit". In GitHub Desktop, it will see all of the various changed files in the left column, and below that it will ask for a Summary and Description. Give as regular commits as you can so it's easier to track what went on, and give some good details as well.
 Once you're done with all your commits and you're ready to send your new branch for submission, press "Publish Branch", which will submit it into the GitHub repo for others to see. If you've already pressed "Publish Branch", use "Push Branch", to "push" the local files you've changed onto the public repo.
