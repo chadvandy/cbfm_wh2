@@ -31,6 +31,7 @@ local vow_lords = {
 	["grn_azhag_the_slaughterer"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge",
 	["dlc06_grn_skarsnik"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge",
 	["dlc06_grn_wurrzag_da_great_prophet"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge",
+	["wh2_dlc15_grn_grom_the_paunch"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge",
 	-- Dark Elves
 	["wh2_main_def_malekith"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge",
 	["wh2_main_def_morathi"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge",
