@@ -1,4 +1,4 @@
-# community_bug_fix_mod
+# community_bugfix_mod
 
 This is the [Community Bug Fix Mod's](https://steamcommunity.com/sharedfiles/filedetails/?id=1234481316) GitHub repo, to make it a little bit easier to collaborate and work together on updating the mod.
 
@@ -9,14 +9,14 @@ Will likely continue to use Trello as an organizational tool for tracking what b
 To get ready to work on the CBFM, you just need to have a GitHub account and the [GitHub Desktop](https://desktop.github.com/) application installed on your PC.
 
 Once the two above are done, open up GitHub Desktop and login to your account. Should be in "File -> Options". Then, in GitHub Desktop, press "File -> Clone Repository". This will make a "clone" of the CBFM repository of data on your own computer, which you can edit and change at will, locally.
-Select "URL", decide a local path, and then in the URL slot type in "chadvandy/community_bug_fix_mod". Press "Clone", and it will be added onto your PC on the path decided!
+Select "URL", decide a local path, and then in the URL slot type in "chadvandy/community_bugfix_mod". Press "Clone", and it will be added onto your PC on the path decided!
 
 And now you have the entire repository of CBFM installed onto your PC. I recommend setting the "local path" as the `community_bugfix_mod` folder in your MyMod folder, to make everything even easier.
 
 ### Making Edits
 
 Before you get started making edits to the CBFM mod, you've gotta do two things. First off, in GitHub Desktop, where it says "Current repository", make sure it says the CBFM repo. And in "Current branch", select it and press "New branch", to make your own new "branch" of data. This will help us with merging all the different flows of changes; if several people edit the same table or file, we'll be able to see who did what and how to combine them.
-Then, in RPFM, open up your CBFM MyMod, clear out everything within it, and use "Add Folder... ->", and target the community_bug_fix_mod MyMod folder. This will make sure your local copy of RPFM is up-to-date with the latest release of CBFM retail before you get working.
+Then, in RPFM, open up your CBFM MyMod, clear out everything within it, and use "Add Folder... ->", and target the community_bugfix_mod MyMod folder. This will make sure your local copy of RPFM is up-to-date with the latest release of CBFM retail before you get working.
 
 At that point, your RPFM .pack is 100% up-to-date with CBFM's live version, and you can start making edits within RPFM. 
 Once you're done and have tested, simply right click your .pack in RPFM, press "Extract", and everything will automatically be sent to the MyMod folder.
