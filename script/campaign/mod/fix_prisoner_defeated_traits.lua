@@ -94,7 +94,7 @@ core:add_listener(
 			for i = 1, num_attackers do
 				local this_char_cqi, this_mf_cqi, current_faction_name = cm:pending_battle_cache_get_attacker(i)
 				local char_obj = cm:get_character_by_cqi(this_char_cqi)
-				
+
 				if cm:char_is_general_with_army(char_obj) then
 					local LL_trait = LEGENDARY_LORD_DEFEATED_TRAITS[prisoner_subtype];
 					if LL_trait ~= nil then
@@ -113,7 +113,7 @@ core:add_listener(
 			for i = 1, num_defenders do
 				local this_char_cqi, this_mf_cqi, current_faction_name = cm:pending_battle_cache_get_defender(i)
 				local char_obj = cm:get_character_by_cqi(this_char_cqi)
-				
+
 				if cm:char_is_general_with_army(char_obj) then
 					local LL_trait = LEGENDARY_LORD_DEFEATED_TRAITS[prisoner_subtype];
 					if LL_trait ~= nil then
