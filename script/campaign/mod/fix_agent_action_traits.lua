@@ -1,6 +1,6 @@
 local ACTION_KEY_TO_ACTION = {
 	["wh2_dlc15_agent_action_runesmith_assist_army_replenish_troops"] = "Replenish Troops",
-    ["wh2_dlc15_agent_action_runesmith_hinder_army_assault_unit"] = "Assault Units",
+    ["wh2_dlc15_agent_action_runesmith_hinder_army_assault_unit"] = "Assault Unit",
     ["wh2_dlc15_agent_action_runesmith_hinder_settlement_steal_technology"] = "Steal Technology"
 }
 
