@@ -64,7 +64,6 @@ local LEGENDARY_LORD_DEFEATED_TRAITS = {
 	["wh2_dlc15_grn_grom_the_paunch"] = 		"wh2_dlc15_trait_defeated_grom"							-- Grom the Paunch
 };
 
-
 function Get_Enemy_Legendary_Lords_In_Last_Battle(character)
 	local pb = cm:model():pending_battle();
 	local LL_attackers = {};
@@ -74,26 +73,26 @@ function Get_Enemy_Legendary_Lords_In_Last_Battle(character)
 	local num_attackers = cm:pending_battle_cache_num_attackers();
 	local num_defenders = cm:pending_battle_cache_num_defenders();
 
-	if pb:night_battle() == true then --or pb:ambush_battle() == true 
+	if pb:night_battle() == true then --or pb:ambush_battle() == true
 		num_attackers = 1;
 		num_defenders = 1;
 	end
 	
 	for i = 1, num_attackers do
 		local this_char_cqi, this_mf_cqi, current_faction_name = cm:pending_battle_cache_get_attacker(i);
-		local char_obj = cm:model():character_for_command_queue_index(this_char_cqi);
+		local char_subtype = cm:pending_battle_cache_get_attacker_subtype(i);
 		
 		if this_char_cqi == character:cqi() then
 			was_attacker = true;
 			break;
 		end
 		
-		if char_obj:is_null_interface() == false then
-			local char_subtype = char_obj:character_subtype_key();
-			
-			if LEGENDARY_LORD_DEFEATED_TRAITS[char_subtype] ~= nil then
-				table.insert(LL_attackers, char_subtype);
-			elseif is_surtha_ek(char_obj) == true then
+		if LEGENDARY_LORD_DEFEATED_TRAITS[char_subtype] ~= nil then
+			table.insert(LL_attackers, char_subtype);
+		else
+			local char_obj = cm:model():character_for_command_queue_index(this_char_cqi);
+
+			if char_obj:is_null_interface() == false and is_surtha_ek(char_obj) == true then
 				table.insert(LL_attackers, "surtha_ek");
 			end
 		end
@@ -105,14 +104,14 @@ function Get_Enemy_Legendary_Lords_In_Last_Battle(character)
 	
 	for i = 1, num_defenders do
 		local this_char_cqi, this_mf_cqi, current_faction_name = cm:pending_battle_cache_get_defender(i);
-		local char_obj = cm:model():character_for_command_queue_index(this_char_cqi);
+		local char_subtype = cm:pending_battle_cache_get_defender_subtype(i);
 		
-		if char_obj:is_null_interface() == false then
-			local char_subtype = char_obj:character_subtype_key();
-			
-			if LEGENDARY_LORD_DEFEATED_TRAITS[char_subtype] ~= nil then
-				table.insert(LL_defenders, char_subtype);
-			elseif is_surtha_ek(char_obj) == true then
+		if LEGENDARY_LORD_DEFEATED_TRAITS[char_subtype] ~= nil then
+			table.insert(LL_defenders, char_subtype);
+		else
+			local char_obj = cm:model():character_for_command_queue_index(this_char_cqi);
+
+			if char_obj:is_null_interface() == false and is_surtha_ek(char_obj) == true then
 				table.insert(LL_defenders, "surtha_ek");
 			end
 		end
