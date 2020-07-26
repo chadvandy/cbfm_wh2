@@ -7,11 +7,8 @@ local function spy_guilde_elven_espionage_reveal_shroud(faction)
 	local factions_trading_with = faction:factions_trading_with()
 	local faction_name = faction:name()
 	
-	if factions_trading_with:num_items() > 0 then
-		if has_effect_bundle then
-			cm:apply_effect_bundle(effect_bundle, faction_name, 0)
-		end
-	
+	if has_effect_bundle and factions_trading_with:num_items() > 0 then
+			
 		for i = 0, factions_trading_with:num_items() - 1 do
 			local current_faction = factions_trading_with:item_at(i)
 			local current_faction_regions = current_faction:region_list()
@@ -22,8 +19,6 @@ local function spy_guilde_elven_espionage_reveal_shroud(faction)
 				cm:make_region_visible_in_shroud(faction_name, current_region_name)
 			end
 		end
-	elseif has_effect_bundle then
-		cm:remove_effect_bundle(effect_bundle, faction_name)
 	end
 end
 
