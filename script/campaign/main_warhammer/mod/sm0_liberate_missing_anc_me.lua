@@ -39,10 +39,10 @@ local subtype_anc = {
     },
     ["grn_azhag_the_slaughterer"] = {
         {"mission", "wh_main_anc_enchanted_item_the_crown_of_sorcery", "wh_main_grn_azhag_the_slaughterer_crown_of_sorcery_stage_1", 8,"wh_main_grn_azhag_the_slaughterer_crown_of_sorcery_stage_3a_mpc"},
-        {"mission", "wh_main_anc_armour_azhags_ard_armour", "wh_main_grn_azhag_the_slaughterer_azhags_ard_armour_stage_1.1", 13,"wh_main_grn_azhag_the_slaughterer_azhags_ard_armour_stage_4a_mpc"}, --        {"dilemma", "wh_main_anc_armour_azhags_ard_armour", "wh_main_azhag_the_slaughterer_azhags_ard_armour_stage_1", 13,"wh_main_grn_azhag_the_slaughterer_azhags_ard_armour_stage_4a_mpc"},
+        {"mission", "wh_main_anc_armour_azhags_ard_armour", "wh_main_grn_azhag_the_slaughterer_azhags_ard_armour_stage_1.1", 13,"wh_main_grn_azhag_the_slaughterer_azhags_ard_armour_stage_4a_mpc"}, --{"dilemma", "wh_main_anc_armour_azhags_ard_armour", "wh_main_azhag_the_slaughterer_azhags_ard_armour_stage_1", 13,"wh_main_grn_azhag_the_slaughterer_azhags_ard_armour_stage_4a_mpc"},        
         {"mission", "wh_main_anc_weapon_slaggas_slashas", "wh_main_grn_azhag_the_slaughterer_slaggas_slashas_stage_1", 18,"wh_main_grn_azhag_the_slaughterer_slaggas_slashas_stage_4a_mpc"}
     },
-    ["wh2_dlc15_grn_grom_the_paunch"] ={
+    ["wh2_dlc15_grn_grom_the_paunch"] = {
 		{"mission", "wh2_dlc15_anc_weapon_axe_of_grom", "wh2_dlc15_main_grn_grom_axe_of_grom_stage_1", 5,"wh2_dlc15_main_grn_grom_axe_of_grom_stage_4_mpc"},
 		{"mission", "wh2_dlc15_anc_enchanted_item_lucky_banner", "wh2_dlc15_main_grn_grom_lucky_banner_stage_1", 2}
 	},
@@ -107,24 +107,24 @@ local subtype_anc = {
     },
     ["dlc07_brt_fay_enchantress"] = {
 		{"mission", "wh_dlc07_anc_arcane_item_the_chalice_of_potions", "wh_dlc07_qb_brt_fay_enchantress_chalice_of_potions_stage_1", 9, "wh_dlc07_qb_brt_fay_enchantress_chalice_of_potions_stage_6_mpc"},
-		{"mission", "wh2_dlc12_anc_arcane_item_brt_morgianas_mirror", "wh2_dlc12_brt_fay_morgianas_mirror", 6}
+        {"mission", "wh2_dlc12_anc_arcane_item_brt_morgianas_mirror", "wh2_dlc12_brt_fay_morgianas_mirror", 6}
     },
     ["dlc07_brt_alberic"] = {
 		{"incident", "wh_dlc07_anc_weapon_trident_of_manann", "wh_dlc07_qb_brt_alberic_trident_of_bordeleaux_stage_1", 3, "wh_dlc07_qb_brt_alberic_trident_of_bordeleaux_stage_8_estalian_tomb_mpc"},
-		{"mission", "wh2_dlc12_anc_enchanted_item_brt_braid_of_bordeleaux", "wh2_dlc12_brt_alberic_braid_of_bordeleaux", 6}
+        {"mission", "wh2_dlc12_anc_enchanted_item_brt_braid_of_bordeleaux", "wh2_dlc12_brt_alberic_braid_of_bordeleaux", 6}
     },
     ["brt_louen_leoncouer"] = {
 		{"incident", "wh_main_anc_weapon_the_sword_of_couronne", "wh_dlc07_qb_brt_louen_sword_of_couronne_stage_0", 9, "wh_dlc07_qb_brt_louen_sword_of_couronne_stage_4_la_maisontaal_abbey_mpc"},
-		{"mission", "wh2_dlc12_anc_armour_brt_armour_of_brilliance", "wh2_dlc12_brt_louen_armour_of_brilliance", 6}
+        {"mission", "wh2_dlc12_anc_armour_brt_armour_of_brilliance", "wh2_dlc12_brt_louen_armour_of_brilliance", 6}
     },
     ["wh2_dlc14_brt_repanse"] = {
 		{"mission", "wh2_dlc14_anc_weapon_sword_of_lyonesse", "wh2_dlc14_main_brt_repanse_sword_of_lyonesse_stage_1", 5, "wh2_dlc14_main_brt_repanse_sword_of_lyonesse_stage_4_mpc"}
-    },
+    },    
     ["pro02_vmp_isabella_von_carstein"] = {
 		{"mission", "wh_pro02_anc_enchanted_item_blood_chalice_of_bathori", "wh_pro02_qb_vmp_isabella_von_carstein_blood_chalice_of_bathori_stage_1", 9, "wh_pro02_qb_vmp_isabella_von_carstein_blood_chalice_of_bathori_stage_8_mpc"}
     },
     ["wh2_main_hef_tyrion"] = {
-        {"mission", "wh2_main_anc_weapon_sunfang", "wh2_main_hef_tyrion_sunfang_stage_1", 10, "wh2_main_hef_tyrion_sunfang_stage_4_mpc"},
+		{"mission", "wh2_main_anc_weapon_sunfang", "wh2_main_hef_tyrion_sunfang_stage_1", 10, "wh2_main_hef_tyrion_sunfang_stage_4_mpc"},
 		{"mission", "wh2_main_anc_armour_dragon_armour_of_aenarion", "wh2_main_hef_tyrion_dragon_armour_of_aenarion_stage_1", 6, "wh2_main_hef_tyrion_dragon_armour_of_aenarion_stage_4_mpc"},
         {"mission", "wh2_main_anc_enchanted_item_heart_of_avelorn", "wh2_dlc14_hef_me_anc_enchanted_item_heart_of_avelorn", 2}
     },
@@ -146,15 +146,15 @@ local subtype_anc = {
 		{"mission","wh2_dlc15_anc_talisman_talisman_of_hoeth","wh2_dlc15_main_hef_eltharion_talisman_of_hoeth_stage_1",5,"wh2_dlc15_main_hef_eltharion_talisman_of_hoeth_stage_3_mpc"},
 		{"mission","wh2_dlc15_anc_armour_helm_of_yvresse","wh2_dlc15_vortex_hef_eltharion_helm_of_yvresse_stage_1",7},
 		{"mission","wh2_dlc15_anc_weapon_fangsword_of_eltharion","wh2_dlc15_vortex_hef_eltharion_fangsword_of_eltharion_stage_1",10}
-	},
+    },
     ["wh2_dlc15_hef_imrik"] = {
 		{"mission","wh2_dlc15_anc_armour_armour_of_caledor","wh2_dlc15_main_hef_imrik_armour_of_caledor_stage_1",5,"wh2_dlc15_main_hef_imrik_armour_of_caledor_stage_3_mpc"}
-    },
+	},
     ["wh2_main_def_malekith"] = {
-        {"mission", "wh2_main_anc_weapon_destroyer", "wh2_main_def_malekith_destroyer_stage_1", 10, "wh2_main_def_malekith_destroyer_stage_3_mpc"},
+		{"mission", "wh2_main_anc_weapon_destroyer", "wh2_main_def_malekith_destroyer_stage_1", 10, "wh2_main_def_malekith_destroyer_stage_3_mpc"},
 		{"mission", "wh2_main_anc_arcane_item_circlet_of_iron", "wh2_main_def_malekith_circlet_of_iron_stage_1", 6, "wh2_main_def_malekith_circlet_of_iron_stage_3_mpc"},
 		{"mission", "wh2_main_anc_armour_supreme_spellshield", "wh2_main_def_malekith_supreme_spellshield_stage_1", 14, "wh2_main_def_malekith_supreme_spellshield_stage_3_mpc"},
-		{"mission", "wh2_main_anc_armour_armour_of_midnight", "wh2_main_vortex_narrative_def_hoteks_levy", 2}
+        {"mission", "wh2_main_anc_armour_armour_of_midnight", "wh2_main_vortex_narrative_def_hoteks_levy", 2}
     },
     ["wh2_main_def_morathi"] = {
 		{"mission", "wh2_main_anc_weapon_heartrender_and_the_darksword", "wh2_main_def_morathi_heartrender_and_the_darksword_stage_1", 6, "wh2_main_def_morathi_heartrender_and_the_darksword_stage_6_mpc"},
@@ -171,11 +171,11 @@ local subtype_anc = {
     ["wh2_main_lzd_lord_mazdamundi"] = {
 		{"mission", "wh2_main_anc_weapon_cobra_mace_of_mazdamundi", "wh2_main_lzd_mazdamundi_cobra_mace_of_mazdamundi_stage_1", 10, "wh2_main_lzd_mazdamundi_cobra_mace_of_mazdamundi_stage_3_mpc"},
 		{"mission", "wh2_main_anc_magic_standard_sunburst_standard_of_hexoatl", "wh2_main_lzd_mazdamundi_sunburst_standard_of_hexoatl_stage_1", 6, "wh2_main_lzd_mazdamundi_sunburst_standard_of_hexoatl_stage_4_mpc"}
-	},
+    },
     ["wh2_main_lzd_kroq_gar"] = {
 		{"mission", "wh2_main_anc_enchanted_item_hand_of_gods", "wh2_main_liz_kroq_gar_hand_of_gods_stage_1", 10, "wh2_main_liz_kroq_gar_hand_of_gods_stage_3_mpc"},
 		{"mission", "wh2_main_anc_weapon_revered_spear_of_tlanxla", "wh2_main_liz_kroq_gar_revered_spear_of_tlanxla_stage_1", 6, "wh2_main_liz_kroq_gar_revered_spear_of_tlanxla_stage_3_mpc"}
-	},
+    },
     ["wh2_dlc12_lzd_tehenhauin"] = {
         {"mission", "wh2_dlc12_anc_enchanted_item_plaque_of_sotek", "wh2_dlc12_lzd_tehenhauin_plaque_of_sotek_stage_1", 8, "wh2_dlc12_lzd_tehenhauin_plaque_of_sotek_mp"}
     },
@@ -185,7 +185,7 @@ local subtype_anc = {
     ["wh2_dlc13_lzd_nakai"] = {
 		{"mission", "wh2_dlc13_anc_enchanted_item_golden_tributes", "wh2_dlc13_lzd_nakai_golden_tributes_stage_1", 8,"wh2_dlc13_lzd_nakai_golden_tributes_stage_3"},
 		{"mission", "wh2_dlc13_talisman_the_ogham_shard", "wh2_dlc13_lzd_nakai_the_ogham_shard_stage_1", 8,"wh2_dlc13_lzd_nakai_the_ogham_shard_stage_2"}
-	},
+    },
     ["wh2_dlc13_lzd_gor_rok"] = {
 		{"mission", "wh2_dlc13_anc_armour_the_shield_of_aeons", "wh2_dlc13_gorrok_the_shield_of_aeons_stage_1", 8,"wh2_dlc13_gorrok_the_shield_of_aeons_stage_3"},
         {"mission", "wh2_dlc13_anc_weapon_mace_of_ulumak", "wh2_dlc14_lzd_the_mace_of_ulumak", 2}
@@ -193,29 +193,29 @@ local subtype_anc = {
     ["wh2_main_skv_lord_skrolk"] = {
 		{"mission", "wh2_main_anc_weapon_rod_of_corruption", "wh2_main_skv_skrolk_rod_of_corruption_stage_1", 10, "wh2_main_skv_skrolk_rod_of_corruption_stage_3_mpc"},
 		{"mission", "wh2_main_anc_arcane_item_the_liber_bubonicus", "wh2_main_skv_skrolk_liber_bubonicus_stage_1", 6, "wh2_main_skv_skrolk_liber_bubonicus_stage_3_mpc"}
-	},
+    },
     ["wh2_main_skv_queek_headtaker"] = {
 		{"mission", "wh2_main_anc_armour_warp_shard_armour", "wh2_main_skv_queek_headtaker_warp_shard_armour_stage_1", 6, "wh2_main_skv_queek_headtaker_warp_shard_armour_stage_6_mpc"},
 		{"mission", "wh2_main_anc_weapon_dwarf_gouger", "wh2_main_skv_queek_headtaker_dwarfgouger_stage_1", 10, "wh2_main_skv_queek_headtaker_dwarfgouger_stage_4_mpc"}
-	},
+    },
     ["wh2_dlc09_skv_tretch_craventail"] = {
 		{"mission", "wh2_dlc09_anc_enchanted_item_lucky_skullhelm", "wh2_dlc09_skv_tretch_lucky_skullhelm_stage_1", 8, "wh2_dlc09_skv_tretch_lucky_skullhelm_stage_5_mpc"}
     },
     ["wh2_dlc12_skv_ikit_claw"] = {
-        {"mission", "wh2_dlc12_anc_weapon_storm_daemon", "wh2_dlc12_ikit_claw_storm_daemon_stage_1", 8, "wh2_dlc12_ikit_claw_storm_daemon_mp"}
+		{"mission", "wh2_dlc12_anc_weapon_storm_daemon", "wh2_dlc12_ikit_claw_storm_daemon_stage_1", 8, "wh2_dlc12_ikit_claw_storm_daemon_mp"}
     },
     ["wh2_dlc14_skv_deathmaster_snikch"] = {
-		{"mission", "wh2_dlc14_anc_armour_the_cloak_of_shadows", "wh2_dlc14_main_skv_snikch_the_cloak_of_shadows_stage_1", 5, "wh2_dlc14_main_skv_snikch_the_cloak_of_shadows_stage_4_mpc"},
+        {"mission", "wh2_dlc14_anc_armour_the_cloak_of_shadows", "wh2_dlc14_main_skv_snikch_the_cloak_of_shadows_stage_1", 5},
         {"mission", "wh2_dlc14_anc_weapon_whirl_of_weeping_blades", "wh2_dlc14_main_skv_snikch_whirl_of_weeping_blades_stage_1", 3}
     },
     ["wh2_dlc09_tmb_settra"] = {
 		{"mission", "wh2_dlc09_anc_enchanted_item_the_crown_of_nehekhara", "wh2_dlc09_tmb_settra_the_crown_of_nehekhara_stage_1", 6, "wh2_dlc09_tmb_settra_the_crown_of_nehekhara_stage_5_mpc"},
 		{"mission", "wh2_dlc09_anc_weapon_the_blessed_blade_of_ptra", "wh2_dlc09_tmb_settra_the_blessed_blade_of_ptra_stage_1", 13, "wh2_dlc09_tmb_settra_the_blessed_blade_of_ptra_stage_3_mpc"}
-	},
+    },
     ["wh2_dlc09_tmb_arkhan"] = {
 		{"mission", "wh2_dlc09_anc_weapon_the_tomb_blade_of_arkhan", "wh2_dlc09_tmb_arkhan_the_tomb_blade_of_arkhan_stage_1", 6, "wh2_dlc09_tmb_arkhan_the_tomb_blade_of_arkhan_stage_4_mpc"},
 		{"mission", "wh2_dlc09_anc_arcane_item_staff_of_nagash", "wh2_dlc09_tmb_arkhan_the_staff_of_nagash_stage_1", 10, "wh2_dlc09_qb_tmb_arkhan_the_staff_of_nagash_stage_5_mpc"}
-	},
+    },
     ["wh2_dlc09_tmb_khatep"] = {
         {"mission", "wh2_dlc09_anc_arcane_item_the_liche_staff", "wh2_dlc09_mortal_empires_tmb_khatep_the_liche_staff_1", 6}
     },
@@ -243,66 +243,6 @@ local subtype_anc = {
     ["wh2_dlc11_def_lokhir"] = {
         {"mission", "wh2_main_anc_armour_helm_of_the_kraken", "wh2_dlc11_lokhir_helm_of_the_kraken_stage_1", 11, "wh2_dlc11_lokhir_fellheart_helm_of_the_kraken_mp"},
         {"mission", "wh2_dlc11_anc_weapon_red_blades", "wh2_dlc11_def_lokhir_red_blades_stage_1", 2}
-    },
-
-    --mixu
-    ["brt_adalhard"] = {
-        {"", "mixu_anc_armour_brt_adalhard_lions_cloak", "", 12}
-    },
-    ["brt_bohemond"] = {
-        {"", "mixu_anc_armour_brt_bohemond_bohemonds_shield", "", 12}
-    },
-    ["brt_chilfroy"] = {
-        {"", "mixu_anc_weapon_brt_chilfroy_lance_of_artois", "", 13},
-        {"", "mixu_anc_enchanted_item_brt_chilfroy_antlers_of_the_great_hunt", "", 9}
-    },
-    ["brt_cassyon"] = {
-        {"", "mixu_anc_weapon_brt_cassyon_the_glorfinial", "", 13}
-    },
-    ["mixu_elspeth_von_draken"] = {
-        {"", "mixu_anc_weapon_emp_elspeth_von_draken_the_pale_scythe", "", 17},
-        {"", "mixu_anc_arcane_item_emp_elspeth_von_draken_deaths_timekeeper", "", 12}
-    },
-    ["mixu_katarin_the_ice_queen"] = {
-        {"", "mixu_anc_enchanted_item_ksl_katarin_the_ice_queen_crystal_cloak", "", 9},
-        {"", "mixu_anc_weapon_ksl_katarin_the_ice_queen_fearfrost", "", 15}
-    },
-    ["emp_theoderic_gausser"] = {
-        {"", "mixu_anc_enchanted_item_emp_theoderic_gausser_sea_dragon_cloak", "", 10}
-    },
-    ["wef_daith"] = {
-        {"", "mixu_anc_armour_wef_daith_the_oaken_armour", "", 15}
-    },
-    ["dwf_kazador_dragonslayer"] = {
-        {"", "mixu_anc_armour_dwf_kazador_dragonslayer_armour_of_karak_azul", "", 9},
-        {"", "mixu_anc_weapon_dwf_kazador_dragonslayer_hammer_karak_azul", "", 15}
-    },
-    ["dwf_thorek_ironbrow"] = {
-        {"", "mixu_anc_weapon_dwf_thorek_ironbrow_klad_brakak", "", 15},
-        {"", "mixu_anc_armour_dwf_thorek_ironbrow_thoreks_rune_armour", "", 9}
-    },
-    ["emp_edward_van_der_kraal"] = {
-        {"", "mixu_anc_enchanted_item_emp_edward_van_der_kraal_the_cursed_skull", "", 15}
-    },
-    ["emp_theodore_bruckner"] = {
-        {"", "mixu_anc_talisman_emp_theodore_bruckner_baleflame_amulet", "", 5},
-        {"", "mixu_anc_weapon_emp_theodore_bruckner_liarsbane", "", 10}
-    },
-    ["brt_almaric_de_gaudaron"] = {
-        {"", "mixu_anc_talisman_brt_almaric_de_gaudaron_the_icon_of_the_lady", "", 10}
-    },
-    ["dlc03_emp_boris_todbringer"] = {
-        {"", "mixu_anc_enchanted_item_emp_boris_todbringer_talisman_of_ulric", "", 15}
-    },
-    ["emp_vorn_thugenheim"] = {
-        {"", "mixu_anc_talisman_emp_vorn_thugenheim_heart_of_middenheim", "", 15},
-        {"", "mixu_anc_enchanted_item_emp_vorn_thugenheim_pelt_of_horrors", "", 10}
-    },
-    ["bst_taurox"] = {
-        {"", "mixu_anc_weapon_bst_taurox_the_brass_bull_rune_tortured_axes", "", 13}
-    },
-    ["emp_wolfram_hertwig"] = {
-        {"", "mixu_anc_talisman_emp_wolfram_hertwig_kislevite_icon", "", 14}
     }
 } --: map<string, vector<vector<WHATEVER>>>
 
