@@ -1,12 +1,21 @@
 --v function()
 local function set_admiral_immortality_invisible()
-    cm:callback(function()
-        local selected_char_cqi = cm:get_campaign_ui_manager():get_char_selected_cqi()
-        local selected_char = cm:get_character_by_cqi(selected_char_cqi)
-        if selected_char:character_subtype("wh2_main_def_black_ark") then
-            set_component_visible_with_parent(false, core:get_ui_root(), "character_details_panel", "effects_parent", "campaign_effects_window", "listview", "list_clip", "list_box", "wh2_main_effect_grant_immortality_hero")		
-        end
-    end, 0.1)
+    real_timer.register_singleshot("next_tick", 0)
+    core:add_listener(
+        "cbf_im_next_tick",
+        "RealTimeTrigger",
+        function(context)
+            return context.string == "next_tick"
+        end,
+        function(context)
+            local selected_char_cqi = cm:get_campaign_ui_manager():get_char_selected_cqi()
+            local selected_char = cm:get_character_by_cqi(selected_char_cqi)
+            if selected_char and selected_char:character_subtype("wh2_main_def_black_ark") then
+                set_component_visible_with_parent(false, core:get_ui_root(), "character_details_panel", "effects_parent", "campaign_effects_window", "listview", "list_clip", "list_box", "wh2_main_effect_grant_immortality_hero")		
+            end
+        end,
+        false
+    )	
 end
 
 -- Having both the hero and the lord immortality effect state in the character effect list of blark admirals is annoying so we hide the former
