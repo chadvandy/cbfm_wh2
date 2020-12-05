@@ -70,6 +70,7 @@ local lair_action_effects = {
 
 function add_eltharion_lair_listeners()
 	out("#### Adding Eltharion Lair Listeners ####");
+
 	core:add_listener(
 		"lair_FactionTurnStart",
 		"FactionBeginTurnPhaseNormal",
@@ -79,6 +80,7 @@ function add_eltharion_lair_listeners()
 		end,
 		true
 	);
+
 	core:add_listener(
 		"lair_CharacterRankUp",
 		"CharacterRankUp",
@@ -88,6 +90,7 @@ function add_eltharion_lair_listeners()
 		end,
 		true
 	);
+
 	core:add_listener(
 		"lair_RitualCompletedEvent",
 		"RitualCompletedEvent",
@@ -97,6 +100,7 @@ function add_eltharion_lair_listeners()
 		end,
 		true
 	);
+
 	core:add_listener(
 		"lair_PrisonActionTakenEvent",
 		"PrisonActionTakenEvent",
@@ -106,6 +110,7 @@ function add_eltharion_lair_listeners()
 		end,
 		true
 	);
+
 	core:add_listener(
 		"lair_BuildingCompleted",
 		"BuildingCompleted",
@@ -115,6 +120,7 @@ function add_eltharion_lair_listeners()
 		end,
 		true
 	);
+
 	core:add_listener(
 		"lair_BattleCompleted",
 		"BattleCompleted",
@@ -124,6 +130,7 @@ function add_eltharion_lair_listeners()
 		end,
 		true
 	);
+
 	core:add_listener(
 		"lair_ComponentLClickUp",
 		"ComponentLClickUp",
@@ -147,9 +154,10 @@ function add_eltharion_lair_listeners()
 		end,
 		true
 	);
+
 	core:add_listener(
-		"lair_UITriggerScriptEvent",
-		"UITriggerScriptEvent",
+		"lair_UITrigger",
+		"UITrigger",
 		function(context)
 			return context:trigger() == "grom_invasion_event";
 		end,
@@ -158,6 +166,7 @@ function add_eltharion_lair_listeners()
 		end,
 		true
 	);
+
 	core:add_listener(
 		"lair_DilemmaChoiceMadeEvent",
 		"DilemmaChoiceMadeEvent",
@@ -183,6 +192,32 @@ function add_eltharion_lair_listeners()
 		true
 	);
 	
+	core:add_listener(
+		"lair_GarrisonOccupiedEvent",
+		"GarrisonOccupiedEvent",
+		function(context)
+			local faction_key = context:character():faction():name()
+			if(faction_key == yvresse_faction_key) then
+				return true
+			end
+
+			return false
+		end,
+		function(context)
+			-- checking to see if faction has been wiped out, resulting in lost prisoners 
+			cm:callback(function()
+				local warden = cm:model():world():faction_by_key(yvresse_faction_key);
+				
+				if warden:is_human() == true then
+					lair_CheckDeadPrisoners(warden)
+					lair_UpdatePrisonAbility(warden)
+					lair_UpdatePrisonerEffects(warden)
+				end
+			end, 0.5)
+		end,
+		true
+	)
+
 	if cm:is_new_game() == true then
 		local warden = cm:model():world():faction_by_key(yvresse_faction_key);
 		lair_UpdatePrisonAbility(warden);
@@ -210,6 +245,7 @@ function add_eltharion_lair_listeners()
 
 		if grom_button then
 			grom_button:SetDisabled(true);
+			grom_button:SetVisible(false);
 		end
 	end
 end
@@ -221,22 +257,16 @@ function lair_FactionTurnStart(context)
 		lair_UpdatePrisonAbility(faction);
 		lair_UpdatePrisonerEffects(faction);
 		lair_UpdatePrisonerEscapes(faction);
-		local dead_prisoners = {};
+		lair_CheckDeadPrisoners(faction)
 
 		for index = 1, #lair_indoctrinated_characters do
 			local char_cqi = lair_indoctrinated_characters[index];
 			local character = cm:model():character_for_command_queue_index(char_cqi);
 
-			if character:is_null_interface() == true or character:faction():is_null_interface() == true or character:faction():is_dead() == true then
-				table.insert(dead_prisoners, index);
-			else
+			if character:is_null_interface() == false and character:faction():is_null_interface() == false and character:faction():is_dead() == false then
 				lair_StealIncomeFromCharactersFaction(character);
 				lair_MakeCharacterVisible(character);
 			end
-		end
-		
-		for i = 1, #dead_prisoners do
-			table.remove(lair_indoctrinated_characters, dead_prisoners[i]);
 		end
 		
 		cm:callback(function()
@@ -249,6 +279,7 @@ function lair_FactionTurnStart(context)
 
 			if grom_button then
 				grom_button:SetDisabled(true);
+				grom_button:SetVisible(false);
 			end
 		end
 	end
@@ -316,6 +347,7 @@ function (context)
 		cm:trigger_incident_with_targets(warden_cqi, "wh2_dlc15_incident_hef_prisoner_captured", 0, faction_cqi, prisoner_cqi, 0, 0, 0);
 	end
 end
+
 events.ImprisonmenRejectiontEvent[#events.ImprisonmenRejectiontEvent+1] =
 function (context)
 	local warden = context:faction();
@@ -370,19 +402,22 @@ end
 
 function lair_BattleCompleted(context)
 	local pending_battle = cm:model():pending_battle();
-	
-	if pending_battle:is_auto_resolved() == true then
-		local warden = cm:model():world():faction_by_key(yvresse_faction_key);
+	local warden = cm:model():world():faction_by_key(yvresse_faction_key);
 
-		if warden:is_human() == true then
+
+	if warden:is_human() == true then
+		if pending_battle:is_auto_resolved() == true then
+
 			local prison_system = cm:model():prison_system();
 			local prisoners = prison_system:get_faction_prisoners(warden);
+
 			if prisoners:num_items() < lair_max_prisoners then
 				if cm:pending_battle_cache_faction_is_attacker(yvresse_faction_key) then
 					local fought = pending_battle:has_been_fought();
 					local attacker_battle_result = pending_battle:attacker_battle_result();
 					local defender_battle_result = pending_battle:defender_battle_result();
 					local retreat = attacker_battle_result == defender_battle_result;
+
 					if fought == true and retreat == false then
 						if cm:model():random_percent(lair_autoresolve_caputre_chance) then
 							local num_defenders = cm:pending_battle_cache_num_defenders()
@@ -402,6 +437,31 @@ function lair_BattleCompleted(context)
 				end
 			end
 		end
+		
+		-- checking to see if faction has been wiped out, resulting in lost prisoners 
+		cm:callback(function()
+			lair_CheckDeadPrisoners(warden)
+			lair_UpdatePrisonAbility(warden)
+			lair_UpdatePrisonerEffects(warden)
+		end, 0.5)
+	end
+end
+
+
+function lair_CheckDeadPrisoners(faction)
+	local dead_prisoners = {};
+
+	for index = 1, #lair_indoctrinated_characters do
+		local char_cqi = lair_indoctrinated_characters[index];
+		local character = cm:model():character_for_command_queue_index(char_cqi);
+
+		if character:is_null_interface() == true or character:faction():is_null_interface() == true or character:faction():is_dead() == true then
+			table.insert(dead_prisoners, index);
+		end
+	end
+	
+	for i = 1, #dead_prisoners do
+		table.remove(lair_indoctrinated_characters, dead_prisoners[i]);
 	end
 end
 
@@ -484,7 +544,6 @@ function lair_PrisonActionTakenEvent(context)
 	end
 
 	local action = context:action_key();
-	out("Prison Action: "..action);
 
 	if action == "wh2_dlc15_prison_action_indoctrinate" then
 		cm:faction_add_pooled_resource(yvresse_faction_key, "wardens_supply", "wh2_dlc15_resource_factor_wardens_supply_indoctrinated_prisoners", lair_indoctrinate_supply);
