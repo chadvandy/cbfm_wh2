@@ -44,6 +44,8 @@ function q_setup()
 	
 	local orion_subtype = "dlc05_wef_orion";
 	local durthu_subtype = "dlc05_wef_durthu";
+	local sisters_of_twilight_subtype = "wh2_dlc16_wef_sisters_of_twilight";
+	local drycha_subtype = "wh2_dlc16_wef_drycha";
 
 	local fay_enchantress_subtype = "dlc07_brt_fay_enchantress";
 	local louen_subtype = "brt_louen_leoncouer";
@@ -74,7 +76,8 @@ function q_setup()
 	local tretch_craventail_subtype = "wh2_dlc09_skv_tretch_craventail";
 	local ikit_claw_subtype = "wh2_dlc12_skv_ikit_claw";
 	local snikch_subtype = "wh2_dlc14_skv_deathmaster_snikch";
-	
+	local throt_subtype = "wh2_dlc16_skv_throt_the_unclean";
+
 	local settra_subtype = "wh2_dlc09_tmb_settra";
 	local arkhan_subtype = "wh2_dlc09_tmb_arkhan";
 	local khatep_subtype = "wh2_dlc09_tmb_khatep";
@@ -89,7 +92,7 @@ function q_setup()
 	local cylostra_subtype = "wh2_dlc11_cst_cylostra";
 	local lokhir_subtype = "wh2_dlc11_def_lokhir";
 	
-	--factions for each subtype, this will be used to check if they are in their own faction or confederated, if latter, wew trigger mpc version of the mission
+	--factions for each subtype, this will be used to check if they are in their own faction or confederated, if latter, we trigger mpc version of the mission
 	local karl_franz_faction = "wh_main_emp_empire";
 	local balthasar_gelt_faction = "wh2_dlc13_emp_golden_order";
 	local volkmar_the_grim_faction = "wh_main_emp_empire";
@@ -123,6 +126,8 @@ function q_setup()
 	
 	local orion_faction = "wh_dlc05_wef_wood_elves";
 	local durthu_faction = "wh_dlc05_wef_argwylon";
+	local sisters_of_twilight_faction = "wh2_dlc16_wef_sisters_of_twilight";
+	local drycha_faction = "wh2_dlc16_wef_drycha";
 
 	local fay_enchantress_faction = "wh_main_brt_carcassonne";
 	local louen_faction = "wh_main_brt_bretonnia";
@@ -153,6 +158,7 @@ function q_setup()
 	local tretch_craventail_faction = "wh2_dlc09_skv_clan_rictus";
 	local ikit_claw_faction = "wh2_main_skv_clan_skyre";
 	local snikch_faction = "wh2_main_skv_clan_eshin";
+	local throt_faction = "wh2_main_skv_clan_moulder";
 	
 	local settra_faction = "wh2_dlc09_tmb_khemri";
 	local arkhan_faction = "wh2_dlc09_tmb_followers_of_nagash";
@@ -304,6 +310,14 @@ function q_setup()
 		{"mission", "wh_dlc05_anc_weapon_daiths_sword", "wh_dlc05_wef_durthu_sword_of_daith_stage_1", 8,"wh_dlc05_wef_durthu_sword_of_daith_stage_4a_mpc"}
 	};
 	
+	local sisters_of_twilight_quests = {
+		{"mission", "wh2_dlc16_anc_mount_wef_cha_sisters_of_twilight_forest_dragon", "wh2_dlc16_wef_sisters_dragon_stage_1", 12,"wh2_dlc16_wef_sisters_dragon_stage_4_mpc"}
+	};
+
+	local drycha_quests = {
+		{"mission", "wh2_dlc16_anc_enchanted_item_fang_of_taalroth", "wh2_dlc16_wef_drycha_coeddil_unchained_stage_1", 5,"wh2_dlc16_wef_drycha_coeddil_unchained_stage_4_mpc"}
+	};
+
 	local fay_enchantress_quests = {
 		{"mission", "wh_dlc07_anc_arcane_item_the_chalice_of_potions", "wh_dlc07_qb_brt_fay_enchantress_chalice_of_potions_stage_1", 9, "wh_dlc07_qb_brt_fay_enchantress_chalice_of_potions_stage_6_mpc"},
 		{"mission", "wh2_dlc12_anc_arcane_item_brt_morgianas_mirror", "wh2_dlc12_brt_fay_morgianas_mirror", 6}
@@ -463,6 +477,13 @@ function q_setup()
 	--add_to_alt_quests(ancillary_key, final_mission_key, character_subtype)
 	add_to_alt_quests("wh2_dlc14_anc_weapon_whirl_of_weeping_blades", "wh2_dlc14_main_skv_snikch_whirl_of_weeping_blades_stage_1", "wh2_dlc14_skv_snikch"); 
 	
+	local throt_quests = {
+		{"mission", "wh2_dlc16_anc_enchanted_item_whip_of_domination", "wh2_dlc16_skv_throt_main_whip_of_domination_stage_1", 5, "wh2_dlc16_skv_throt_main_whip_of_domination_stage_4_mpc"},
+		{"mission", "wh2_dlc16_anc_weapon_creature_killer", "wh2_dlc16_skv_throt_main_creature_killer_stage_1", 3}
+	};
+	--add_to_alt_quests(ancillary_key, final_mission_key, character_subtype)
+	add_to_alt_quests("wh2_dlc16_anc_weapon_creature_killer", "wh2_dlc16_skv_throt_main_creature_killer_stage_1", "wh2_dlc16_skv_throt_the_unclean");
+
 	local settra_quests = {
 		{"mission", "wh2_dlc09_anc_enchanted_item_the_crown_of_nehekhara", "wh2_dlc09_tmb_settra_the_crown_of_nehekhara_stage_1", 6, "wh2_dlc09_tmb_settra_the_crown_of_nehekhara_stage_5_mpc"},
 		{"mission", "wh2_dlc09_anc_weapon_the_blessed_blade_of_ptra", "wh2_dlc09_tmb_settra_the_blessed_blade_of_ptra_stage_1", 13, "wh2_dlc09_tmb_settra_the_blessed_blade_of_ptra_stage_3_mpc"}
@@ -545,6 +566,8 @@ function q_setup()
 	
 	set_up_rank_up_listener(orion_quests, orion_subtype, nil, orion_faction);
 	set_up_rank_up_listener(durthu_quests, durthu_subtype, nil, durthu_faction);
+	set_up_rank_up_listener(sisters_of_twilight_quests, sisters_of_twilight_subtype, nil, sisters_of_twilight_faction);
+	set_up_rank_up_listener(drycha_quests, drycha_subtype, nil, drycha_faction);
 
 	set_up_rank_up_listener(tyrion_quests, tyrion_subtype, nil, tyrion_faction);
 	set_up_rank_up_listener(teclis_quests, teclis_subtype, nil, teclis_faction);
@@ -570,6 +593,7 @@ function q_setup()
 	set_up_rank_up_listener(tretch_craventail_quests, tretch_craventail_subtype, nil, tretch_craventail_faction);
 	set_up_rank_up_listener(ikit_claw_quests, ikit_claw_subtype, nil, ikit_claw_faction);
 	set_up_rank_up_listener(snikch_quests, snikch_subtype, nil, snikch_faction);
+	set_up_rank_up_listener(throt_quests, throt_subtype, nil, throt_faction);
 	
 	set_up_rank_up_listener(alberic_quests, alberic_subtype, nil, alberic_faction);
 	set_up_rank_up_listener(louen_quests, louen_subtype, nil, louen_faction);
@@ -581,7 +605,7 @@ function q_setup()
 	set_up_rank_up_listener(khatep_quests, khatep_subtype, nil, khatep_faction);
 	set_up_rank_up_listener(khalida_quests, khalida_subtype, nil, khalida_faction);
 	
-	set_up_rank_up_listener(wulfrik_quests, wulfrik_subtype, nil, wulfhart_faction);
+	set_up_rank_up_listener(wulfrik_quests, wulfrik_subtype, nil, wulfrik_faction);
 	set_up_rank_up_listener(throgg_quests, throgg_subtype, nil, throgg_faction);
 	
 	set_up_rank_up_listener(harkon_quests, harkon_subtype, nil, harkon_faction);

@@ -35,6 +35,7 @@ function q_setup()
 	local tretch_craventail_subtype = "wh2_dlc09_skv_tretch_craventail";
 	local ikit_claw_subtype = "wh2_dlc12_skv_ikit_claw";
 	local snikch_subtype = "wh2_dlc14_skv_deathmaster_snikch";
+	local throt_subtype = "wh2_dlc16_skv_throt_the_unclean";
 	
 	local settra_subtype = "wh2_dlc09_tmb_settra";
 	local arkhan_subtype = "wh2_dlc09_tmb_arkhan";
@@ -53,6 +54,9 @@ function q_setup()
 
 	local grom_the_paunch_subtype = "wh2_dlc15_grn_grom_the_paunch";
 	
+	local sisters_of_twilight_subtype = "wh2_dlc16_wef_sisters_of_twilight";
+	
+	--factions for each subtype, this will be used to check if they are in their own faction or confederated, if latter, we trigger mpc version of the mission
 	local tyrion_faction = "wh2_main_hef_eataine";
 	local teclis_faction = "wh2_main_hef_order_of_loremasters";
 	local alarielle_faction = "wh2_main_hef_avelorn";
@@ -77,6 +81,7 @@ function q_setup()
 	local tretch_craventail_faction = "wh2_dlc09_skv_clan_rictus";
 	local ikit_claw_faction = "wh2_main_skv_clan_skyre";
 	local snikch_faction = "wh2_main_skv_clan_eshin";
+	local throt_faction = "wh2_main_skv_clan_moulder";
 	
 	local settra_faction = "wh2_dlc09_tmb_khemri";
 	local arkhan_faction = "wh2_dlc09_tmb_followers_of_nagash";
@@ -94,7 +99,9 @@ function q_setup()
 	local repanse_faction = "wh2_dlc14_brt_chevaliers_de_lyonesse";
 
 	local grom_the_paunch_faction = "wh2_dlc15_grn_broken_axe";
-	
+
+	local sisters_of_twilight_faction = "wh2_dlc16_wef_sisters_of_twilight";
+
 	-- type, ancillary key, mission key, rank required, [optional] mission key if playing MPC, [optional] advice key, [optional] log x co-ord, [optional] log y co-ord, [optional] target region
 	local tyrion_quests = {
 		{"mission", "wh2_main_anc_armour_dragon_armour_of_aenarion", "wh2_main_great_vortex_hef_tyrion_dragon_armour_of_aenarion_stage_1", 6, "wh2_main_great_vortex_hef_tyrion_dragon_armour_of_aenarion_stage_4_mpc", "war.camp.advice.quest.tyrion.dragon_armour_of_aenarion.001"},
@@ -230,6 +237,13 @@ function q_setup()
 	--add_to_alt_quests(ancillary_key, final_mission_key, character_subtype)
 	add_to_alt_quests("wh2_dlc14_anc_weapon_whirl_of_weeping_blades", "wh2_dlc14_vortex_skv_snikch_whirl_of_weeping_blades_stage_1", "wh2_dlc14_skv_snikch"); 
 
+	local throt_quests = {
+		{"mission", "wh2_dlc16_anc_enchanted_item_whip_of_domination", "wh2_dlc16_skv_throt_vortex_whip_of_domination_stage_1", 5, "wh2_dlc16_skv_throt_vortex_whip_of_domination_stage_4_mpc"},
+		{"mission", "wh2_dlc16_anc_weapon_creature_killer", "wh2_dlc16_skv_throt_vortex_creature_killer_stage_1", 3}
+	};
+	--add_to_alt_quests(ancillary_key, final_mission_key, character_subtype)
+	add_to_alt_quests("wh2_dlc16_anc_weapon_creature_killer", "wh2_dlc16_skv_throt_vortex_creature_killer_stage_1", "wh2_dlc16_skv_throt_the_unclean");
+
 	local settra_quests = {
 		{"mission", "wh2_dlc09_anc_enchanted_item_the_crown_of_nehekhara", "wh2_dlc09_great_vortex_tmb_settra_the_crown_of_nehekhara_stage_1", 6, "wh2_dlc09_great_vortex_tmb_settra_the_crown_of_nehekhara_stage_5_mpc", "dlc09.camp.advice.quest.settra.the_crown_of_nehekhara.001"},
 		{"mission", "wh2_dlc09_anc_weapon_the_blessed_blade_of_ptra", "wh2_dlc09_great_vortex_tmb_settra_the_blessed_blade_of_ptra_stage_1", 13, "wh2_dlc09_great_vortex_tmb_settra_the_blessed_blade_of_ptra_stage_3_mpc", "dlc09.camp.advice.quest.settra.the_blessed_blade_of_ptra.001"}
@@ -282,6 +296,10 @@ function q_setup()
 
 	add_to_alt_quests("wh2_dlc15_anc_enchanted_item_lucky_banner", "wh2_dlc15_main_grn_grom_lucky_banner_stage_1", grom_the_paunch_subtype);
 	
+	local sisters_of_twilight_quests = {
+		{"mission", "wh2_dlc16_anc_mount_wef_cha_sisters_of_twilight_forest_dragon", "wh2_dlc16_great_vortex_wef_sisters_dragon_stage_1", 12,"wh2_dlc16_great_vortex_wef_sisters_dragon_stage_4_mpc"}
+	};
+
 	-- assemble infotext about quests
 	local infotext = {
 		1,
@@ -315,6 +333,7 @@ function q_setup()
 	set_up_rank_up_listener(tretch_craventail_quests, tretch_craventail_subtype, infotext, tretch_craventail_faction);
 	set_up_rank_up_listener(ikit_claw_quests, ikit_claw_subtype, nil, ikit_claw_faction);
 	set_up_rank_up_listener(snikch_quests, snikch_subtype, nil, snikch_faction);
+	set_up_rank_up_listener(throt_quests, throt_subtype, nil, throt_faction);
 	
 	set_up_rank_up_listener(settra_quests, settra_subtype, infotext, settra_faction);
 	set_up_rank_up_listener(arkhan_quests, arkhan_subtype, infotext, arkhan_faction);
@@ -332,6 +351,8 @@ function q_setup()
 	set_up_rank_up_listener(repanse_quests, repanse_subtype, nil, repanse_faction);
 
 	set_up_rank_up_listener(grom_the_paunch_quests,grom_the_paunch_subtype, nil, grom_the_paunch_faction);
+
+	set_up_rank_up_listener(sisters_of_twilight_quests, sisters_of_twilight_subtype, nil, sisters_of_twilight_faction);
 
 	core:add_listener(
 		"quest_item_listerner",

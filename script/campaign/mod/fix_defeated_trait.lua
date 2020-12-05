@@ -61,8 +61,11 @@ local LEGENDARY_LORD_DEFEATED_TRAITS = {
 	["wh2_pro08_neu_gotrek"] =					"wh2_dlc14_trait_defeated_gotrek",						-- Gotrek
 	["wh2_dlc15_hef_imrik"] = 					"wh2_dlc15_trait_defeated_imrik",						-- Imrik
 	["wh2_dlc15_hef_eltharion"] = 				"wh2_dlc15_trait_defeated_eltharion",					-- Eltharion the Grim
-	["wh2_dlc15_grn_grom_the_paunch"] = 		"wh2_dlc15_trait_defeated_grom"							-- Grom the Paunch
-};
+	["wh2_dlc15_grn_grom_the_paunch"] = 		"wh2_dlc15_trait_defeated_grom",					    -- Grom the Paunch
+	["wh2_dlc16_wef_drycha"] = 		            "wh2_main_trait_defeated_drycha",						-- Drycha
+	["wh2_dlc16_wef_sisters_of_twilight"] =     "wh2_main_trait_defeated_sisters_of_twilight",			-- Sisters of Twilight
+	["wh2_dlc16_skv_throt_the_unclean"] = 		"wh2_main_trait_defeated_throt"							-- Throt the Unclean
+}
 
 function Get_Enemy_Legendary_Lords_In_Last_Battle(character)
 	local pb = cm:model():pending_battle();

@@ -1,11 +1,11 @@
 --v function()
 local function set_admiral_immortality_invisible()
-    real_timer.register_singleshot("next_tick", 0)
+    real_timer.register_singleshot("set_admiral_immortality_invisible", 0)
     core:add_listener(
         "cbf_im_next_tick",
         "RealTimeTrigger",
         function(context)
-            return context.string == "next_tick"
+            return context.string == "set_admiral_immortality_invisible"
         end,
         function(context)
             local selected_char_cqi = cm:get_campaign_ui_manager():get_char_selected_cqi()
