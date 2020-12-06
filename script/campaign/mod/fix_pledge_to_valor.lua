@@ -10,6 +10,7 @@ local vow_lords = {
 	["wh2_dlc14_skv_deathmaster_snikch"] = "wh_dlc07_trait_brt_grail_vow_untaint_pledge",
 	["wh2_main_skv_lord_skrolk"] = "wh_dlc07_trait_brt_grail_vow_untaint_pledge",
 	["wh2_main_skv_queek_headtaker"] = "wh_dlc07_trait_brt_grail_vow_untaint_pledge",
+	["wh2_dlc16_skv_throt_the_unclean"] = "wh_dlc07_trait_brt_grail_vow_untaint_pledge",
 	-- Vampire Counts
 	["dlc04_vmp_helman_ghorst"] = "wh_dlc07_trait_brt_grail_vow_untaint_pledge",
 	["dlc04_vmp_vlad_con_carstein"] = "wh_dlc07_trait_brt_grail_vow_untaint_pledge",

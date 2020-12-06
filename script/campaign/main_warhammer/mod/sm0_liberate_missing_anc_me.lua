@@ -105,6 +105,12 @@ local subtype_anc = {
     ["dlc05_wef_durthu"] = {
         {"mission", "wh_dlc05_anc_weapon_daiths_sword", "wh_dlc05_wef_durthu_sword_of_daith_stage_1", 8,"wh_dlc05_wef_durthu_sword_of_daith_stage_4a_mpc"}
     },
+    ["sisters_of_twilight_quests"] = {
+		{"mission", "wh2_dlc16_anc_mount_wef_cha_sisters_of_twilight_forest_dragon", "wh2_dlc16_wef_sisters_dragon_stage_1", 12,"wh2_dlc16_wef_sisters_dragon_stage_4_mpc"}
+	},
+	["drycha_quests"] = {
+		{"mission", "wh2_dlc16_anc_enchanted_item_fang_of_taalroth", "wh2_dlc16_wef_drycha_coeddil_unchained_stage_1", 5,"wh2_dlc16_wef_drycha_coeddil_unchained_stage_4_mpc"}
+	},
     ["dlc07_brt_fay_enchantress"] = {
 		{"mission", "wh_dlc07_anc_arcane_item_the_chalice_of_potions", "wh_dlc07_qb_brt_fay_enchantress_chalice_of_potions_stage_1", 9, "wh_dlc07_qb_brt_fay_enchantress_chalice_of_potions_stage_6_mpc"},
         {"mission", "wh2_dlc12_anc_arcane_item_brt_morgianas_mirror", "wh2_dlc12_brt_fay_morgianas_mirror", 6}
@@ -208,6 +214,10 @@ local subtype_anc = {
         {"mission", "wh2_dlc14_anc_armour_the_cloak_of_shadows", "wh2_dlc14_main_skv_snikch_the_cloak_of_shadows_stage_1", 5},
         {"mission", "wh2_dlc14_anc_weapon_whirl_of_weeping_blades", "wh2_dlc14_main_skv_snikch_whirl_of_weeping_blades_stage_1", 3}
     },
+    ["throt_quests"] = {
+		{"mission", "wh2_dlc16_anc_enchanted_item_whip_of_domination", "wh2_dlc16_skv_throt_main_whip_of_domination_stage_1", 5, "wh2_dlc16_skv_throt_main_whip_of_domination_stage_4_mpc"},
+		{"mission", "wh2_dlc16_anc_weapon_creature_killer", "wh2_dlc16_skv_throt_main_creature_killer_stage_1", 3}
+	},	
     ["wh2_dlc09_tmb_settra"] = {
 		{"mission", "wh2_dlc09_anc_enchanted_item_the_crown_of_nehekhara", "wh2_dlc09_tmb_settra_the_crown_of_nehekhara_stage_1", 6, "wh2_dlc09_tmb_settra_the_crown_of_nehekhara_stage_5_mpc"},
 		{"mission", "wh2_dlc09_anc_weapon_the_blessed_blade_of_ptra", "wh2_dlc09_tmb_settra_the_blessed_blade_of_ptra_stage_1", 13, "wh2_dlc09_tmb_settra_the_blessed_blade_of_ptra_stage_3_mpc"}
@@ -307,7 +317,7 @@ function sm0_liberate_missing_anc_me()
                                         end
                                         if not mission_found then
                                             --sm0_log("force_add_ancillary: "..current_ancillary_key) 
-                                            CampaignUI.TriggerCampaignScriptEvent(cm:get_faction(cm:get_local_faction(true)):command_queue_index(), "anc|"..tostring(character:command_queue_index())..":"..current_ancillary_key)
+                                            CampaignUI.TriggerCampaignScriptEvent(cm:get_local_faction(true):command_queue_index(), "anc|"..tostring(character:command_queue_index())..":"..current_ancillary_key)
                                         end
                                     end
                                 end
@@ -329,8 +339,8 @@ function sm0_liberate_missing_anc_me()
     )
     --Multiplayer listener
     core:add_listener(
-        "sm0_backup_UITriggerScriptEvent",
-        "UITriggerScriptEvent",
+        "sm0_backup_UITrigger",
+        "UITrigger",
         function(context)
             return context:trigger():starts_with("anc|")
         end,
