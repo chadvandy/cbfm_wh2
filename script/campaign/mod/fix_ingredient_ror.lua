@@ -53,7 +53,7 @@ local food_recruit_index = {
     ["wh2_dlc15_discharge"] = 	{"wh2_dlc15_grn_mon_river_trolls_ror_0"},
     ["wh2_dlc15_ectoplasm"] = 	{},
     ["wh2_dlc15_milk"] = 		{},
-    ["wh2_dlc15_yolk"] = 		{"wh_main_grn_mon_arachnarok_spider_0", "wh2_dlc15_grn_mon_arachnarok_spider_waaagh_0", "wh_dlc06_grn_mon_venom_queen_0"}
+    ["wh2_dlc15_yolk"] = 		{"wh_main_grn_mon_arachnarok_spider_0", "wh_dlc15_grn_mon_arachnarok_spider_waaagh_0", "wh_dlc06_grn_mon_venom_queen_0"}
 }
 
 function fix_ingredient_ror()
