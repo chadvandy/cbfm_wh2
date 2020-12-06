@@ -25,8 +25,8 @@ local ulthuan_regions = {
 			["wh2_main_cothique_tor_koruali"] = true,
 			["wh2_main_yvresse_tor_yvresse"] = true,
 			["wh2_main_yvresse_elessaeli"] = true,
-			["wh2_main_yvresse_shrine_of_loec"] = true,
-			["wh2_main_yvresse_tralinia"] = true
+			["wh2_main_yvresse_tralinia"] = true,
+			["wh2_main_yvresse_shrine_of_loec"] = true
 		},
 		["inner"] = {
 			["wh2_main_eataine_lothern"] = true,
@@ -284,12 +284,10 @@ function add_alarielle_listeners()
 			end,
 			true
 		);
-		core:add_listener(
+
+		cm:add_faction_turn_start_listener_by_name(
 			"defender_of_ulthuan_update",
-			"FactionTurnStart",
-			function(context)
-				return context:faction():name() == defender_of_ulthuan_faction;
-			end,
+			defender_of_ulthuan_faction,
 			function(context)
 				if defender_of_ulthuan_level < 10 then
 					defender_of_ulthuan_level = defender_of_ulthuan_level + 1;
@@ -329,7 +327,7 @@ function add_alarielle_listeners()
 				blood_voyage_inv:start_invasion(
 				function(self)
 					local force_leader = self:get_general();
-					local local_faction = cm:get_local_faction(true);
+					local local_faction = cm:get_local_faction_name(true);
 				
 					if local_faction == "wh2_main_def_har_ganeth" then
 						cm:scroll_camera_from_current(false, 3, {force_leader:display_position_x(), force_leader:display_position_y(), 14.768, 0.0, 12.0});
