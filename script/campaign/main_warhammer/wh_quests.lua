@@ -317,6 +317,8 @@ function q_setup()
 	local drycha_quests = {
 		{"mission", "wh2_dlc16_anc_enchanted_item_fang_of_taalroth", "wh2_dlc16_wef_drycha_coeddil_unchained_stage_1", 5,"wh2_dlc16_wef_drycha_coeddil_unchained_stage_4_mpc"}
 	};
+	--add_to_alt_quests(ancillary_key, final_mission_key, character_subtype)
+	add_to_alt_quests("wh2_dlc16_anc_enchanted_item_fang_of_taalroth", "wh2_dlc16_wef_drycha_coeddil_unchained_stage_4_mpc", "wh2_dlc16_wef_drycha");
 
 	local fay_enchantress_quests = {
 		{"mission", "wh_dlc07_anc_arcane_item_the_chalice_of_potions", "wh_dlc07_qb_brt_fay_enchantress_chalice_of_potions_stage_1", 9, "wh_dlc07_qb_brt_fay_enchantress_chalice_of_potions_stage_6_mpc"},
