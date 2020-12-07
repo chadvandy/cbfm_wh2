@@ -1363,6 +1363,7 @@ function Worldroots:add_worldroots_listeners()
 			"CharacterRankUp",
 			function(context)
 				return context:character():character_subtype("wh2_dlc16_wef_drycha") and context:character():rank() >= 5 and Worldroots.coeddil_unlocked == false
+				and not context:character():faction():is_human()
 			end,
 			function(context)
 				local drycha_faction = context:character():faction()
