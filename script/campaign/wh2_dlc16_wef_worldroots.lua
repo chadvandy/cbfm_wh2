@@ -30,7 +30,7 @@ Worldroots = {
 	---technology value
 	technology_value = 1,  -- needs to match dummy display in db
 	--markers
-	unresolved_marker_value = -1,
+	unresolved_marker_value = 0,
 	peaceful_resolution_value = 10, ---needs to match dummy display in db
 	battle_resolution_value = 10, --needs to match dummy display in db
 	
@@ -46,6 +46,7 @@ Worldroots = {
 	avelorn_invasion_duration = 5, --- after this many turns the game will release control of the spawned Avelorn invasion and re-allow CAI targeting of the ruins
 	debug_ariel_unlock = false, -- set to true to spawn Ariel/Coeddil on turn 1 for easy testing
 	ariel_unlocked = false,
+	ariel_spawn_pending_faction = "",
 	coeddil_unlocked = false,
 	ai_ariel_spawn_turn = 20, --- turn after which ariel can appear for either the Sisters or Orion
 	ai_ariel_spawn_chance = 50,  --- chance on each turn that ariel will spawn (chance is per faction, with Sisters prioritised)
