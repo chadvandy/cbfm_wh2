@@ -1374,6 +1374,10 @@ function Worldroots:add_worldroots_listeners()
 		)
 	end
 
+	if cm:get_faction(self.ariel_spawn_pending_faction) then
+		self:spawn_ariel(self.ariel_spawn_pending_faction)
+	end
+
 	if self.primary_player_key == false or (self.primary_player_key == "wh2_dlc16_wef_drycha" and self.secondary_player_key == false) then
 		out("No human Wood Elves found or human Drycha")
 		--- if no humans, kick off a listener to spawn ariel around a specified turn
@@ -1773,8 +1777,6 @@ function Worldroots:spawn_ariel(faction_key)
 		return
 	end
 
-	self.ariel_unlocked = true
-
 	core:add_listener(
 		"GiveArielAncillaries",
 		"UniqueAgentSpawned",
@@ -1814,16 +1816,21 @@ function Worldroots:spawn_ariel(faction_key)
 		false
 	);
 
+	self.ariel_spawn_pending_faction = faction_key
 	if cm:is_processing_battle() then
 		cm:progress_on_battle_completed(
 			"ariel_spawn_pending_battle_delay",
 			function()
 				cm:spawn_unique_agent(cm:get_faction(faction_key):command_queue_index(), "wh2_dlc16_wef_ariel", true);
+				self.ariel_unlocked = true
+				self.ariel_spawn_pending_faction = ""
 				cm:cancel_progress_on_battle_completed("ariel_spawn_pending_battle_delay")
 			end
 		)
 	else
 		cm:spawn_unique_agent(cm:get_faction(faction_key):command_queue_index(), "wh2_dlc16_wef_ariel", true);
+		self.ariel_unlocked = true
+		self.ariel_spawn_pending_faction = ""
 	end
 	
 	
@@ -2346,7 +2353,13 @@ function Worldroots:grant_ritual_rewards(forest, completing_faction_key)
 end
 
 function Worldroots:ritual_ready_check(forest)
+
 	local glade_owner_faction_interface = cm:get_region(forest.glade_region_key):owning_faction()
+	
+	if not Worldroots:faction_is_human_wood_elf(glade_owner_faction_interface:name()) then
+		return false
+	end
+
 	local glade_owner_faction_cqi = glade_owner_faction_interface:command_queue_index()
 	local healing_amount = glade_owner_faction_interface:pooled_resource(forest.pooled_resource):value()
 	local ritual_ready_incident = "wh2_dlc16_incident_wef_ritual_rebirth_available_"..forest.key
@@ -2812,6 +2825,7 @@ cm:add_saving_game_callback(
 		cm:save_named_value("WorldrootsCoeddilSpawned", Worldroots.coeddil_unlocked, context)
 		cm:save_named_value("WorldrootsCompletedEncounters", Worldroots.completed_encounters, context)
 		cm:save_named_value("WorldrootsTurnsSinceLastMarker", Worldroots.turns_since_last_marker, context)
+		cm:save_named_value("WorldrootsArielSpawnPendingFaction", Worldroots.ariel_spawn_pending_faction, context)
 	end
 );
 cm:add_loading_game_callback(
@@ -2826,6 +2840,7 @@ cm:add_loading_game_callback(
 			Worldroots.turns_since_last_marker = cm:load_named_value("WorldrootsTurnsSinceLastMarker", 0, context)
 			Worldroots.ariel_unlocked = cm:load_named_value("WorldrootsArielSpawned", false, context)
 			Worldroots.coeddil_unlocked = cm:load_named_value("WorldrootsCoeddilSpawned", false, context)
+			Worldroots.ariel_spawn_pending_faction = cm:load_named_value("WorldrootsArielSpawnPendingFaction", "", context)
 		end
 	end
 );
