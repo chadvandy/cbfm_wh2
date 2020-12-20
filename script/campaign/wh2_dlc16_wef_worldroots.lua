@@ -1370,6 +1370,9 @@ function Worldroots:add_worldroots_listeners()
 				local drycha_faction = context:character():faction()
 				cm:spawn_unique_agent(drycha_faction:command_queue_index(), "wh2_dlc16_wef_coeddil", true);
 				out("COEDDIL SPAWNED!")
+				if not context:character():has_trait("wh2_dlc16_trait_drycha_potion_sacre") then 
+					Give_Trait(context:character(), "wh2_dlc16_trait_drycha_potion_sacre")
+				end
 			end,
 			true
 		)
@@ -1511,6 +1514,14 @@ function Worldroots:add_worldroots_listeners()
 			if Worldroots.coeddil_unlocked == false then
 				cm:spawn_unique_agent(context:mission():faction():command_queue_index(), "wh2_dlc16_wef_coeddil", true);
 				out("COEDDIL SPAWNED!")
+
+				local char_list = context:mission():faction():character_list()
+				for i = 0, char_list:num_items() - 1 do
+					local char = char_list:item_at(i)
+					if char:character_subtype("wh2_dlc16_wef_drycha") and not char:has_trait("wh2_dlc16_trait_drycha_potion_sacre") then 
+						Give_Trait(char, "wh2_dlc16_trait_drycha_potion_sacre")
+					end
+				end
 			end
 		end
 	)
