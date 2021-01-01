@@ -7,7 +7,7 @@ function fix_nor_confed_dilemma()
         function(context)
             local character = context:character();
             
-            if character:won_battle() == true and character:faction():subculture() == greenskin and not character:faction():name():find("rebel") 
+            if character:won_battle() == true and character:faction():subculture() == NORSCA_SUBCULTURE and not character:faction():name():find("rebel") 
             and not character:faction():name():find("invasion") and not character:faction():name():find("separatists") and not character:faction():name():find("incursion") then
                 local enemies = cm:pending_battle_cache_get_enemies_of_char(character);
                 local enemy_count = #enemies;
