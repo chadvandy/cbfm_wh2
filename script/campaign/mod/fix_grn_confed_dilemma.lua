@@ -1,4 +1,5 @@
 function fix_grn_confed_dilemma()
+    local greenskin = "wh_main_sc_grn_greenskins"
     core:remove_listener("character_completed_battle_greenskin_confederation_dilemma")
     core:add_listener(
         "cbf_character_completed_battle_greenskin_confederation_dilemma",
