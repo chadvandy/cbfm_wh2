@@ -26,7 +26,7 @@ cm:add_first_tick_callback(function()
 
 	core:remove_listener("Bret_UniqueAgentSpawned")
 	core:add_listener(
-		"fix_Bret_UniqueAgentSpawned",
+		"Bret_UniqueAgentSpawned",
 		"UniqueAgentSpawned",
 		function(context)
 			local character = context:unique_agent_details():character();

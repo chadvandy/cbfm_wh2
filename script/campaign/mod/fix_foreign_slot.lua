@@ -1,7 +1,7 @@
 function fix_foreign_slot()
 	core:remove_listener("underempire_ForeignSlotManagerRemovedEvent")
 	core:add_listener(
-		"fix_underempire_ForeignSlotManagerRemovedEvent",
+		"underempire_ForeignSlotManagerRemovedEvent",
 		"ForeignSlotManagerRemovedEvent",
 		true,
 		function(context)

@@ -39,7 +39,7 @@ function fix_multiple_vows()
     core:remove_listener("Vow_CharacterCreated")
     -- Allows player to skip the early Vows at high enough Chivalry
     core:add_listener(
-        "fix_Vow_CharacterCreated",
+        "Vow_CharacterCreated",
         "CharacterCreated",
         true,
         function(context)

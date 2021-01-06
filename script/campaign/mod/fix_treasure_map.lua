@@ -24,7 +24,7 @@ function fix_treasure_map()
 		if faction and faction:is_human() then
             core:remove_listener("BattleCompleted_Treasure_Map")
             core:add_listener( 
-                "cbf_BattleCompleted_Treasure_Map",
+                "BattleCompleted_Treasure_Map",
                 "BattleCompleted",
                 function(context) 
                     return cm:pending_battle_cache_human_is_involved();

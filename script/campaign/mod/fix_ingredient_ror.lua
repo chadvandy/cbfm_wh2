@@ -61,7 +61,7 @@ function fix_ingredient_ror()
         if #food_recruit_index[food_index[i]] ~= 0 then
             core:remove_listener("food_recruit"..tostring(i))
 			core:add_listener(
-			"cbf_food_recruit"..tostring(i),
+			"food_recruit"..tostring(i),
 			"UnitTrained",
 			function(context)
 				--check unlock state of food
