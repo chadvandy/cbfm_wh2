@@ -39,7 +39,7 @@ function fix_ai_vow()
     core:remove_listener("character_rank_up_vows_per_level_ai")
     -- AI characters get the Vows per level
     core:add_listener(
-        "fix_character_rank_up_vows_per_level_ai",
+        "character_rank_up_vows_per_level_ai",
         "CharacterRankUp",
         true,
         function(context)

@@ -44,7 +44,7 @@ local vow_lords = {
 function fix_pledge_to_valor()
 	core:remove_listener("character_convalesced_or_killed_grail_vow")
 	core:add_listener(
-		"fix_character_convalesced_or_killed_grail_vow",
+		"character_convalesced_or_killed_grail_vow",
 		"CharacterConvalescedOrKilled",
 		true,
 		function(context)
