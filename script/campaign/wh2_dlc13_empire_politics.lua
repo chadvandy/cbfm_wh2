@@ -2546,10 +2546,10 @@ EMPIRE_ELECTOR_COUNTS = {
 	["stirland"] = {capital = "wh_main_stirland_wurtbad", faction_key = "wh_main_emp_stirland"},
 	["talabecland"] = {capital = "wh_main_talabecland_talabheim", faction_key = "wh_main_emp_talabecland"},
 	["wissenland"] = {capital = "wh_main_wissenland_nuln", faction_key = "wh_main_emp_wissenland"},
-	["solland"] = {capital = "wh2_main_solland_pfeildorf", faction_key = ""},
+	--["solland"] = {capital = "wh2_main_solland_pfeildorf", faction_key = ""},
 	["sylvania"] = {capital = "wh_main_eastern_sylvania_castle_drakenhof", faction_key = ""},
 	["marienburg"] = {capital = "wh_main_the_wasteland_marienburg", faction_key = ""},
-	["golden"] = {capital = "", faction_key = "wh2_dlc13_emp_golden_order"}
+	["golden"] = {capital = "wh2_main_solland_pfeildorf", faction_key = "wh2_dlc13_emp_golden_order"}
 };
 
 EMPIRE_REGION_TO_ELECTOR_KEY = {
@@ -2584,7 +2584,9 @@ EMPIRE_REGION_TO_ELECTOR_KEY = {
 	["wh_main_talabecland_talabheim"] = "talabecland",
 	["wh_main_wissenland_nuln"] = "wissenland",
 	["wh_main_wissenland_pfeildorf"] = "wissenland",
-	["wh_main_wissenland_wissenburg"] = "wissenland"
+	["wh_main_wissenland_wissenburg"] = "wissenland",
+	["wh2_main_solland_pfeildorf"] = "golden",
+	["wh2_main_solland_steingart"] = "wissenland"
 };
 
 EMPIRE_CONFEDERATION_DILEMMAS = {
