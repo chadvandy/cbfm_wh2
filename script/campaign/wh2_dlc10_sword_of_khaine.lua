@@ -926,7 +926,7 @@ core:add_listener(
 	function(context)
 		local region = context:garrison_residence():region():name()
 
-		if(Sword_region_key == region) then
+		if (Sword_owner["region"] == region) then
 			return true
 		end
 		return false
