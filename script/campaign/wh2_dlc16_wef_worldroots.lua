@@ -2321,7 +2321,7 @@ function Worldroots:grant_ritual_rewards(forest, completing_faction_key)
 		forest:custom_ritual_completion_callback()
 	end
 
-	if Worldroots.ariel_unlocked == false and cm:is_dlc_flag_enabled("TW_WH2_DLC16_TWILIGHT") then
+	if Worldroots.ariel_unlocked == false and (cm:is_multiplayer() or cm:is_dlc_flag_enabled("TW_WH2_DLC16_TWILIGHT")) then
 		Worldroots:spawn_ariel(completing_faction_key)
 	end
 
