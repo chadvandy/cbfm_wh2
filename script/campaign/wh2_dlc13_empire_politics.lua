@@ -2586,7 +2586,7 @@ EMPIRE_REGION_TO_ELECTOR_KEY = {
 	["wh_main_wissenland_pfeildorf"] = "wissenland",
 	["wh_main_wissenland_wissenburg"] = "wissenland",
 	["wh2_main_solland_pfeildorf"] = "golden",
-	["wh2_main_solland_steingart"] = "wissenland"
+	["wh2_main_solland_steingart"] = "golden"
 };
 
 EMPIRE_CONFEDERATION_DILEMMAS = {
