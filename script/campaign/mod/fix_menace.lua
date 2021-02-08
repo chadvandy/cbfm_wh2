@@ -8,12 +8,12 @@ local function update_menace_bundle(char)
     if defender:has_region() and defender:region():religion_proportion("wh2_main_religion_skaven") >= 0.095 then
         corruption_bonus = true
     end
-    out("sm0/corruption_bonus = "..tostring(corruption_bonus))
+    --out("sm0/corruption_bonus = "..tostring(corruption_bonus))
     local queek_bonus = false
     if char:character_subtype("wh2_main_skv_queek_headtaker") then
         queek_bonus = true
     end
-    out("sm0/queek_bonus = "..tostring(queek_bonus))
+    --out("sm0/queek_bonus = "..tostring(queek_bonus))
     if char:military_force():has_effect_bundle("wh2_sm0_bundle_fix_menace_below_plus") then 
         cm:remove_effect_bundle_from_characters_force("wh2_sm0_bundle_fix_menace_below_plus", char_cqi)
     end
@@ -24,7 +24,7 @@ local function update_menace_bundle(char)
     if not corruption_bonus and not queek_bonus then
         if not char:faction():is_human() or cm:is_multiplayer() then
             cm:apply_effect_bundle_to_characters_force("wh2_sm0_bundle_fix_menace_below_minus", char_cqi, 0, false)
-            out("sm0/effect_bundle = wh2_sm0_bundle_fix_menace_below_minus")
+            --out("sm0/effect_bundle = wh2_sm0_bundle_fix_menace_below_minus")
         else
             core:add_listener(
                 "menace_charges_ScriptEventPlayerBattleStarted",
@@ -32,7 +32,7 @@ local function update_menace_bundle(char)
                 true,
                 function(context)
                     cm:apply_effect_bundle_to_characters_force("wh2_sm0_bundle_fix_menace_below_minus", char_cqi, 0, false)
-                    out("sm0/effect_bundle = wh2_sm0_bundle_fix_menace_below_minus")
+                    --out("sm0/effect_bundle = wh2_sm0_bundle_fix_menace_below_minus")
                 end,
                 false
             ) 
@@ -40,7 +40,7 @@ local function update_menace_bundle(char)
     end
     if corruption_bonus and queek_bonus then
         cm:apply_effect_bundle_to_characters_force("wh2_sm0_bundle_fix_menace_below_plus", char_cqi, 0, false)
-        out("sm0/effect_bundle = wh2_sm0_bundle_fix_menace_below_plus")
+        --out("sm0/effect_bundle = wh2_sm0_bundle_fix_menace_below_plus")
     end
 end
 
