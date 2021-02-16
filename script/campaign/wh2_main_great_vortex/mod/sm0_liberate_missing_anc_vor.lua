@@ -185,20 +185,20 @@ function sm0_liberate_missing_anc_vor()
                                         for i = 0, list_box:ChildCount() - 1 do
                                             local quest_uic = UIComponent(list_box:Find(i))
                                             local quest_title = find_uicomponent(quest_uic, "name")
-                                            --sm0_log("mission_title = "..mission_title) 
-                                            if quest_title and mission_title == quest_title:GetStateText() then
-                                                --sm0_log("UI mission_title = "..quest_title:GetStateText())
+                                            --out("mission_title = "..mission_title) 
+                                            if quest_title and string.find(quest_title:GetStateText(), mission_title) then
+                                                --out("UI mission_title = "..quest_title:GetStateText())
                                                 mission_found = true 
                                             end  
                                         end
                                         if not mission_found then
-                                            --sm0_log("force_add_ancillary: "..current_ancillary_key) 
+                                            --out("force_add_ancillary: "..current_ancillary_key) 
                                             CampaignUI.TriggerCampaignScriptEvent(cm:get_local_faction(true):command_queue_index(), "anc|"..tostring(character:command_queue_index())..":"..current_ancillary_key)
                                         end
                                     end
                                 end
                             else
-                                --sm0_log("force_add_ancillary: "..current_ancillary_key)
+                                --out("force_add_ancillary: "..current_ancillary_key)
                                 cm:disable_event_feed_events(true, "", "", "character_ancillary_gained")
                                 cm:force_add_ancillary(character, current_ancillary_key, true, false)
                                 cm:disable_event_feed_events(false, "", "", "character_ancillary_gained")
@@ -207,7 +207,7 @@ function sm0_liberate_missing_anc_vor()
                         false
                     )
                 else
-                    --sm0_log("ancillary_exists: "..current_ancillary_key)
+                    --out("ancillary_exists: "..current_ancillary_key)
                 end
             end 
         end,
