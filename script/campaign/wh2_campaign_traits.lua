@@ -108,7 +108,8 @@ local LEGENDARY_LORD_DEFEATED_TRAITS = {
 	["wh2_dlc15_grn_grom_the_paunch"] = 		"wh2_dlc15_trait_defeated_grom",					    -- Grom the Paunch
 	["wh2_dlc16_wef_drycha"] = 		            "wh2_main_trait_defeated_drycha",						-- Drycha
 	["wh2_dlc16_wef_sisters_of_twilight"] =     "wh2_main_trait_defeated_sisters_of_twilight",			-- Sisters of Twilight
-	["wh2_dlc16_skv_throt_the_unclean"] = 		"wh2_main_trait_defeated_throt"							-- Throt the Unclean
+	["wh2_dlc16_skv_throt_the_unclean"] = 		"wh2_main_trait_defeated_throt",						-- Throt the Unclean
+	["wh2_twa03_def_rakarth"] = 				"wh2_twa03_trait_defeated_rakarth"						-- Rakarth
 };
 
 local SUBCULTURES_TRAIT_KEYS = {
