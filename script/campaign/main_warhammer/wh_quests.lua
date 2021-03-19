@@ -63,6 +63,7 @@ function q_setup()
 	local morathi_subtype = "wh2_main_def_morathi";
 	local hellebron_subtype = "wh2_dlc10_def_crone_hellebron";
 	local malus_subtype = "wh2_dlc14_def_malus_darkblade";
+	local rakarth_subtype = "wh2_twa03_def_rakarth";
 	
 	local mazdamundi_subtype = "wh2_main_lzd_lord_mazdamundi";
 	local kroq_gar_subtype = "wh2_main_lzd_kroq_gar";
@@ -145,7 +146,8 @@ function q_setup()
 	local morathi_faction = "wh2_main_def_cult_of_pleasure";
 	local hellebron_faction = "wh2_main_def_har_ganeth";
 	local malus_faction = "wh2_main_def_hag_graef";
-	
+	local rakarth_faction = "wh2_twa03_def_rakarth";
+
 	local mazdamundi_faction = "wh2_main_lzd_hexoatl";
 	local kroq_gar_faction = "wh2_main_lzd_last_defenders";
 	local tehenhauin_faction = "wh2_dlc12_lzd_cult_of_sotek";
@@ -424,6 +426,10 @@ function q_setup()
 		{"mission", "wh2_dlc14_anc_weapon_warpsword_of_khaine", "wh2_dlc14_main_def_malus_warpsword_of_khaine_stage_1", 5, "wh2_dlc14_main_def_malus_warpsword_of_khaine_stage_4_mpc"}
 	};
 
+	local rakarth_quests = {
+		{"mission", "wh2_twa03_anc_weapon_whip_of_agony", "wh2_twa03_def_rakarth_whip_of_agony_stage_1", 2, "wh2_twa03_def_rakarth_whip_of_agony_stage_2_mpc"}
+	};
+
 	local mazdamundi_quests = {
 		{"mission", "wh2_main_anc_weapon_cobra_mace_of_mazdamundi", "wh2_main_lzd_mazdamundi_cobra_mace_of_mazdamundi_stage_1", 10, "wh2_main_lzd_mazdamundi_cobra_mace_of_mazdamundi_stage_3_mpc"},
 		{"mission", "wh2_main_anc_magic_standard_sunburst_standard_of_hexoatl", "wh2_main_lzd_mazdamundi_sunburst_standard_of_hexoatl_stage_1", 6, "wh2_main_lzd_mazdamundi_sunburst_standard_of_hexoatl_stage_4_mpc"}
@@ -582,6 +588,7 @@ function q_setup()
 	set_up_rank_up_listener(morathi_quests, morathi_subtype, nil, morathi_faction);
 	set_up_rank_up_listener(hellebron_quests, hellebron_subtype, nil, hellebron_faction);
 	set_up_rank_up_listener(malus_quests, malus_subtype, nil, malus_faction);
+	set_up_rank_up_listener(rakarth_quests, rakarth_subtype, nil, rakarth_faction);
 	
 	set_up_rank_up_listener(mazdamundi_quests, mazdamundi_subtype, nil, mazdamundi_faction);
 	set_up_rank_up_listener(kroq_gar_quests, kroq_gar_subtype, nil, kroq_gar_faction);
