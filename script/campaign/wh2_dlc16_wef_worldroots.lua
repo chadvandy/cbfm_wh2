@@ -1917,24 +1917,27 @@ function Worldroots:set_up_battle_listeners()
 		end,
 		function(context)
 			local character = context:character()
+			local region = character:region()
+			
+			if(region:is_null_interface() == false) then
+				local region_key = region:name()
 
-			local region_key = character:region():name()
+				local forest_to_benefit = self:is_adjacent_to_forest(region_key)
 
-			local forest_to_benefit = self:is_adjacent_to_forest(region_key)
-
-			if forest_to_benefit == false then 
-				forest_to_benefit = self:is_part_of_forest(region_key)
-			end
-
-			if forest_to_benefit ~= false then
-				local amount_to_gain = self.battle_value
-				if character:faction():has_technology("tech_dlc05_2_ellinill") then
-					amount_to_gain = amount_to_gain + self.battle_value_tech_bonus
+				if forest_to_benefit == false then 
+					forest_to_benefit = self:is_part_of_forest(region_key)
 				end
-				if character:has_skill(self.battle_value_skill_key) then
-					amount_to_gain = amount_to_gain + self.battle_value_skill_bonus
+
+				if forest_to_benefit ~= false then
+					local amount_to_gain = self.battle_value
+					if character:faction():has_technology("tech_dlc05_2_ellinill") then
+						amount_to_gain = amount_to_gain + self.battle_value_tech_bonus
+					end
+					if character:has_skill(self.battle_value_skill_key) then
+						amount_to_gain = amount_to_gain + self.battle_value_skill_bonus
+					end
+					Worldroots:add_pooled_resource_to_all_wood_elves(forest_to_benefit, "wh2_dlc16_resource_factor_razing_and_battles", amount_to_gain, nil, true)
 				end
-				Worldroots:add_pooled_resource_to_all_wood_elves(forest_to_benefit, "wh2_dlc16_resource_factor_razing_and_battles", amount_to_gain, nil, true)
 			end
 		end,
 	true)
