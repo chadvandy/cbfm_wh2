@@ -38,7 +38,8 @@ local vow_lords = {
 	["wh2_main_def_morathi"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge",
 	["wh2_dlc10_def_crone_hellebron"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge",
 	["wh2_dlc11_def_lokhir"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge",
-	["wh2_dlc14_def_malus_darkblade"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge"
+	["wh2_dlc14_def_malus_darkblade"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge",
+	["wh2_twa03_def_rakarth"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge"
 } --:map<string, string>
 
 function fix_pledge_to_valor()
