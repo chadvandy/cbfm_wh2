@@ -8,7 +8,7 @@ local Eltharion_faction = "wh2_main_hef_yvresse";
 local Mist_murderer_location = {	["wh2_main_great_vortex"] = "wh2_main_vor_northern_yvresse_tor_yvresse", 
 							["main_warhammer"] = "wh2_main_yvresse_tor_yvresse"};
 local Mist_murderer_trait = {"wh2_dlc15_trait_mistwalker_shadow", "wh2_dlc15_trait_mistwalker_sentinel", "wh2_dlc15_trait_mistwalker_watcher"};
-local Mist_murderer_effect = {"wh2_dlc10_bundle_blood_voyage_old", "wh2_dlc10_bundle_blood_voyage_old", "wh2_dlc10_bundle_blood_voyage_old"};
+local Mist_murderer_effect = {"wh_main_bundle_military_upkeep_free_force_siege_attacker", "wh_main_bundle_military_upkeep_free_force_siege_attacker", "wh_main_bundle_military_upkeep_free_force_siege_attacker"};
 local Mist_murderer_count = 1;
 --the list is where we keep track of who's currently being chased by which mist murderer invasion, this could potentionally be used to remove the force when their target is done
 local Mist_murder_list = {};
