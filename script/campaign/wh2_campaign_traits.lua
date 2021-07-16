@@ -7,7 +7,7 @@ local TRAIT_EXCLUSIONS = {
 		["wh2_main_trait_corrupted_vampire"] = {"wh_main_vmp_vampire_counts", "wh2_dlc09_tmb_tomb_kings", "wh2_dlc11_cst_vampire_coast"},
 		["wh2_main_trait_corrupted_skaven"] = {"wh2_main_skv_skaven", "wh_main_chs_chaos", "wh_dlc03_bst_beastmen"},
 		["wh2_main_trait_pacifist"] = {"wh_main_chs_chaos", "wh_dlc03_bst_beastmen"},
-		["wh2_main_trait_stance_recruiting"] = {"wh2_dlc09_tmb_tomb_kings"},
+		["wh2_main_trait_stance_recruiting"] = {"wh2_dlc09_tmb_tomb_kings", "wh_dlc03_bst_beastmen"},
 		["wh2_main_trait_defeats_against_chaos"] = {"wh_main_chs_chaos"},
 		["wh2_main_trait_agent_actions_against_chaos"] = {"wh_main_chs_chaos"},
 		["wh2_main_trait_wins_against_chaos"] = {"wh_main_chs_chaos"}
@@ -22,7 +22,7 @@ local TRAIT_EXCLUSIONS = {
 		["wh2_main_trait_far_from_capital"] = {"wh_main_sc_brt_bretonnia"},
 		["wh2_main_trait_lazy"] = {"wh_main_sc_brt_bretonnia", "wh_dlc05_sc_wef_wood_elves"},
 		["wh2_main_trait_lone_wolf"] = {"wh_main_sc_brt_bretonnia"},
-		["wh2_main_trait_post_battle_execute"] = {"wh_main_sc_brt_bretonnia"},
+		["wh2_main_trait_post_battle_execute"] = {"wh_main_sc_brt_bretonnia", "wh_main_sc_dwf_dwarfs"},
 		["wh2_main_trait_post_battle_ransom"] = {"wh_main_sc_brt_bretonnia"},
 		["wh2_main_trait_public_order"] = {"wh_main_sc_brt_bretonnia"},
 		["wh2_main_trait_razing"] = {"wh_main_sc_brt_bretonnia"},
@@ -37,12 +37,17 @@ local TRAIT_EXCLUSIONS = {
 		["wh2_main_trait_defeated_louen_leoncouer"] = {"wh_main_sc_brt_bretonnia"}
 	},
 	["faction"] = {
-		["wh2_main_trait_corrupted_chaos"] = {"wh2_main_def_cult_of_pleasure", "wh2_main_def_cult_of_pleasure_separatists", "wh2_dlc13_lzd_spirits_of_the_jungle"},
+		["wh2_main_trait_corrupted_chaos"] =
+			{"wh2_main_def_cult_of_pleasure",
+			"wh2_main_def_cult_of_pleasure_separatists",
+			"wh2_dlc13_lzd_spirits_of_the_jungle",
+			"wh2_dlc17_lzd_oxyotl"},
 		["wh2_main_trait_sacking"] = {"wh2_dlc13_lzd_spirits_of_the_jungle"}
 	}
 };
 
 local LEGENDARY_LORD_DEFEATED_TRAITS = {
+  --["character key"] (agent_subtypes) =   		"trait key" (character_traits)
 	["emp_karl_franz"] =						"wh2_main_trait_defeated_karl_franz", 					-- Karl Franz
 	["emp_balthasar_gelt"] =					"wh2_main_trait_defeated_balthasar_gelt",				-- Balthasar Gelt
 	["dlc04_emp_volkmar"] =						"wh2_main_trait_defeated_volkmar_the_grim", 			-- Volkmar the Grim
@@ -109,7 +114,10 @@ local LEGENDARY_LORD_DEFEATED_TRAITS = {
 	["wh2_dlc16_wef_drycha"] = 		            "wh2_main_trait_defeated_drycha",						-- Drycha
 	["wh2_dlc16_wef_sisters_of_twilight"] =     "wh2_main_trait_defeated_sisters_of_twilight",			-- Sisters of Twilight
 	["wh2_dlc16_skv_throt_the_unclean"] = 		"wh2_main_trait_defeated_throt",						-- Throt the Unclean
-	["wh2_twa03_def_rakarth"] = 				"wh2_twa03_trait_defeated_rakarth"						-- Rakarth
+	["wh2_twa03_def_rakarth"] = 				"wh2_twa03_trait_defeated_rakarth",						-- Rakarth
+	["wh2_dlc17_lzd_oxyotl"] =					"wh2_dlc17_trait_defeated_oxyotl",						-- Oxyotl
+	["wh2_dlc17_bst_taurox"] =					"wh2_dlc17_trait_defeated_taurox",						-- Taurox
+	["wh2_dlc17_dwf_thorek"] =					"wh2_dlc17_trait_defeated_thorek"						-- Thorek Ironbrow
 };
 
 local SUBCULTURES_TRAIT_KEYS = {
@@ -619,19 +627,21 @@ events.CharacterTurnStart[#events.CharacterTurnStart+1] =
 function (context)
 	local character = context:character();
 
-	if not character:faction():is_allowed_to_capture_territory() then
-		if cm:char_is_general_with_army(character) and character:has_region() and not character:region():is_abandoned() then
-			if character:turns_in_enemy_regions() >= 20 then
-				if character:trait_points("wh2_main_trait_lone_wolf") == 2 then
-					Give_Trait(character, "wh2_main_trait_lone_wolf");
-				end
-			elseif character:turns_in_enemy_regions() >= 15 then
-				if character:trait_points("wh2_main_trait_lone_wolf") == 1 then
-					Give_Trait(character, "wh2_main_trait_lone_wolf");
-				end
-			elseif character:turns_in_enemy_regions() >= 10 then
-				if character:trait_points("wh2_main_trait_lone_wolf") == 0 then
-					Give_Trait(character, "wh2_main_trait_lone_wolf");
+	if character:is_null_interface() == false then
+		if not character:faction():is_allowed_to_capture_territory() then
+			if cm:char_is_general_with_army(character) and character:has_region() and not character:region():is_abandoned() then
+				if character:turns_in_enemy_regions() >= 20 then
+					if character:trait_points("wh2_main_trait_lone_wolf") == 2 then
+						Give_Trait(character, "wh2_main_trait_lone_wolf");
+					end
+				elseif character:turns_in_enemy_regions() >= 15 then
+					if character:trait_points("wh2_main_trait_lone_wolf") == 1 then
+						Give_Trait(character, "wh2_main_trait_lone_wolf");
+					end
+				elseif character:turns_in_enemy_regions() >= 10 then
+					if character:trait_points("wh2_main_trait_lone_wolf") == 0 then
+						Give_Trait(character, "wh2_main_trait_lone_wolf");
+					end
 				end
 			end
 		end
