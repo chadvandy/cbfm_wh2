@@ -1,4 +1,5 @@
 local LEGENDARY_LORD_DEFEATED_TRAITS = {
+  --["character key"] (agent_subtypes) =   		"trait key" (character_traits)
 	["emp_karl_franz"] =						"wh2_main_trait_defeated_karl_franz", 					-- Karl Franz
 	["emp_balthasar_gelt"] =					"wh2_main_trait_defeated_balthasar_gelt",				-- Balthasar Gelt
 	["dlc04_emp_volkmar"] =						"wh2_main_trait_defeated_volkmar_the_grim", 			-- Volkmar the Grim
@@ -65,7 +66,10 @@ local LEGENDARY_LORD_DEFEATED_TRAITS = {
 	["wh2_dlc16_wef_drycha"] = 		            "wh2_main_trait_defeated_drycha",						-- Drycha
 	["wh2_dlc16_wef_sisters_of_twilight"] =     "wh2_main_trait_defeated_sisters_of_twilight",			-- Sisters of Twilight
 	["wh2_dlc16_skv_throt_the_unclean"] = 		"wh2_main_trait_defeated_throt",						-- Throt the Unclean
-	["wh2_twa03_def_rakarth"] = 				"wh2_twa03_trait_defeated_rakarth"						-- Rakarth
+	["wh2_twa03_def_rakarth"] = 				"wh2_twa03_trait_defeated_rakarth",						-- Rakarth
+	["wh2_dlc17_lzd_oxyotl"] =					"wh2_dlc17_trait_defeated_oxyotl",						-- Oxyotl
+	["wh2_dlc17_bst_taurox"] =					"wh2_dlc17_trait_defeated_taurox",						-- Taurox
+	["wh2_dlc17_dwf_thorek"] =					"wh2_dlc17_trait_defeated_thorek"						-- Thorek Ironbrow
 }
 
 function Get_Enemy_Legendary_Lords_In_Last_Battle(character)
