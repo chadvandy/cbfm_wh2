@@ -256,6 +256,16 @@ local subtype_anc = {
     ["wh2_dlc11_def_lokhir"] = {
         {"mission", "wh2_main_anc_armour_helm_of_the_kraken", "wh2_dlc11_lokhir_helm_of_the_kraken_stage_1", 11, "wh2_dlc11_lokhir_fellheart_helm_of_the_kraken_mp"},
         {"mission", "wh2_dlc11_anc_weapon_red_blades", "wh2_dlc11_def_lokhir_red_blades_stage_1", 2}
+    },
+    ["wh2_dlc17_lzd_oxyotl"] = {
+        {"mission", "wh2_dlc17_anc_weapon_the_golden_blowpipe_of_ptoohee", "wh2_dlc17_lzd_oxyotl_the_golden_blowpipe_of_ptoohee_stage_1", 5, "wh2_dlc17_lzd_oxyotl_the_golden_blowpipe_of_ptoohee_stage_4b_mpc"}
+    },
+    ["wh2_dlc17_bst_taurox"] = {
+        {"mission", "wh2_dlc17_anc_weapon_rune_tortured_axes", "wh2_dlc17_bst_taurox_rune_tortured_axes_stage_1", 5,"wh2_dlc17_bst_taurox_rune_tortured_axes_stage_3_mpc"}
+    },
+    ["wh2_dlc17_dwf_thorek"] = {
+        {"mission", "wh2_dlc17_anc_weapon_klad_brakak", "wh2_dlc17_dwf_thorek_klad_brakak_stage_1", 5,"wh2_dlc17_dwf_thorek_klad_brakak_stage_4_mp"},
+        {"mission", "wh2_dlc17_anc_armour_thoreks_rune_armour", "wh2_dlc17_dwf_thorek_rune_armour_quest", 3, "wh2_dlc17_dwf_thorek_rune_armour_quest"}
     }
 } --: map<string, vector<vector<WHATEVER>>>
 
