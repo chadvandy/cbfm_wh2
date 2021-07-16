@@ -27,6 +27,7 @@ local vow_lords = {
 	["dlc03_bst_khazrak"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge",
 	["dlc03_bst_malagor"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge",
 	["dlc05_bst_morghur"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge",
+	["wh2_dlc17_bst_taurox"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge",
 	-- Greenskin
 	["grn_grimgor_ironhide"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge",
 	["grn_azhag_the_slaughterer"] = "wh_dlc07_trait_brt_questing_vow_protect_pledge",
