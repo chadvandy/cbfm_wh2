@@ -249,6 +249,20 @@ local vor_custom_start_factions = {
 		}
 	},
 	--------------------
+	------ TRETCH ------
+	--------------------
+	{faction = "wh2_dlc09_skv_clan_rictus", 
+		custom_start = {
+			{
+				exceptions = nil,
+				changes = {
+					{"teleport_character", "wh2_dlc09_skv_clan_rictus", 263, 581, 271, 584, true},
+					{"teleport_character", "wh2_main_def_the_forgebound", 297, 582, 286, 581, true}
+				}
+			}
+		}
+	},
+	--------------------
 	----- GOR-ROK ------
 	--------------------
 	{faction = "wh2_main_lzd_itza", 
@@ -524,7 +538,7 @@ local vor_custom_start_factions = {
 			-- VORTEX NARRATIVE SETUP (only for Single player - listing all faction keys is messy but no time to implement an all factions check)
 				exceptions = {"wh2_main_hef_eataine", "wh2_main_hef_order_of_loremasters", "wh2_main_hef_avelorn", "wh2_main_hef_nagarythe", "wh2_main_hef_yvresse", "wh2_dlc15_hef_imrik", "wh2_main_lzd_hexoatl", "wh2_main_lzd_last_defenders", "wh2_dlc13_lzd_spirits_of_the_jungle", "wh2_dlc12_lzd_cult_of_sotek", "wh2_main_lzd_itza", "wh2_main_lzd_tlaqua", "wh2_main_def_naggarond", 
 								"wh2_main_def_cult_of_pleasure", "wh2_main_def_har_ganeth", "wh2_dlc11_def_the_blessed_dread", "wh2_main_def_hag_graef", "wh2_main_skv_clan_mors", "wh2_main_skv_clan_pestilens", "wh2_dlc09_skv_clan_rictus", "wh2_main_skv_clan_skyre", "wh2_main_skv_clan_eshin", "wh2_dlc11_cst_vampire_coast", "wh2_dlc11_cst_noctilus", "wh2_dlc11_cst_pirates_of_sartosa", 
-									"wh2_dlc11_cst_the_drowned", "wh2_dlc09_tmb_khemri", "wh2_dlc09_tmb_lybaras", "wh2_dlc09_tmb_followers_of_nagash", "wh2_dlc09_tmb_exiles_of_nehek", "wh2_dlc13_emp_the_huntmarshals_expedition", "wh2_dlc14_brt_chevaliers_de_lyonesse", "wh2_dlc15_grn_broken_axe", "wh2_dlc16_wef_sisters_of_twilight"},
+									"wh2_dlc11_cst_the_drowned", "wh2_dlc09_tmb_khemri", "wh2_dlc09_tmb_lybaras", "wh2_dlc09_tmb_followers_of_nagash", "wh2_dlc09_tmb_exiles_of_nehek", "wh2_dlc13_emp_the_huntmarshals_expedition", "wh2_dlc14_brt_chevaliers_de_lyonesse", "wh2_dlc15_grn_broken_axe", "wh2_dlc16_wef_sisters_of_twilight","wh2_dlc17_bst_taurox","wh2_dlc17_dwf_thorek_ironbrow","wh2_dlc17_lzd_oxyotl"},
 				changes = {
 					--Waystone faction 1 (Forest spirit focus) setup
 					{"create_army", "wh2_dlc16_wef_waystone_faction_1", "wh_dlc05_wef_inf_waywatchers_0,wh_dlc05_wef_mon_treekin_0,wh_dlc05_wef_mon_treekin_0,wh_dlc05_wef_inf_waywatchers_0,wh_dlc05_wef_mon_treekin_0,wh_dlc05_wef_mon_treekin_0,wh_dlc05_wef_inf_dryads_0,wh_dlc05_wef_inf_dryads_0,wh_dlc05_wef_inf_dryads_0,wh_dlc05_wef_mon_treekin_0,wh_dlc05_wef_mon_treeman_0,wh_dlc05_wef_mon_treeman_0,wh2_dlc16_wef_mon_zoats,wh_dlc05_wef_cav_sisters_thorn_0", 
@@ -625,9 +639,9 @@ local vor_custom_start_factions = {
 					{"block_diplomacy","faction:wh2_main_bst_stone_horn","faction:wh2_dlc16_wef_sisters_of_twilight","peace", false, false},
 					{"block_diplomacy","faction:wh2_dlc16_wef_sisters_of_twilight","faction:wh2_main_bst_stone_horn","peace", false, false},
 					{"block_diplomacy","faction:wh2_dlc16_grn_naggaroth_orcs","faction:wh2_dlc16_wef_sisters_of_twilight","peace", false, false},					
-					{"block_diplomacy","faction:wh2_dlc16_wef_sisters_of_twilight","faction:wh2_dlc16_grn_naggaroth_orcs","peace", false, false},					
-					{"block_diplomacy","faction:wh2_main_def_clar_karond","faction:wh2_dlc16_grn_naggaroth_orcs","war", false, false},					
-					{"block_diplomacy","faction:wh2_dlc16_grn_naggaroth_orcs","faction:wh2_main_def_clar_karond","war", false, false},					
+					{"block_diplomacy","faction:wh2_dlc16_wef_sisters_of_twilight","faction:wh2_dlc16_grn_naggaroth_orcs","peace", false, false},
+					{"block_diplomacy","faction:wh2_main_def_clar_karond","faction:wh2_dlc16_grn_naggaroth_orcs","war", false, false},
+					{"block_diplomacy","faction:wh2_dlc16_grn_naggaroth_orcs","faction:wh2_main_def_clar_karond","war", false, false},
 				}
 			}
 		}
@@ -670,6 +684,132 @@ local vor_custom_start_factions = {
 					{"teleport_character_faction_leader", "wh2_main_hef_nagarythe", 320, 610},
 				}
 			},
+		}
+	},
+	-------------------------
+	-- OXYOTL ---------------
+	-------------------------
+	{faction = "wh2_dlc17_lzd_oxyotl", 
+		custom_start = {
+			{
+				exceptions = nil,
+				changes = {
+					{"create_army", "wh2_dlc17_nor_deadwood_ravagers", "wh_main_nor_inf_chaos_marauders_0,wh_main_nor_inf_chaos_marauders_0,wh_dlc08_nor_mon_war_mammoth_0,wh_dlc08_nor_inf_marauder_hunters_1,wh_dlc08_nor_inf_marauder_hunters_1,wh_main_nor_mon_chaos_warhounds_0,wh_main_nor_mon_chaos_warhounds_0", 
+						"wh2_main_vor_deadwood_the_frozen_city", 352, 690, "nor_marauder_chieftain", true, 1,  {"names_name_2064688764", "", "names_name_2039007277", ""}
+					},
+					{"char_effect_bundle", "wh2_dlc17_nor_deadwood_ravagers", 352, 690, "wh_main_reduced_movement_range_90", 2},
+					{"force_diplomacy", "wh2_dlc17_lzd_oxyotl", "wh2_dlc17_nor_deadwood_ravagers", "war"},
+
+					{"region_change", "wh2_main_vor_deadwood_dargoth", "wh2_dlc17_nor_deadwood_ravagers"},
+					{"primary_slot_change", "wh2_main_vor_deadwood_dargoth", "wh_main_nor_outpost_minor_human_2"},
+					{"secondary_slot_change", "wh2_main_vor_deadwood_dargoth", 0, "wh_main_nor_outpost_garrison_2"},
+					{"secondary_slot_change", "wh2_main_vor_deadwood_dargoth", 1, "wh_main_nor_outpost_military_2"},
+					
+					{"region_change", "wh2_main_vor_deadwood_nagrar", "wh2_dlc17_nor_deadwood_ravagers"},
+					{"primary_slot_change", "wh2_main_vor_deadwood_nagrar", "wh_main_nor_outpost_minor_human_2_coast"},
+					{"port_slot_change", "wh2_main_vor_deadwood_nagrar", "wh_main_nor_port"},
+					{"secondary_slot_change", "wh2_main_vor_deadwood_nagrar", 0, "wh_main_nor_outpost_stables_2"},
+
+					{"region_change", "wh2_main_vor_deadwood_shagrath", "wh2_dlc17_nor_deadwood_ravagers"},
+					{"primary_slot_change", "wh2_main_vor_deadwood_shagrath", "wh_main_nor_outpost_minor_human_1_coast"},
+					{"port_slot_change", "wh2_main_vor_deadwood_shagrath", "wh_main_nor_port"},
+
+					{"kill_faction", "wh2_main_def_deadwood_sentinels"}					
+				}
+			}
+		}
+	},
+	-------------------------
+	---- THOREK IRONBROW ----
+	-------------------------
+	{faction = "wh2_dlc17_dwf_thorek_ironbrow", 
+		custom_start = {
+			{
+				exceptions = nil,
+				changes = {	
+					{"abandon_region", "wh2_main_vor_southern_spine_of_sotek_mine_of_the_bearded_skulls"},
+					{"region_change", "wh2_main_vor_southern_spine_of_sotek_mine_of_the_bearded_skulls", "wh2_dlc12_skv_clan_mange"},	
+					{"primary_slot_change", "wh2_main_vor_southern_spine_of_sotek_mine_of_the_bearded_skulls", "wh2_main_skv_settlement_major_2"},
+					{"secondary_slot_change", "wh2_main_vor_southern_spine_of_sotek_mine_of_the_bearded_skulls", 0, "wh2_main_skv_farm_2"},
+					{"add_units", "wh2_dlc12_skv_clan_mange", 150, 170, {"wh2_main_skv_inf_plague_monks","wh2_main_skv_inf_poison_wind_globadiers"}},
+					{"teleport_character", "wh2_dlc12_skv_clan_mange", 150, 170, 173, 96, true},
+					{"abandon_region", "wh2_main_vor_the_lost_valleys_subatuun"},
+					{"region_change", "wh2_main_vor_the_lost_valleys_subatuun", "wh2_dlc12_skv_clan_mange"},
+					{"primary_slot_change", "wh2_main_vor_the_lost_valleys_subatuun", "wh2_main_skv_settlement_minor_2"},
+					{"secondary_slot_change", "wh2_main_vor_the_lost_valleys_subatuun", 0, "wh2_main_skv_clanrats_1"},
+					{"secondary_slot_change", "wh2_main_vor_the_lost_valleys_subatuun", 1, "wh2_main_skv_farm_1"},
+					{"char_effect_bundle", "wh2_dlc12_skv_clan_mange", 173, 96, "wh_main_reduced_movement_range_90", 2},
+					{"add_development_points","wh2_main_vor_southern_spine_of_sotek_thrice-cursed_peak",1},
+					{"primary_slot_change", "wh2_main_vor_the_dragon_isles_the_blood_hall", "wh2_main_def_settlement_major_3_coast"}
+				}
+			},
+			{
+				exceptions = {"wh2_dlc13_lzd_spirits_of_the_jungle"},
+				changes = {
+					{"abandon_region", "wh2_main_vor_northern_spine_of_sotek_hualotal"},
+					{"region_change", "wh2_main_vor_northern_spine_of_sotek_hualotal", "wh2_dlc12_skv_clan_fester"},
+					{"primary_slot_change", "wh2_main_vor_northern_spine_of_sotek_hualotal", "wh2_main_skv_settlement_major_2"},
+					{"secondary_slot_change", "wh2_main_vor_northern_spine_of_sotek_hualotal", 0, "wh2_main_skv_monsters_1"},
+					{"abandon_region", "wh2_main_vor_northern_spine_of_sotek_cavern_of_the_mlexigaur"},
+					{"region_change", "wh2_main_vor_northern_spine_of_sotek_cavern_of_the_mlexigaur", "wh2_dlc12_skv_clan_fester"},
+					{"primary_slot_change", "wh2_main_vor_northern_spine_of_sotek_cavern_of_the_mlexigaur", "wh2_main_skv_settlement_minor_3"},
+					{"secondary_slot_change", "wh2_main_vor_northern_spine_of_sotek_cavern_of_the_mlexigaur", 0, "wh2_main_skv_defence_minor_2"},
+					{"region_change", "wh2_main_vor_the_dragon_isles_isle_of_the_crimson_skull", "wh2_main_def_blood_hall_coven"},
+					{"primary_slot_change", "wh2_main_vor_the_dragon_isles_isle_of_the_crimson_skull", "wh2_main_def_settlement_minor_2_coast"},
+					{"port_slot_change", "wh2_main_vor_the_dragon_isles_isle_of_the_crimson_skull", "wh2_main_def_port_1"}
+				}
+			},
+			{
+				exceptions = {"wh2_dlc11_def_the_blessed_dread"},
+				changes = {
+					{"primary_slot_change", "wh2_main_vor_culchan_plains_chupayotl", "wh2_main_def_settlement_major_3_coast"},
+					{"secondary_slot_change", "wh2_main_vor_culchan_plains_chupayotl", 1, "wh2_main_def_defence_major_1"},
+					{"port_slot_change", "wh2_main_vor_culchan_plains_chupayotl", "wh2_main_def_port_2"}
+				}
+			},
+			{
+				exceptions = {"wh2_main_skv_clan_skyre"},
+				changes = {
+					{"region_change", "wh2_main_vor_volcanic_islands_fuming_serpent", "wh2_main_skv_clan_skyre"},
+					{"primary_slot_change", "wh2_main_vor_volcanic_islands_fuming_serpent", "wh2_main_skv_settlement_minor_3_coast"},
+					{"port_slot_change", "wh2_main_vor_volcanic_islands_fuming_serpent", "wh2_main_skv_port_2"},
+					{"secondary_slot_change", "wh2_main_vor_volcanic_islands_fuming_serpent", 0, "wh2_main_skv_defence_minor_2"}
+				}
+			},
+			{
+				exceptions = {"wh2_dlc13_emp_the_huntmarshals_expedition"},
+				changes = {
+					{"primary_slot_change", "wh2_main_vor_jungles_of_green_mist_spektazuma", "wh_main_savage_settlement_major_2"}
+				}
+			}
+		}
+	},
+	
+	--------------------
+	------ TAUROX ------
+	--------------------
+
+	{faction = "wh2_dlc17_bst_taurox",
+		custom_start = {
+			{
+				exceptions = nil,
+				changes = {
+					{"region_change", "wh2_main_vor_shadow_wood_daldrachs_lair", "wh2_main_def_clar_karond"},
+					{"primary_slot_change", "wh2_main_vor_shadow_wood_daldrachs_lair", "wh2_main_def_settlement_minor_2"},
+					{"secondary_slot_change", "wh2_main_vor_shadow_wood_daldrachs_lair", 0, "wh2_main_def_farm_1"},
+					{"region_change", "wh2_main_vor_obsidian_peaks_ice_rock_gorge", "wh2_dlc16_grn_naggaroth_orcs"},
+					{"primary_slot_change", "wh2_main_vor_obsidian_peaks_ice_rock_gorge", "wh_main_grn_settlement_minor_2"},
+					{"secondary_slot_change", "wh2_main_vor_obsidian_peaks_ice_rock_gorge", 0, "wh_main_grn_military_1"},
+					{"region_change", "wh2_main_vor_obsidian_peaks_keshta_vault", "wh2_dlc16_grn_naggaroth_orcs"},
+					{"primary_slot_change", "wh2_main_vor_obsidian_peaks_keshta_vault", "wh_main_grn_settlement_major_2"},
+					{"secondary_slot_change", "wh2_main_vor_obsidian_peaks_keshta_vault", 0, "wh_main_grn_industry_1"},
+					{"region_change", "wh2_main_vor_the_black_flood_temple_of_khaine", "wh2_main_def_naggarond"},
+					{"primary_slot_change", "wh2_main_vor_the_black_flood_temple_of_khaine", "wh2_main_def_settlement_minor_2"},
+					{"secondary_slot_change", "wh2_main_vor_the_black_flood_temple_of_khaine", 0, "wh2_main_def_farm_1"},
+					{"char_effect_bundle", "wh2_main_def_clar_karond", 247, 540, "wh_main_reduced_movement_range_90", 3},	
+					{"char_effect_bundle", "wh2_main_def_clar_karond", 220, 584, "wh_main_reduced_movement_range_90", 3},						
+				}
+			}
 		}
 	},
 
@@ -1060,14 +1200,11 @@ local me_custom_start_factions = {
 			}
 		}
 	},
-
-
+	
 	--------------------
-	------- BEASTMEN----
+	------- MALAGOR ----
 	--------------------
-
-
-	{faction = "wh_dlc03_bst_beastmen",
+	{faction = "wh2_dlc17_bst_malagor",
 		custom_start = {
 			{
 				exceptions = nil,
@@ -1076,7 +1213,130 @@ local me_custom_start_factions = {
 				}
 			}
 		}
-	}
+	},
+	
+	--------------------
+	------- KHAZRAK ----
+	--------------------
+	{faction = "wh_dlc03_bst_beastmen",
+		custom_start = {
+			{
+				exceptions = nil,
+				changes = {
+					{"teleport_character_faction_leader", "wh_main_teb_estalia", 391, 251},
+					{"force_diplomacy", "wh_dlc03_bst_beastmen", "wh_dlc05_wef_argwylon", "peace"},
+					{"force_diplomacy", "wh_dlc03_bst_beastmen", "wh_dlc05_wef_wood_elves", "peace"}
+				}
+			}
+		}
+	},
+	
+	--------------------
+	------- MORGHUR ----
+	--------------------
+	{faction = "wh_dlc05_bst_morghur_herd",
+		custom_start = {
+			{
+				exceptions = nil,
+				changes = {
+					{"teleport_character_faction_leader", "wh_main_emp_nordland", 525, 552},
+					{"teleport_character_faction_leader", "wh_dlc05_bst_morghur_herd", 507, 551},
+				}
+			}
+		}
+	},
+	
+	-------------------------
+	-- OXYOTL ---------------
+	-------------------------
+	{faction = "wh2_dlc17_lzd_oxyotl", 
+		custom_start = {
+			{
+				exceptions = nil,
+				changes = {
+					{"create_army", "wh2_dlc17_nor_deadwood_ravagers", "wh_main_nor_inf_chaos_marauders_0,wh_main_nor_inf_chaos_marauders_0,wh_dlc08_nor_mon_war_mammoth_0,wh_dlc08_nor_inf_marauder_hunters_1,wh_dlc08_nor_inf_marauder_hunters_1,wh_main_nor_mon_chaos_warhounds_0,wh_main_nor_mon_chaos_warhounds_0", 
+						"wh2_main_deadwood_the_frozen_city", 252, 672, "nor_marauder_chieftain", true, 1,  {"names_name_2064688764", "", "names_name_2039007277", ""}
+					},
+					{"char_effect_bundle", "wh2_dlc17_nor_deadwood_ravagers", 252, 672, "wh_main_reduced_movement_range_90", 2},
+					{"force_diplomacy", "wh2_dlc17_lzd_oxyotl", "wh2_dlc17_nor_deadwood_ravagers", "war"},
+
+					{"region_change", "wh2_main_deadwood_dargoth", "wh2_dlc17_nor_deadwood_ravagers"},
+					{"primary_slot_change", "wh2_main_deadwood_dargoth", "wh_main_nor_outpost_minor_human_2"},
+					{"secondary_slot_change", "wh2_main_deadwood_dargoth", 0, "wh_main_nor_outpost_garrison_2"},
+					{"secondary_slot_change", "wh2_main_deadwood_dargoth", 1, "wh_main_nor_outpost_military_2"},
+					
+					{"region_change", "wh2_main_deadwood_nagrar", "wh2_dlc17_nor_deadwood_ravagers"},
+					{"primary_slot_change", "wh2_main_deadwood_nagrar", "wh_main_nor_outpost_minor_human_2_coast"},
+					{"port_slot_change", "wh2_main_deadwood_nagrar", "wh_main_nor_port"},
+					{"secondary_slot_change", "wh2_main_deadwood_nagrar", 0, "wh_main_nor_outpost_stables_2"},
+
+					{"region_change", "wh2_main_deadwood_shagrath", "wh2_dlc17_nor_deadwood_ravagers"},
+					{"primary_slot_change", "wh2_main_deadwood_shagrath", "wh_main_nor_outpost_minor_human_1_coast"},
+					{"port_slot_change", "wh2_main_deadwood_shagrath", "wh_main_nor_port"},
+
+					{"kill_faction", "wh2_main_def_deadwood_sentinels"}
+				}
+			}
+		}
+	},
+	-------------------------
+	---- THOREK IRONBROW ----	
+	-------------------------
+	{faction = "wh2_dlc17_dwf_thorek_ironbrow",
+		custom_start = {
+			{
+				exceptions = nil,
+				changes = {
+					{"region_change", "wh2_main_southlands_worlds_edge_mountains_lost_plateau", "wh2_main_grn_arachnos"},	
+					{"primary_slot_change", "wh2_main_southlands_worlds_edge_mountains_lost_plateau", "wh_main_grn_settlement_minor_2"},
+					{"secondary_slot_change", "wh2_main_southlands_worlds_edge_mountains_lost_plateau", 0, "wh_main_grn_farm_1"},
+					{"secondary_slot_change", "wh2_main_southlands_worlds_edge_mountains_lost_plateau", 1, "wh_main_grn_garrison_1"},
+					{"create_army", "wh2_main_grn_arachnos","wh_main_grn_inf_orc_boyz,wh_main_grn_inf_orc_boyz,wh_main_grn_inf_orc_arrer_boyz,wh_main_grn_mon_arachnarok_spider_0", 
+						"wh2_main_southlands_worlds_edge_mountains_lost_plateau", 770, 44, "grn_goblin_great_shaman", false, 1
+					},
+					{"char_effect_bundle", "wh2_main_grn_arachnos", 770, 44, "wh_main_reduced_movement_range_90", 2}
+				}
+			}
+		}
+	},
+	
+	--------------------
+	------ TAUROX ------
+	--------------------
+
+	{faction = "wh2_dlc17_bst_taurox",
+		custom_start = {
+			{
+				exceptions = nil,
+				changes = {
+					{"region_change", "wh2_main_blackspine_mountains_red_desert", "wh2_dlc16_grn_naggaroth_orcs"},
+					{"primary_slot_change", "wh2_main_blackspine_mountains_red_desert", "wh_main_grn_settlement_major_2"},
+					{"secondary_slot_change", "wh2_main_blackspine_mountains_red_desert", 0, "wh_main_grn_farm_1"},
+					{"region_change", "wh2_main_obsidian_peaks_storag_kor", "wh2_dlc16_grn_naggaroth_orcs"},
+					{"primary_slot_change", "wh2_main_obsidian_peaks_storag_kor", "wh_main_grn_settlement_minor_2"},
+					{"secondary_slot_change", "wh2_main_obsidian_peaks_storag_kor", 0, "wh_main_grn_military_1"},
+					{"region_change", "wh2_main_the_black_flood_temple_of_khaine", "wh2_dlc16_grn_naggaroth_orcs"},
+					{"primary_slot_change", "wh2_main_the_black_flood_temple_of_khaine", "wh_main_grn_settlement_minor_2"},
+					{"secondary_slot_change", "wh2_main_the_black_flood_temple_of_khaine", 0, "wh_main_grn_garrison_1"},
+					{"region_change", "wh2_main_iron_mountains_rackdo_gorge", "wh2_dlc16_grn_naggaroth_orcs"},
+					{"primary_slot_change", "wh2_main_iron_mountains_rackdo_gorge", "wh_main_grn_settlement_minor_2"},
+					{"secondary_slot_change", "wh2_main_iron_mountains_rackdo_gorge", 0, "wh_main_grn_industry_1"},
+					
+					{"region_change", "wh2_main_the_black_flood_shroktak_mount", "wh2_dlc16_grn_naggaroth_orcs"},
+					{"primary_slot_change", "wh2_main_the_black_flood_shroktak_mount", "wh_main_grn_settlement_minor_2"},
+					{"secondary_slot_change", "wh2_main_the_black_flood_shroktak_mount", 0, "wh_main_grn_military_1"},
+					
+					{"region_change", "wh2_main_the_black_flood_cragroth_deep", "wh2_dlc16_grn_naggaroth_orcs"},
+					{"primary_slot_change", "wh2_main_the_black_flood_cragroth_deep", "wh_main_grn_settlement_minor_2"},
+					{"secondary_slot_change", "wh2_main_the_black_flood_cragroth_deep", 0, "wh_main_grn_farm_1"},
+					
+					{"teleport_character", "wh2_main_bst_ripper_horn", 44, 520, 46, 366, true},
+					{"teleport_character", "wh2_main_bst_manblight", 15, 565, 236, 601, true}
+
+				}
+			}
+		}
+	},
 };
 
 
@@ -2328,6 +2588,19 @@ function generate_character_name(subculture, subtype)
 			{fore = "1162975771", clan = "", family = "1139556517", other = ""}, 	--Walker the Slasher
 			{fore = "1282984516", clan = "", family = "1237200181", other = ""}, 	--Ormgrim of the Wolfclaw
 			{fore = "1305576027", clan = "", family = "1240989680", other = ""} 	--Halvthor Oskharsson
+		};
+	elseif subculture == "wh_main_sc_chs_chaos" then
+		names = {
+			{fore = "2147345958", clan = "", family = "2147351389", other = ""}, -- Crom the Warrior
+			{fore = "2147353726", clan = "", family = "2147351149", other = ""}, -- Jager the Meek
+			{fore = "2147346126", clan = "", family = "2147350971", other = ""}, -- Azubhor the Insane
+			{fore = "2147357445", clan = "", family = "2147350764", other = ""}, -- Grogg the Lazy
+			{fore = "2147353674", clan = "", family = "2147350619", other = ""}, -- Ventris the Man-Slayer
+			{fore = "2147346009", clan = "", family = "2147350035", other = ""}, -- Haargroth the Gore-Master
+			{fore = "2147353791", clan = "", family = "2147350437", other = ""}, -- Barbouros the Mad
+			{fore = "2147345981", clan = "", family = "2147350948", other = ""}, -- Festus the Scourgeborn
+			{fore = "352461555", clan = "", family = "2147353266", other = ""},  -- Kihar Bloodeater
+			{fore = "2147353701", clan = "", family = "2147353297", other = ""}  -- Ragnar Doomborn
 		};
 	elseif subculture == "wh2_main_sc_def_dark_elves" then
 		if subtype:find("wh2_main_def_dreadlord_fem") or subtype:find("wh2_dlc10_def_supreme_sorceress_") then

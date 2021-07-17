@@ -132,7 +132,17 @@ local subtype_anc = {
     },
     ["wh2_dlc16_wef_sisters_of_twilight"] = {
 		{"mission", "wh2_dlc16_anc_mount_wef_cha_sisters_of_twilight_forest_dragon", "wh2_dlc16_great_vortex_wef_sisters_dragon_stage_1", 12,"wh2_dlc16_great_vortex_wef_sisters_dragon_stage_4_mpc"}
-	}
+	},
+    ["wh2_dlc17_lzd_oxyotl"] = {
+        {"mission", "wh2_dlc17_anc_weapon_the_golden_blowpipe_of_ptoohee", "wh2_dlc17_great_vortex_lzd_oxyotl_the_golden_blowpipe_of_ptoohee_stage_1", 5, "wh2_dlc17_great_vortex_lzd_oxyotl_the_golden_blowpipe_of_ptoohee_stage_4b_mpc"}
+    },
+    ["wh2_dlc17_bst_taurox"] = {
+        {"mission", "wh2_dlc17_anc_weapon_rune_tortured_axes", "wh2_dlc17_great_vortex_bst_taurox_rune_tortured_axes_stage_1", 5,"wh2_dlc17_great_vortex_bst_taurox_rune_tortured_axes_stage_3_mpc"}
+    },
+    ["wh2_dlc17_dwf_thorek"] = {
+        {"mission", "wh2_dlc17_anc_weapon_klad_brakak", "wh2_dlc17_great_vortex_dwf_thorek_klad_brakak_stage_1", 5,"wh2_dlc17_great_vortex_dwf_thorek_klad_brakak_stage_4_mp"},
+        {"mission", "wh2_dlc17_anc_armour_thoreks_rune_armour", "wh2_dlc17_great_vortex_dwf_thorek_rune_armour_quest", 3, "wh2_dlc17_great_vortex_dwf_thorek_rune_armour_quest"}
+    }
 } --: map<string, vector<vector<WHATEVER>>>
 
 local missing_anc = {

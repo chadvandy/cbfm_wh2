@@ -1699,7 +1699,7 @@ function Worldroots:set_up_generic_encounter_forced_battle(character, target_fac
 		effect_bundle = self.invasion_force_interrupted_effect_bundle
 	end
 
-	Forced_Battle_Manager:trigger_forced_battle_against_generated_ai_army(
+	Forced_Battle_Manager:trigger_forced_battle_with_generated_army(
 		interacting_force_cqi,
 		target_faction_key,
 		force_template_key,
@@ -2017,7 +2017,7 @@ function Worldroots:set_up_ritual_listeners()
 				invasion_faction = forest.invasion_faction_alternate
 			end
 
-			Forced_Battle_Manager:trigger_forced_battle_against_generated_ai_army(
+			Forced_Battle_Manager:trigger_forced_battle_with_generated_army(
 				interacting_force_cqi,
 				invasion_faction,
 				cm:get_faction(invasion_faction):subculture(),
