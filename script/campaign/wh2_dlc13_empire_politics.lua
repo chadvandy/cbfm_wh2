@@ -1415,6 +1415,7 @@ function empire_spawn_human_defender_for_invasion()
 			local char = char_list:item_at(i)
 			if not char:has_military_force() and not char:is_wounded() and char:character_type("general") then
 				table.insert(empire_political_invasion.cqi_table, char:command_queue_index())
+				cm:set_character_excluded_from_trespassing(char ,true)
 			end
 		end
 		------------------------------------- END -------------------------------------
@@ -1838,12 +1839,15 @@ function empire_dilemma_choice(context)
 			cm:disable_event_feed_events(true, "wh_event_category_character", "", "");
 			if empire_political_invasion.friendly ~= nil and empire_political_invasion.friendly > 0 then
 				------------------------------------- CBF -------------------------------------
-				out("cbf/empire/create_force/empire_political_invasion.friendly = "..tostring(empire_political_invasion.friendly))
+				--out("cbf/empire/create_force/empire_political_invasion.friendly = "..tostring(empire_political_invasion.friendly))
 				if empire_political_invasion.cqi_table then
 					for _, cqi in ipairs(empire_political_invasion.cqi_table) do
 						if cqi == empire_political_invasion.friendly then
 							out("cbf/empire/set_character_immortality/cqi = "..tostring(empire_political_invasion.friendly))
 							cm:set_character_immortality(cm:char_lookup_str(empire_political_invasion.friendly), true)
+						else
+							local char = cm:get_character_by_cqi(cqi)
+							cm:set_character_excluded_from_trespassing(char, false)
 						end
 					end
 				end
@@ -1854,10 +1858,11 @@ function empire_dilemma_choice(context)
 						return true
 					end,
 					function(context)
-						out("cbf/empire/cbf_CharacterCreated/old_cqi = "..tostring(empire_political_invasion.friendly))
+						--out("cbf/empire/cbf_CharacterCreated/old_cqi = "..tostring(empire_political_invasion.friendly))
 						local new_cqi = context:character():command_queue_index()
-						out("cbf/empire/cbf_CharacterCreated/new_cqi = "..tostring(new_cqi))
+						--out("cbf/empire/cbf_CharacterCreated/new_cqi = "..tostring(new_cqi))
 						cm:set_character_immortality(cm:char_lookup_str(new_cqi), false)
+						cm:set_character_excluded_from_trespassing(context:character(), false)
 						core:remove_listener("cbf_CharacterCreated"..tostring(empire_political_invasion.friendly))
 					end,
 					false
@@ -1888,12 +1893,15 @@ function empire_kill_invasion_armies()
 
 		if empire_political_invasion.friendly ~= nil and empire_political_invasion.friendly > 0 then
 				------------------------------------- CBF -------------------------------------
-				out("cbf/empire/create_force/empire_political_invasion.friendly = "..tostring(empire_political_invasion.friendly))
+				--out("cbf/empire/create_force/empire_political_invasion.friendly = "..tostring(empire_political_invasion.friendly))
 				if empire_political_invasion.cqi_table then
 					for _, cqi in ipairs(empire_political_invasion.cqi_table) do
 						if cqi == empire_political_invasion.friendly then
 							out("cbf/empire/set_character_immortality/cqi = "..tostring(empire_political_invasion.friendly))
 							cm:set_character_immortality(cm:char_lookup_str(empire_political_invasion.friendly), true)
+						else
+							local char = cm:get_character_by_cqi(cqi)
+							cm:set_character_excluded_from_trespassing(char, false)
 						end
 					end
 				end
@@ -1904,9 +1912,10 @@ function empire_kill_invasion_armies()
 						return true
 					end,
 					function(context)
-						out("cbf/empire/cbf_CharacterCreated/old_cqi = "..tostring(empire_political_invasion.friendly))
+						--out("cbf/empire/cbf_CharacterCreated/old_cqi = "..tostring(empire_political_invasion.friendly))
 						local new_cqi = context:character():command_queue_index()
-						out("cbf/empire/cbf_CharacterCreated/new_cqi = "..tostring(new_cqi))
+						--out("cbf/empire/cbf_CharacterCreated/new_cqi = "..tostring(new_cqi))
+						cm:set_character_excluded_from_trespassing(context:character(), false)
 						cm:set_character_immortality(cm:char_lookup_str(new_cqi), false)
 						core:remove_listener("cbf_CharacterCreated"..tostring(empire_political_invasion.friendly))
 					end,
