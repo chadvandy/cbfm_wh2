@@ -188,7 +188,7 @@ function add_empire_politics_listeners()
 				local region_elector = EMPIRE_REGION_TO_ELECTOR_KEY[region_key];
 
 				if region_elector ~= nil then
-					if region_key == EMPIRE_ELECTOR_COUNTS[region_elector].capital and EMPIRE_ELECTOR_COUNTS[region_elector].faction ~= faction:name() then
+					if region_key == EMPIRE_ELECTOR_COUNTS[region_elector].capital and EMPIRE_ELECTOR_COUNTS[region_elector].faction_key ~= faction:name() then
 						core:trigger_event("ScriptEventElectorCapitalTaken");
 						break;
 					end
@@ -1415,7 +1415,6 @@ function empire_spawn_human_defender_for_invasion()
 			local char = char_list:item_at(i)
 			if not char:has_military_force() and not char:is_wounded() and char:character_type("general") then
 				table.insert(empire_political_invasion.cqi_table, char:command_queue_index())
-				cm:set_character_excluded_from_trespassing(char ,true)
 			end
 		end
 		------------------------------------- END -------------------------------------
@@ -1845,9 +1844,6 @@ function empire_dilemma_choice(context)
 						if cqi == empire_political_invasion.friendly then
 							out("cbf/empire/set_character_immortality/cqi = "..tostring(empire_political_invasion.friendly))
 							cm:set_character_immortality(cm:char_lookup_str(empire_political_invasion.friendly), true)
-						else
-							local char = cm:get_character_by_cqi(cqi)
-							cm:set_character_excluded_from_trespassing(char, false)
 						end
 					end
 				end
@@ -1862,7 +1858,6 @@ function empire_dilemma_choice(context)
 						local new_cqi = context:character():command_queue_index()
 						--out("cbf/empire/cbf_CharacterCreated/new_cqi = "..tostring(new_cqi))
 						cm:set_character_immortality(cm:char_lookup_str(new_cqi), false)
-						cm:set_character_excluded_from_trespassing(context:character(), false)
 						core:remove_listener("cbf_CharacterCreated"..tostring(empire_political_invasion.friendly))
 					end,
 					false
@@ -1899,9 +1894,6 @@ function empire_kill_invasion_armies()
 						if cqi == empire_political_invasion.friendly then
 							out("cbf/empire/set_character_immortality/cqi = "..tostring(empire_political_invasion.friendly))
 							cm:set_character_immortality(cm:char_lookup_str(empire_political_invasion.friendly), true)
-						else
-							local char = cm:get_character_by_cqi(cqi)
-							cm:set_character_excluded_from_trespassing(char, false)
 						end
 					end
 				end
@@ -1915,7 +1907,6 @@ function empire_kill_invasion_armies()
 						--out("cbf/empire/cbf_CharacterCreated/old_cqi = "..tostring(empire_political_invasion.friendly))
 						local new_cqi = context:character():command_queue_index()
 						--out("cbf/empire/cbf_CharacterCreated/new_cqi = "..tostring(new_cqi))
-						cm:set_character_excluded_from_trespassing(context:character(), false)
 						cm:set_character_immortality(cm:char_lookup_str(new_cqi), false)
 						core:remove_listener("cbf_CharacterCreated"..tostring(empire_political_invasion.friendly))
 					end,
