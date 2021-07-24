@@ -78,6 +78,15 @@ function add_empire_politics_listeners()
 			function(context) empire_turn_start(context) end,
 			true
 		);
+		------------------------------------- CBF -------------------------------------
+		core:add_listener(
+			"emp_CharacterSackedSettlement",
+			"CharacterSackedSettlement",
+			true,
+			function(context) empire_region_sacked(context) end,
+			true
+		);
+		------------------------------------- END -------------------------------------
 	end
 	core:add_listener(
 		"emp_RegionFactionChangeEvent",
@@ -1619,15 +1628,35 @@ function empire_trigger_succession_dilemma(faction, elector_override, fealty_eve
 	return false;
 end
 
+------------------------------------- CBF -------------------------------------
+function empire_region_sacked(context)
+	local region = context:garrison_residence():region();
+	local target_faction = context:garrison_residence():faction();
+	local faction_key = context:character():faction():name();
+	local region_key = region:name();
+	if empire_recently_returned_regions[region_key] ~= nil then
+		if empire_recently_returned_regions[region_key].faction == faction_key then
+			empire_recently_returned_regions[region_key].previous_faction = target_faction:name();
+		end
+	end
+end
+------------------------------------- END -------------------------------------
 function empire_region_occupied(context)
 	local region = context:region();
 	local region_key = region:name();
 	local previous_faction = context:previous_faction();
 	local conquerer = region:owning_faction();
+
+	------------------------------------- CBF -------------------------------------
+	if empire_recently_returned_regions[region_key] ~= nil then
+		empire_recently_returned_regions[region_key].previous_faction = previous_faction:name();
+	end
+	------------------------------------- END -------------------------------------
+
 	-- "normal capture", "campaign director", "unopposed capture", "bribery", "surrendered region", "diplomacy trade"
 	-- "cli command", "startpos setup", "abandoned", "abandoned to rebels", "civil war", "payload", "unknown reason"
 	local reason = context:reason();
-	
+
 	-- Remove any existing instance of a region return dilemma
 	empire_remove_from_return_queue(region_key);
 
@@ -1937,8 +1966,13 @@ function empire_occupation_decision(context)
 		if empire_recently_returned_regions[region_key] ~= nil then
 			if empire_recently_returned_regions[region_key].faction == faction_key then
 				if empire_recently_returned_regions[region_key].cooldown > 0 then
-					cm:faction_add_pooled_resource(faction_key, "emp_imperial_authority", "wh2_dlc13_resource_factor_attacked_returned_region", empire_authority_took_returned_region);
-					empire_recently_returned_regions[region_key] = nil;
+					------------------------------------- CBF -------------------------------------
+					local region_elector = EMPIRE_REGION_TO_ELECTOR_KEY[region_key];
+					if EMPIRE_ELECTOR_COUNTS[region_elector].faction_key == empire_recently_returned_regions[region_key].previous_faction then
+						cm:faction_add_pooled_resource(faction_key, "emp_imperial_authority", "wh2_dlc13_resource_factor_attacked_returned_region", empire_authority_took_returned_region);
+						empire_recently_returned_regions[region_key] = nil;
+					end
+					------------------------------------- END -------------------------------------
 				end
 			end
 		end
@@ -1964,7 +1998,7 @@ function empire_occupation_decision(context)
 			end,
 			0.2
 		);
-		empire_recently_returned_regions[region_key] = {faction = faction_key, cooldown = empire_recently_returned_cooldown};
+		empire_recently_returned_regions[region_key] = {faction = faction_key, cooldown = empire_recently_returned_cooldown, previous_faction = nil};
 	elseif decision == "1252885465" then
 		-- RETURN TO ELECTOR
 		local region_elector = EMPIRE_REGION_TO_ELECTOR_KEY[region_key];
@@ -1984,7 +2018,7 @@ function empire_occupation_decision(context)
 			end,
 			0.2
 		);
-		empire_recently_returned_regions[region_key] = {faction = faction_key, cooldown = empire_recently_returned_cooldown};
+		empire_recently_returned_regions[region_key] = {faction = faction_key, cooldown = empire_recently_returned_cooldown, previous_faction = nil};
 	elseif decision == "662" then
 		local region_elector = EMPIRE_REGION_TO_ELECTOR_KEY[region_key];
 
