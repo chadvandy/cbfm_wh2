@@ -633,7 +633,7 @@ function char_army_has_unit(character, unit)
 
 	-- allow a table of units to be passed in as a parameter
 	if type(unit) == "table" then
-		if not character:has_military_force() or not character:is_embedded_in_military_force() then
+		if not character:has_military_force() and not character:is_embedded_in_military_force() then
 			return false;
 		end;
 	
