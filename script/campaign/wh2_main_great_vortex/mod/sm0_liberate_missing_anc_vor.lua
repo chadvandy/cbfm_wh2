@@ -159,7 +159,12 @@ local missing_anc = {
     {["faction"] = "wh2_main_lzd_tlaqua", ["subtype"] = "wh2_dlc12_lzd_tiktaqto", ["key"] = "wh2_dlc12_anc_weapon_the_blade_of_ancient_skies"},
     {["faction"] = "wh2_dlc11_cst_vampire_coast", ["subtype"] = "wh2_dlc11_cst_harkon", ["key"] = "wh2_dlc11_anc_follower_captain_drekla"},
     {["faction"] = "wh2_dlc15_hef_imrik", ["subtype"] = "wh2_dlc15_hef_imrik", ["key"] = "wh2_dlc15_anc_weapon_star_lance"},
-    {["faction"] = "wh2_twa03_def_rakarth", ["subtype"] = "wh2_twa03_def_rakarth", ["key"] = "wh2_twa03_anc_armour_beast_armour_of_karond_kar"}
+    {["faction"] = "wh2_twa03_def_rakarth", ["subtype"] = "wh2_twa03_def_rakarth", ["key"] = "wh2_twa03_anc_armour_beast_armour_of_karond_kar"},
+    {["faction"] = "wh2_dlc17_dwf_thorek_ironbrow", ["subtype"] = "wh2_dlc17_dwf_thorek", ["key"] = "wh_main_anc_rune_master_rune_of_stoicism"},
+    {["faction"] = "wh2_dlc17_dwf_thorek_ironbrow", ["subtype"] = "wh2_dlc17_dwf_thorek", ["key"] = "wh2_dlc17_anc_follower_dwf_kraggi"},
+    {["faction"] = "wh2_dlc17_dwf_thorek_ironbrow", ["subtype"] = "wh2_dlc17_dwf_thorek", ["key"] = "wh2_dlc17_anc_rune_engineering_rune_of_burning"},
+    {["faction"] = "wh2_dlc17_lzd_oxyotl", ["subtype"] = "wh2_dlc17_lzd_oxyotl", ["key"] = "wh2_dlc17_anc_banner_lzd_poison_fireblood_toxin"},
+    {["faction"] = "wh2_dlc17_lzd_oxyotl", ["subtype"] = "wh2_dlc17_lzd_oxyotl", ["key"] = "wh2_dlc17_anc_banner_lzd_poison_toadskin_essence"}
 } --:vector<map<string, string>>
 
 function sm0_liberate_missing_anc_vor()
@@ -271,7 +276,7 @@ function sm0_liberate_missing_anc_vor()
         "FactionTurnStart",
         true,
         function(context)
-            for _, anc in pairs(missing_anc) do
+            for _, anc in ipairs(missing_anc) do
                 if not cm:model():world():ancillary_exists(anc.key) then
                     local faction = cm:get_faction(anc.faction)
                     local not_found = true
