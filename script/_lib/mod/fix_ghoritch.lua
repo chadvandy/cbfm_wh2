@@ -36,11 +36,23 @@ function add_throt_unlock_ghoritch_listeners()
                 -- number Faction cqi
                 -- string Agent record key from the unique_agents table
                 -- boolean Force agent to spawn even if invalid.
-                cm:spawn_unique_agent(throt_faction_cqi, "wh2_dlc16_skv_ghoritch", false);
-                cm:set_saved_value("ghoritch_unlocked", true);
-                out("#### Ghoritch spawned for Throt ####");		-- re-enable to help with testing
+                core:add_listener(
+                    "Ghoritch_UniqueAgentSpawned",
+                    "UniqueAgentSpawned",
+                    function(context)
+                        local character = context:unique_agent_details():character();
+
+                        return not character:is_null_interface() and character:character_subtype("wh2_dlc16_skv_ghoritch");
+                    end,
+                    function(context)
+                        cm:set_saved_value("ghoritch_unlocked", true);
+                        out("#### Ghoritch spawned for Throt ####");		-- re-enable to help with testing
+                    end,
+                    false
+                );
+                cm:spawn_unique_agent(throt_faction_cqi, "wh2_dlc16_skv_ghoritch", false);     
             end,
-            false
+            true
         );
     --end
 end
