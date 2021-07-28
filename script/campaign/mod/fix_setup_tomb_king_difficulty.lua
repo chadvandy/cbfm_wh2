@@ -17,6 +17,14 @@ local tomb_king_difficulty_modifiers = {
 	["wh2_dlc09_tmb_the_sentinels"] = "wh2_main_negative_research_speed_50"
 }
 
+local difficulty_settings = {
+	"easy",
+	"normal",
+	"hard",
+	"very hard",
+	"legendary"
+}
+
 function setup_tomb_king_difficulty_modifiers()
 	local faction_list = cm:model():world():faction_list();
 	
@@ -47,7 +55,8 @@ function setup_tomb_king_difficulty_modifiers()
 				local difficulty_effect = tomb_king_difficulty_modifiers[fac_type][difficulty_str];
 				
 				if faction:is_quest_battle_faction() == false and faction:has_effect_bundle(difficulty_effect) == false then
-                    for _, effect_bundle_key in pairs(tomb_king_difficulty_modifiers[fac_type]) do
+                    for _, difficulty in ipairs(difficulty_settings) do 
+						local effect_bundle_key = tomb_king_difficulty_modifiers[fac_type][difficulty]
                         if faction:has_effect_bundle(effect_bundle_key) then
                             cm:remove_effect_bundle(effect_bundle_key, faction:name())
                         end
