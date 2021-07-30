@@ -1871,26 +1871,28 @@ function empire_dilemma_choice(context)
 				if empire_political_invasion.cqi_table then
 					for _, cqi in ipairs(empire_political_invasion.cqi_table) do
 						if cqi == empire_political_invasion.friendly then
-							out("cbf/empire/set_character_immortality/cqi = "..tostring(empire_political_invasion.friendly))
-							cm:set_character_immortality(cm:char_lookup_str(empire_political_invasion.friendly), true)
+							if char and (char:character_subtype("dlc04_emp_arch_lector") or char:character_subtype("emp_lord") or char:character_subtype("wh2_dlc13_emp_cha_huntsmarshal_0")) then
+								out("cbf/empire/set_character_immortality/cqi = "..tostring(empire_political_invasion.friendly))
+								cm:set_character_immortality(cm:char_lookup_str(empire_political_invasion.friendly), true)
+								core:add_listener(
+									"cbf_CharacterCreated"..tostring(empire_political_invasion.friendly),
+									"CharacterCreated",
+									function(context)
+										return true
+									end,
+									function(context)
+										--out("cbf/empire/cbf_CharacterCreated/old_cqi = "..tostring(empire_political_invasion.friendly))
+										local new_cqi = context:character():command_queue_index()
+										--out("cbf/empire/cbf_CharacterCreated/new_cqi = "..tostring(new_cqi))
+										cm:set_character_immortality(cm:char_lookup_str(new_cqi), false)
+										core:remove_listener("cbf_CharacterCreated"..tostring(empire_political_invasion.friendly))
+									end,
+									false
+								)
+							end
 						end
 					end
 				end
-				core:add_listener(
-					"cbf_CharacterCreated"..tostring(empire_political_invasion.friendly),
-					"CharacterCreated",
-					function(context)
-						return true
-					end,
-					function(context)
-						--out("cbf/empire/cbf_CharacterCreated/old_cqi = "..tostring(empire_political_invasion.friendly))
-						local new_cqi = context:character():command_queue_index()
-						--out("cbf/empire/cbf_CharacterCreated/new_cqi = "..tostring(new_cqi))
-						cm:set_character_immortality(cm:char_lookup_str(new_cqi), false)
-						core:remove_listener("cbf_CharacterCreated"..tostring(empire_political_invasion.friendly))
-					end,
-					false
-				)
 				------------------------------------- END -------------------------------------
 				cm:kill_character(empire_political_invasion.friendly, true, false);
 			end
@@ -1918,29 +1920,31 @@ function empire_kill_invasion_armies()
 		if empire_political_invasion.friendly ~= nil and empire_political_invasion.friendly > 0 then
 				------------------------------------- CBF -------------------------------------
 				--out("cbf/empire/create_force/empire_political_invasion.friendly = "..tostring(empire_political_invasion.friendly))
-				if empire_political_invasion.cqi_table then
+				if next(empire_political_invasion.cqi_table) then
 					for _, cqi in ipairs(empire_political_invasion.cqi_table) do
 						if cqi == empire_political_invasion.friendly then
-							out("cbf/empire/set_character_immortality/cqi = "..tostring(empire_political_invasion.friendly))
-							cm:set_character_immortality(cm:char_lookup_str(empire_political_invasion.friendly), true)
+							if char and (char:character_subtype("dlc04_emp_arch_lector") or char:character_subtype("emp_lord") or char:character_subtype("wh2_dlc13_emp_cha_huntsmarshal_0")) then
+								out("cbf/empire/set_character_immortality/cqi = "..tostring(empire_political_invasion.friendly))
+								cm:set_character_immortality(cm:char_lookup_str(empire_political_invasion.friendly), true)
+								core:add_listener(
+									"cbf_CharacterCreated"..tostring(empire_political_invasion.friendly),
+									"CharacterCreated",
+									function(context)
+										return true
+									end,
+									function(context)
+										--out("cbf/empire/cbf_CharacterCreated/old_cqi = "..tostring(empire_political_invasion.friendly))
+										local new_cqi = context:character():command_queue_index()
+										--out("cbf/empire/cbf_CharacterCreated/new_cqi = "..tostring(new_cqi))
+										cm:set_character_immortality(cm:char_lookup_str(new_cqi), false)
+										core:remove_listener("cbf_CharacterCreated"..tostring(empire_political_invasion.friendly))
+									end,
+									false
+								)
+							end
 						end
 					end
 				end
-				core:add_listener(
-					"cbf_CharacterCreated"..tostring(empire_political_invasion.friendly),
-					"CharacterCreated",
-					function(context)
-						return true
-					end,
-					function(context)
-						--out("cbf/empire/cbf_CharacterCreated/old_cqi = "..tostring(empire_political_invasion.friendly))
-						local new_cqi = context:character():command_queue_index()
-						--out("cbf/empire/cbf_CharacterCreated/new_cqi = "..tostring(new_cqi))
-						cm:set_character_immortality(cm:char_lookup_str(new_cqi), false)
-						core:remove_listener("cbf_CharacterCreated"..tostring(empire_political_invasion.friendly))
-					end,
-					false
-				)
 				------------------------------------- END -------------------------------------
 			cm:kill_character(empire_political_invasion.friendly, true, false);
 		end
