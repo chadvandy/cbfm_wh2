@@ -302,7 +302,7 @@ function gotrek_setup()
 		function(context)
 			local char_cqi = context:character():command_queue_index();
 			------------------------------------- CBF -------------------------------------
-			if context:character():character_subtype("wh2_pro08_neu_gotrek") and gotrek_details.gotrek_cqi ~= char_cqi then
+			if context:character():character_subtype("wh2_pro08_neu_gotrek") and not context:character():is_wounded() then
 			------------------------------------- END -------------------------------------
 				-- Gotrek has spawned
 				gotrek_details.gotrek_cqi = char_cqi;
@@ -324,7 +324,7 @@ function gotrek_setup()
 				
 				-- F_and_G_camera(key, loc, delay) - WHEN THEY SPAWN - gotrek_details.gotrek_cqi can get you gotreks force from cqi
 			------------------------------------- CBF -------------------------------------
-			elseif context:character():character_subtype("wh2_pro08_neu_felix") and gotrek_details.felix_cqi ~= char_cqi then
+			elseif context:character():character_subtype("wh2_pro08_neu_felix") and not context:character():is_wounded() then
 			------------------------------------- END -------------------------------------
 				-- Felix has spawned
 				gotrek_details.felix_cqi = char_cqi;
