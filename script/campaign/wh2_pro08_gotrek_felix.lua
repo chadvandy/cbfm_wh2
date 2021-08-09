@@ -82,8 +82,9 @@ function add_gotrek_felix_listeners()
 				gotrek_details.state = gotrek_state.cooldown;
 				gotrek_details.cooldown = gotrek_spawn_turn_ai;
 			end
-		
+			------------------------------------- CBF -------------------------------------
 			gotrek_details.level = 1;
+			------------------------------------- END -------------------------------------
 			gotrek_details.spawn_turn = 0;
 			gotrek_details.gotrek_cqi = 0;
 			gotrek_details.felix_cqi = 0;
@@ -300,8 +301,9 @@ function gotrek_setup()
 		end,
 		function(context)
 			local char_cqi = context:character():command_queue_index();
-
-			if context:character():character_subtype("wh2_pro08_neu_gotrek") then
+			------------------------------------- CBF -------------------------------------
+			if context:character():character_subtype("wh2_pro08_neu_gotrek") and gotrek_details.gotrek_cqi ~= char_cqi then
+			------------------------------------- END -------------------------------------
 				-- Gotrek has spawned
 				gotrek_details.gotrek_cqi = char_cqi;
 				out("Gotrek CQI : "..char_cqi);
@@ -321,8 +323,9 @@ function gotrek_setup()
 				end;
 				
 				-- F_and_G_camera(key, loc, delay) - WHEN THEY SPAWN - gotrek_details.gotrek_cqi can get you gotreks force from cqi
-
-			elseif context:character():character_subtype("wh2_pro08_neu_felix") then
+			------------------------------------- CBF -------------------------------------
+			elseif context:character():character_subtype("wh2_pro08_neu_felix") and gotrek_details.felix_cqi ~= char_cqi then
+			------------------------------------- END -------------------------------------
 				-- Felix has spawned
 				gotrek_details.felix_cqi = char_cqi;
 				out("Felix CQI : "..char_cqi);
