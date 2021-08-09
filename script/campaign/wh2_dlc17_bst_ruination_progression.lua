@@ -18,7 +18,7 @@ Ruination = {
 	cost_mod_effect_suffix = "_cost_mod",
 	-- Rituals
 	army_cap_ritual = "wh2_dlc17_bst_ritual_army_cap_upgrade",
-	army_cap_ritual_unlock_tier = 7,
+	army_cap_ritual_unlock_tier = 6,
 	unit_cap_ritual_category = "BEASTMEN_RITUAL_UNITS",
 	unit_ritual_cost_mod_increment = 15, ----multiplier to a unit cap cost each time it is performed
 	hero_cap_ritual_category = "BEASTMEN_RITUAL_LORDS",
@@ -550,6 +550,7 @@ Ruination.herdstone_building_list = {
 		"wh2_dlc17_bst_special_settlement_the_awakening_2",
 		"wh2_dlc17_bst_special_settlement_tor_yvresse_2",
 		"wh2_dlc17_bst_special_settlement_unicorn_gate_2",
+		"wh2_dlc17_bst_special_settlement_konquata_2"
 	},
 	[2] = {
 		"wh2_dlc17_bst_settlement_major_3_coast",
@@ -592,6 +593,7 @@ Ruination.herdstone_building_list = {
 		"wh2_dlc17_bst_special_settlement_the_awakening_3",
 		"wh2_dlc17_bst_special_settlement_tor_yvresse_3",
 		"wh2_dlc17_bst_special_settlement_unicorn_gate_3",
+		"wh2_dlc17_bst_special_settlement_konquata_3"
 	},
 	[3] = {
 		"wh2_dlc17_bst_settlement_major_4_coast",
@@ -634,6 +636,7 @@ Ruination.herdstone_building_list = {
 		"wh2_dlc17_bst_special_settlement_the_awakening_4",
 		"wh2_dlc17_bst_special_settlement_tor_yvresse_4",
 		"wh2_dlc17_bst_special_settlement_unicorn_gate_4",
+		"wh2_dlc17_bst_special_settlement_konquata_4"
 	},
 	[4] = {
 		"wh2_dlc17_bst_settlement_major_5_coast",
@@ -676,6 +679,7 @@ Ruination.herdstone_building_list = {
 		"wh2_dlc17_bst_special_settlement_the_awakening_5",
 		"wh2_dlc17_bst_special_settlement_tor_yvresse_5",
 		"wh2_dlc17_bst_special_settlement_unicorn_gate_5",
+		"wh2_dlc17_bst_special_settlement_konquata_5"
 	},
 }
 

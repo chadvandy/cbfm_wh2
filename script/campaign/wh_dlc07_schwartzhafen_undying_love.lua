@@ -23,23 +23,18 @@ function add_vlad_isabella_listeners()
 	core:add_listener(
 		"remove_couple_bundle_CharacterCompletedBattle",
 		"CharacterCompletedBattle",
-		function()
-			-- in case vlad or isabella are wounded post battle make sure the effect bundle is removed from all vampire forces
-			return context:character():faction():subculture() == vampire_subculture_key
-		end,
+		true,
 		function(context)
-			remove_undying_love_bundle(context:character())
+			remove_undying_love_bundle(context)
 		end,
 		true
 	)
 	core:add_listener(
 		"remove_couple_bundle_CharacterTurnStart",
 		"CharacterTurnStart",
-		function()
-			return context:character():faction():subculture() == vampire_subculture_key
-		end,
+		true,
 		function(context)
-			remove_undying_love_bundle(context:character())
+			remove_undying_love_bundle(context)
 		end,
 		true
 	)
@@ -91,7 +86,6 @@ function add_undying_love_bundle(context)
 	if #couple_cqi >= 2 then
 		for i = 1, 2 do
 			local mf = cm:get_military_force_by_cqi(couple_cqi[i])
-			local character = mf:general_character()
 			if not mf:has_effect_bundle(bundle_name) and pb:night_battle() == false then
 				cm:apply_effect_bundle_to_force(bundle_name, couple_cqi[i], 0)
 			end
@@ -99,10 +93,14 @@ function add_undying_love_bundle(context)
 	end
 end
 
-function remove_undying_love_bundle(character)
-	local mf = character:military_force()
-		
-	if mf:has_effect_bundle(bundle_name) then
-		cm:remove_effect_bundle_from_force(bundle_name, mf:command_queue_index())
+function remove_undying_love_bundle(context)
+	local character = context:character()
+	-- in case vlad or isabella are wounded post battle make sure the effect bundle is removed from all vampire forces
+	if character:faction():subculture() == vampire_subculture_key then
+		local mf = character:military_force()
+			
+		if mf:has_effect_bundle(bundle_name) then
+			cm:remove_effect_bundle_from_force(bundle_name, mf:command_queue_index())
+		end
 	end
 end
