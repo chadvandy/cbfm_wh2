@@ -94,7 +94,7 @@ end
 
 function remove_undying_love_bundle(character)
 	-- in case vlad or isabella are wounded post battle make sure the effect bundle is removed from all vampire forces
-	if character:faction():subculture() == vampire_subculture_key then
+	if character:faction():subculture() == vampire_subculture_key and character:has_military_force() then
 		local mf = character:military_force()
 			
 		if mf:has_effect_bundle(bundle_name) then
