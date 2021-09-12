@@ -182,7 +182,7 @@ function add_eltharion_lair_listeners()
 			elseif choice == 1 then
 				lair_grom_dilemma = false;
 			end
-			
+
 			local grom_button = find_uicomponent(core:get_ui_root(), "layout", "groms_invasion_holder", "groms_invasion_content", "grom_invasion");
 
 			if grom_button then
@@ -191,7 +191,7 @@ function add_eltharion_lair_listeners()
 		end,
 		true
 	);
-	
+
 	core:add_listener(
 		"lair_GarrisonOccupiedEvent",
 		"GarrisonOccupiedEvent",
@@ -217,7 +217,7 @@ function add_eltharion_lair_listeners()
 		end,
 		true
 	)
-
+	
 	if cm:is_new_game() == true then
 		local warden = cm:model():world():faction_by_key(yvresse_faction_key);
 		lair_UpdatePrisonAbility(warden);
@@ -403,11 +403,11 @@ end
 function lair_BattleCompleted(context)
 	local pending_battle = cm:model():pending_battle();
 	local warden = cm:model():world():faction_by_key(yvresse_faction_key);
-
-
+	
+	
 	if warden:is_human() == true then
 		if pending_battle:is_auto_resolved() == true then
-
+		
 			local prison_system = cm:model():prison_system();
 			local prisoners = prison_system:get_faction_prisoners(warden);
 
@@ -437,7 +437,7 @@ function lair_BattleCompleted(context)
 				end
 			end
 		end
-		
+
 		-- checking to see if faction has been wiped out, resulting in lost prisoners 
 		cm:callback(function()
 			lair_CheckDeadPrisoners(warden)
