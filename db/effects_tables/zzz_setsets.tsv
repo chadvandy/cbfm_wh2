@@ -1,0 +1,5 @@
+effect	icon	priority	icon_negative	category	is_positive_value_good
+#effects_tables	3	db/effects_tables/zzz_setsets
+wh2_HV_lzd_armour_redcrested_skink_ark_of_sotek	armour.png	101	armour.png	battle	true
+wh2_HV_lzd_melee_attack_redcrested_skink	melee.png	109	melee.png	battle	true
+wh2_HV_lzd_melee_defence_redcrested_skink	defence.png	111	defence.png	battle	true

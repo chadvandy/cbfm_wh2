@@ -1,0 +1,3 @@
+key	type	applies_to	transferrable	unique_to_world	unique_to_faction	precedence	start_date	end_date	avatar_skill	avatar_special_ability	legendary_item	mp_exclusive	is_wife_ancillary	category	min_starting_age	max_starting_age	min_expiry_age	max_expiry_age	immortal	provided_bodyguard_unit	provided_banner	uniqueness_score	turns_before_swap_allowed	subcategory	randomly_dropped	can_be_stolen	can_be_destroyed
+#ancillaries_tables	18	db/ancillaries_tables/zzz_kraggi
+wh2_dlc17_anc_follower_dwf_kraggi	wh_dlc17_anc_dwarfs_follower_kraggi	.	false	false	false	1	0	9999			false	false	false	general	1	1	50	75	true			1	0	follower	false	false	false

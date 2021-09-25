@@ -1,0 +1,34 @@
+building	unit	xp	conditions	key	faction	enabled
+#building_units_allowed_tables	4	db/building_units_allowed_tables/zzz_sm0_empire
+wh_main_emp_outpostnorsca_minor_1	wh2_dlc13_emp_inf_archers_0	0	0	192300		false
+wh_main_emp_outpostnorsca_minor_1	wh_main_emp_inf_spearmen_0	0	0	192301		false
+wh_main_emp_outpostnorsca_minor_1_coast	wh2_dlc13_emp_inf_archers_0	0	0	192302		false
+wh_main_emp_outpostnorsca_minor_1_coast	wh_main_emp_inf_spearmen_0	0	0	192303		false
+wh_main_emp_outpostnorsca_minor_2	wh_main_emp_inf_spearmen_0	0	0	192304		false
+wh_main_emp_outpostnorsca_minor_2	wh2_dlc13_emp_inf_archers_0	0	0	192305		false
+wh_main_emp_outpostnorsca_minor_2_coast	wh_main_emp_inf_spearmen_0	0	0	192306		false
+wh_main_emp_outpostnorsca_minor_2_coast	wh2_dlc13_emp_inf_archers_0	0	0	192307		false
+wh_main_emp_outpostnorsca_minor_3	wh_main_emp_inf_spearmen_0	0	0	192308		false
+wh_main_emp_outpostnorsca_minor_3	wh2_dlc13_emp_inf_archers_0	0	0	192309		false
+wh_main_emp_outpostnorsca_minor_3_coast	wh_main_emp_inf_spearmen_0	0	0	192310		false
+wh_main_emp_outpostnorsca_minor_3_coast	wh2_dlc13_emp_inf_archers_0	0	0	192311		false
+wh_main_emp_outpostnorsca_major_1	wh_main_emp_inf_spearmen_0	0	0	192312		false
+wh_main_emp_outpostnorsca_major_1	wh2_dlc13_emp_inf_archers_0	0	0	192313		false
+wh_main_emp_outpostnorsca_major_1_coast	wh_main_emp_inf_spearmen_0	0	0	192314		false
+wh_main_emp_outpostnorsca_major_1_coast	wh2_dlc13_emp_inf_archers_0	0	0	192315		false
+wh_main_emp_outpostnorsca_major_2	wh_main_emp_inf_spearmen_0	0	0	192316		false
+wh_main_emp_outpostnorsca_major_2	wh2_dlc13_emp_inf_archers_0	0	0	192317		false
+wh_main_emp_outpostnorsca_major_2_coast	wh2_dlc13_emp_inf_archers_0	0	0	192318		false
+wh_main_emp_outpostnorsca_major_2_coast	wh_main_emp_inf_spearmen_0	0	0	192319		false
+wh_main_emp_outpostnorsca_major_3	wh_main_emp_inf_spearmen_0	0	0	192320		false
+wh_main_emp_outpostnorsca_major_3	wh2_dlc13_emp_inf_archers_0	0	0	192321		false
+wh_main_emp_outpostnorsca_major_3_coast	wh2_dlc13_emp_inf_archers_0	0	0	192322		false
+wh_main_emp_outpostnorsca_major_3_coast	wh_main_emp_inf_spearmen_0	0	0	192323		false
+wh_main_emp_outpostnorsca_major_4	wh2_dlc13_emp_inf_archers_0	0	0	192324		false
+wh_main_emp_outpostnorsca_major_4	wh_main_emp_inf_spearmen_0	0	0	192325		false
+wh_main_emp_outpostnorsca_major_4_coast	wh2_dlc13_emp_inf_archers_0	0	0	192326		false
+wh_main_emp_outpostnorsca_major_4_coast	wh_main_emp_inf_spearmen_0	0	0	192327		false
+wh_main_emp_outpostnorsca_major_5	wh_main_emp_inf_spearmen_0	0	0	192328		false
+wh_main_emp_outpostnorsca_major_5	wh2_dlc13_emp_inf_archers_0	0	0	192329		false
+wh_main_emp_outpostnorsca_major_5_coast	wh2_dlc13_emp_inf_archers_0	0	0	192330		false
+wh_main_emp_outpostnorsca_major_5_coast	wh_main_emp_inf_spearmen_0	0	0	192331		false

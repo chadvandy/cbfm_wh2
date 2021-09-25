@@ -1,0 +1,14 @@
+campaign	faction	sub_culture	culture	building_or_building_range_start_inclusive	building_range_end_inclusive	building_instance	building_chain	building_super_chain	cai_construction_system_category	cai_construction_system_category_group	score_or_score_start_inclusive	score_end_inclusive	per_province_building_limit_start	per_province_building_minimum_discount_when_exceeding_limit_start	per_province_building_maximum_discount_when_exceeding_limit_start	per_province_per_building_discount_increment_when_exceeding_limit_start	per_province_building_limit_end	per_province_building_minimum_discount_when_exceeding_limit_end	per_province_building_maximum_discount_when_exceeding_limit_end	per_province_per_building_discount_increment_when_exceeding_limit_end	per_faction_building_limit_start	per_faction_building_minimum_discount_when_exceeding_limit_start	per_faction_building_maximum_discount_when_exceeding_limit_start	per_faction_per_building_discount_increment_when_exceeding_limit_start	per_faction_building_limit_end	per_faction_building_minimum_discount_when_exceeding_limit_end	per_faction_building_maximum_discount_when_exceeding_limit_end	per_faction_per_building_discount_increment_when_exceeding_limit_end
+#cai_construction_system_building_values_tables	0	db/cai_construction_system_building_values_tables/zzz_cailandmarks
+				wh2_dlc15_special_massif_orcal_quarry	wh2_dlc15_special_massif_orcal_quarry						500	500	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
+				wh2_dlc15_special_grn_nuln_grand_prix	wh2_dlc15_special_grn_nuln_grand_prix						500	500	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
+				wh2_dlc15_special_grom_peak_statue_of_grom	wh2_dlc15_special_grom_peak_statue_of_grom						500	500	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
+				wh2_dlc15_special_morgheim_necropolis_tmb	wh2_dlc15_special_morgheim_necropolis_tmb						500	500	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
+				wh2_dlc15_special_morgheim_necropolis_vmp	wh2_dlc15_special_morgheim_necropolis_vmp						500	500	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
+				wh2_dlc15_special_mount_arachnos_1	wh2_dlc15_special_mount_arachnos_3						500	500	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
+				wh2_dlc14_special_skv_crookback	wh2_dlc14_special_skv_crookback					cai_military_group	500	500	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
+				wh2_dlc14_special_dragon_isle_port_1	wh2_dlc14_special_dragon_isle_port_3						500	500	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
+				wh2_dlc14_special_dragon_isle_port_1_grn	wh2_dlc14_special_dragon_isle_port_3_grn						500	500	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
+				wh2_dlc14_special_dragon_isle_port_1_tmb	wh2_dlc14_special_dragon_isle_port_3_tmb						500	500	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
+				wh2_dlc14_special_copher_port_1	wh2_dlc14_special_copher_port_2						500	500	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0
+				wh2_dlc14_special_copher_port_1_brettonia	wh2_dlc14_special_copher_port_2_bretonnia						500	500	-1	0	0	0	-1	0	0	0	-1	0	0	0	-1	0	0	0

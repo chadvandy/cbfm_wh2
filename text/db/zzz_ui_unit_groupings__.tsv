@@ -1,0 +1,4 @@
+key	text	tooltip
+#Loc PackedFile	1	text/db/zzz_ui_unit_groupings__.loc
+ui_unit_groupings_onscreen_skv_infantry_sword	Sword Infantry	true
+ui_unit_groupings_tooltip_skv_infantry_sword	 	true

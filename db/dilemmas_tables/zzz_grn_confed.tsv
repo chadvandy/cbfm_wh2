@@ -1,0 +1,4 @@
+key	localised_title	localised_description	ui_image	generate	prioritized	event_category	sound_popup_override	sound_click_override
+#dilemmas_tables	5	db/dilemmas_tables/zzz_grn_confed
+wh2_main_grn_confederate_wh2_dlc16_grn_creeping_death			army_morale_up	false	true	Event		
+wh2_main_grn_confederate_wh2_dlc16_grn_naggaroth_orcs			army_morale_up	false	true	Event		

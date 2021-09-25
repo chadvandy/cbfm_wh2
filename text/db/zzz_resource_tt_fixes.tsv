@@ -1,0 +1,6 @@
+key	text	tooltip
+#Loc PackedFile	1	text/db/zzz_resource_tt_fixes.loc
+resources_onscreen_text_res_location_elves	Strategic Location	true
+resources_description_res_location_elves	This location is of special importance to the Elves.	true
+resources_onscreen_text_res_location_lzd_sotek	Strategic Location	true
+resources_description_res_location_lzd_sotek	This location is of special importance to the Cult of Sotek.	true

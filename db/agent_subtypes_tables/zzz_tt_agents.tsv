@@ -1,0 +1,4 @@
+key	auto_generate	is_caster	small_icon	associated_unit_override	audio_voiceover_actor_group	show_in_ui	cap	has_female_name	can_gain_xp	loyalty_is_applicable	contributes_to_agent_cap	recruitment_category	magic_lore	audio_vo_culture_override	spam_click_vo_enabled
+#agent_subtypes_tables	19	db/agent_subtypes_tables/zzz_tt_agents
+wh2_dlc16_skv_throt_the_unclean	false	false		wh2_dlc16_skv_cha_throt_the_unclean_0	wh2_dlc16_vo_actor_Skaven_Throt	true	-1	false	true	false	true	legendary_lords			true
+wh2_dlc16_skv_ghoritch	false	false	ui/campaign ui/agents/wh2_dlc16_skv_ghoritch.png	wh2_dlc16_skv_cha_ghoritch_0	wh2_dlc16_vo_actor_Skaven_Ghoritch	false	1	false	true	false	false				false

@@ -1,0 +1,3 @@
+key	source	target	ownership	location	territory
+#campaign_effect_scopes_tables	2	db/campaign_effect_scopes_tables/zzz_raise_dead_cost
+cbf_region_to_character_own	region	character	yours	regionwide	any

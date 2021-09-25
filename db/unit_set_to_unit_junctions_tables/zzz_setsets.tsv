@@ -1,0 +1,8 @@
+unit_set	unit_record	unit_caste	unit_category	unit_class	exclude
+#unit_set_to_unit_junctions_tables	0	db/unit_set_to_unit_junctions_tables/zzz_setsets
+hef_all	wh2_dlc15_hef_mon_black_dragon_imrik				false
+hef_all	wh2_dlc15_hef_mon_forest_dragon_0				false
+hef_all	wh2_dlc15_hef_mon_forest_dragon_imrik				false
+hef_all	wh2_dlc15_hef_mon_moon_dragon_imrik				false
+hef_all	wh2_dlc15_hef_mon_star_dragon_imrik				false
+hef_all	wh2_dlc15_hef_mon_sun_dragon_imrik				false

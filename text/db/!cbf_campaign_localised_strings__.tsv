@@ -1,0 +1,4 @@
+key	text	tooltip
+#Loc PackedFile	1	text/db/!cbf_campaign_localised_strings__.loc
+campaign_localised_strings_string_units_of_renown_tooltip_locked	[[col:red]]This unit will unlock after one of your [[img:icon_general]][[/img]]Lords or [[img:icon_hero]]Heroes[[/img]] reaches the required rank.[[/col]]	true
+campaign_localised_strings_string_tooltip_beastmen_panel_upgrade_army_final_tier	[[col:red]]You must reach Ruination Level 7 to unlock this upgrade[[/col]]	true
