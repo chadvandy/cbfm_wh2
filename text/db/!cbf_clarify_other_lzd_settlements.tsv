@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/!cbf_clarify_other_lzd_settlements.loc
+#Loc PackedFile;1;text/db/!cbf_clarify_other_lzd_settlements.loc		
 building_culture_variants_name_wh2_main_special_settlement_hexoatl_other_lzd_1wh2_main_lzd_hexoatl	Hexoatl (Coldblood Commune)	true
 building_culture_variants_name_wh2_main_special_settlement_hexoatl_other_lzd_1wh2_main_lzd_lizardmen	Hexoatl (Coldblood Commune)	true
 building_culture_variants_name_wh2_main_special_settlement_hexoatl_other_lzd_2wh2_main_lzd_hexoatl	Hexoatl (Temple-Precinct)	true

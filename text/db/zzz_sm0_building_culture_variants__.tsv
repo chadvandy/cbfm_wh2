@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/zzz_sm0_building_culture_variants__.loc
+#Loc PackedFile;1;text/db/zzz_sm0_building_culture_variants__.loc		
 building_culture_variants_name_wh2_main_special_settlement_colony_minor_brt_ruin	Ruined Elven Colony	true
 building_culture_variants_name_wh2_main_special_settlement_colony_minor_brt_1	Tiny Occupied Elven Colony	true
 building_culture_variants_name_wh2_main_special_settlement_colony_minor_brt_3	Occupied Elven Colony	true

@@ -1,4 +1,4 @@
 ancillary	agent
-#ancillary_to_included_agents_tables	0	db/ancillary_to_included_agents_tables/zzz_bst_general
+#ancillary_to_included_agents_tables;0;db/ancillary_to_included_agents_tables/zzz_bst_general	
 wh2_dlc17_anc_banner_banner_of_madness	general
 wh2_dlc17_anc_banner_banner_of_unholy_exultation	general

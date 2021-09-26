@@ -1,5 +1,5 @@
 building	effect	value	effect_scope	value_damaged	value_ruined
-#building_effects_junction_tables	3	db/building_effects_junction_tables/zzz_sm0_walls
+#building_effects_junction_tables;3;db/building_effects_junction_tables/zzz_sm0_walls					
 wh2_main_special_settlement_colony_minor_brt_1	wh2_main_effect_economy_gdp_mod_trade_sea_global	1.0	faction_to_region_own	1.0	0.0
 wh2_main_special_settlement_colony_minor_brt_1	wh_main_effect_construction_slot_dummy	1.0	this_building	1.0	1.0
 wh2_main_special_settlement_colony_minor_brt_1	wh_main_effect_economy_gdp_mod_trade_sea	50.0	region_to_region_own	25.0	0.0

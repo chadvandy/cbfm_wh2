@@ -1,5 +1,5 @@
 effect	icon	priority	icon_negative	category	is_positive_value_good
-#effects_tables	3	db/effects_tables/zzz_cst_admirals
+#effects_tables;3;db/effects_tables/zzz_cst_admirals					
 wh2_dlc11_cst_admiral_1_trait_dummy_lore	magic.png	1	magic.png	battle	true
 wh2_dlc11_cst_admiral_2_trait_dummy_lore	magic.png	1	magic.png	battle	true
 wh2_dlc11_cst_admiral_3_trait_dummy_lore	magic.png	1	magic.png	battle	true

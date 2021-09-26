@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/!cbf_mission_text__.loc
+#Loc PackedFile;1;text/db/!cbf_mission_text__.loc		
 mission_text_text_wh2_main_objective_BONUS_kroq_gar_2_4_heading	Ice Rider	true
 mission_text_text_wh2_main_objective_BONUS_kroq_gar_2_3_description	Though the Slann Mage-Priests are wise, they prove difficult to understand. The Slann speak telepathically, and are often locked in meditative trances. Only the Skink Priests, through great effort, are able to commune with their masters and divine their will.	true
 mission_text_text_wh2_main_objective_BONUS_kroq_gar_2_3_heading	So Sure, Sotek	true

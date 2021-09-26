@@ -1,3 +1,3 @@
 effect	icon	priority	icon_negative	category	is_positive_value_good
-#effects_tables	3	db/effects_tables/zzz_eshin_tech
+#effects_tables;3;db/effects_tables/zzz_eshin_tech					
 wh2_cbf_effect_tech_melee_attack_decrease		0		battle	true

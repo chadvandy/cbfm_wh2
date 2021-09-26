@@ -1,3 +1,3 @@
 unit_set	unit_record	unit_caste	unit_category	unit_class	exclude
-#unit_set_to_unit_junctions_tables	0	db/unit_set_to_unit_junctions_tables/zzz_gorm_unit_set_ror
+#unit_set_to_unit_junctions_tables;0;db/unit_set_to_unit_junctions_tables/zzz_gorm_unit_set_ror					
 wh2_dlc09_tmb_vet_all_archer	wh2_dlc09_tmb_mon_ushabti_ror				false

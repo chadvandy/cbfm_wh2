@@ -1,5 +1,5 @@
 building	unit	xp	conditions	key	faction	enabled
-#building_units_allowed_tables	4	db/building_units_allowed_tables/zzz_konquata
+#building_units_allowed_tables;4;db/building_units_allowed_tables/zzz_konquata						
 wh2_main_special_settlement_konquata_norsca_1	wh_dlc03_bst_inf_ungor_spearmen_1	0	0	194100		false
 wh2_main_special_settlement_konquata_norsca_1	wh_dlc03_bst_inf_ungor_herd_1	0	0	194101		false
 wh2_dlc17_bst_special_settlement_konquata_2	wh_dlc05_bst_mon_harpies_0	0	0	194102		false

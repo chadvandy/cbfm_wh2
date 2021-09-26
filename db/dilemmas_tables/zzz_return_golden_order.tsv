@@ -1,4 +1,4 @@
 key	localised_title	localised_description	ui_image	generate	prioritized	event_category	sound_popup_override	sound_click_override
-#dilemmas_tables	5	db/dilemmas_tables/zzz_return_golden_order
+#dilemmas_tables;5;db/dilemmas_tables/zzz_return_golden_order								
 wh2_dlc13_demand_return_wh2_main_solland_pfeildorf			elector_region	false	true	imperial_authority		
 wh2_dlc13_demand_return_wh2_main_solland_steingart			elector_region	false	true	imperial_authority		

@@ -1,5 +1,5 @@
 unit_set	unit_record	unit_caste	unit_category	unit_class	exclude
-#unit_set_to_unit_junctions_tables	0	db/unit_set_to_unit_junctions_tables/zzz_tiqtaqterradons
+#unit_set_to_unit_junctions_tables;0;db/unit_set_to_unit_junctions_tables/zzz_tiqtaqterradons					
 lzd_all	wh2_dlc12_lzd_cav_terradon_riders_0_tlaqua				false
 lzd_beasts	wh2_dlc12_lzd_cav_terradon_riders_0_tlaqua				false
 lzd_dinos	wh2_dlc12_lzd_cav_terradon_riders_0_tlaqua				false

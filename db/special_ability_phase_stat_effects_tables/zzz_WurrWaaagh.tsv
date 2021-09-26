@@ -1,3 +1,3 @@
 phase	value	stat	how
-#special_ability_phase_stat_effects_tables	3	db/special_ability_phase_stat_effects_tables/zzz_WurrWaaagh
+#special_ability_phase_stat_effects_tables;3;db/special_ability_phase_stat_effects_tables/zzz_WurrWaaagh			
 wh2_dlc15_army_abilities_wurrzags_big_waaagh	20.0	stat_resistance_physical	add

@@ -1,5 +1,5 @@
 source_resource	target_resource	override_faction	override_subculture
-#resource_ui_overrides_tables	0	db/resource_ui_overrides_tables/zzz_resource_tt_fixes
+#resource_ui_overrides_tables;0;db/resource_ui_overrides_tables/zzz_resource_tt_fixes			
 res_location_elves			wh2_dlc09_sc_tmb_tomb_kings
 res_location_elves			wh2_dlc11_sc_cst_vampire_coast
 res_location_elves			wh2_main_sc_lzd_lizardmen

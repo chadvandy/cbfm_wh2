@@ -1,5 +1,5 @@
 icon_filepath	key	unit	trade_value	strategic_value	in_encyclopedia	show_on_city_infobar
-#resources_tables	5	db/resources_tables/zzz_resource_tt_fixes
+#resources_tables;5;db/resources_tables/zzz_resource_tt_fixes						
 ui\campaign ui\effect_bundles\strategic_location.png	res_location_elves		0	0	false	true
 	res_location_lzd_sotek_dummy		0	0	false	false
 ui\campaign ui\effect_bundles\strategic_location.png	res_location_lzd_sotek		0	0	false	true

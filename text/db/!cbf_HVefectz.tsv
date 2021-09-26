@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/!cbf_HVefectz.loc
+#Loc PackedFile;1;text/db/!cbf_HVefectz.loc		
 effects_description_wh2_HV_lzd_armour_redcrested_skink_ark_of_sotek	Armour: %+n for Skink, Chameleon Skink, Red Crested Skink and Bastiladon (Ark of Sotek) units	true
 effects_description_wh2_HV_lzd_melee_attack_redcrested_skink	Melee attack: %+n for Skink, Chameleon Skink and Red Crested Skink units	true
 effects_description_wh2_HV_lzd_melee_defence_redcrested_skink	Melee defence: %+n for Skink, Chameleon Skink and Red Crested Skink units	true

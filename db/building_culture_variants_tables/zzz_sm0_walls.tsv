@@ -1,5 +1,5 @@
 building	culture	description	icon	subculture	faction	disables	short_description	display_tooltip
-#building_culture_variants_tables	4	db/building_culture_variants_tables/zzz_sm0_walls
+#building_culture_variants_tables;4;db/building_culture_variants_tables/zzz_sm0_walls								
 wh2_main_special_settlement_colony_minor_brt_1		wh_main_PLACEHOLDER	high_elves_city_colony			false	wh2_main_hef_port_1	true
 wh2_main_special_settlement_colony_minor_brt_2		wh_main_PLACEHOLDER	high_elves_city_colony			false	wh2_main_hef_port_1	true
 wh2_main_special_settlement_colony_minor_brt_3		wh_main_PLACEHOLDER	high_elves_city_colony			false	wh2_main_hef_port_1	true

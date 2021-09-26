@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/!cbf_campaign_effect_scopes__.loc
+#Loc PackedFile;1;text/db/!cbf_campaign_effect_scopes__.loc		
 campaign_effect_scopes_localised_text_character_to_force_enemy_provincewide	\\n(enemy forces in local province)	true
 campaign_effect_scopes_localised_text_province_to_force_any_provincewide	\\n(forces in local province)	true
 campaign_effect_scopes_localised_text_building_to_forces_enemy_regionwide	\\n(enemy forces in local region)	true

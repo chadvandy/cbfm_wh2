@@ -1,5 +1,5 @@
 id	dilemma_key	choice_key	payload_key	value
-#cdir_events_dilemma_payloads_tables	2	db/cdir_events_dilemma_payloads_tables/zzz_grn_confed
+#cdir_events_dilemma_payloads_tables;2;db/cdir_events_dilemma_payloads_tables/zzz_grn_confed				
 193800	wh2_main_grn_confederate_wh2_dlc16_grn_creeping_death	FIRST	TEXT_DISPLAY	LOOKUP[dummy_confederate_wh2_dlc16_grn_creeping_death]
 193801	wh2_main_grn_confederate_wh2_dlc16_grn_creeping_death	SECOND	TEXT_DISPLAY	LOOKUP[dummy_enemy_leader_killed]
 193802	wh2_main_grn_confederate_wh2_dlc16_grn_creeping_death	SECOND	DIPLOMATIC_STANDING	AMOUNT[-3]

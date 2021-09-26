@@ -1,5 +1,5 @@
 building	unit	xp	conditions	key	faction	enabled
-#building_units_allowed_tables	4	db/building_units_allowed_tables/zzz_sm0_empire
+#building_units_allowed_tables;4;db/building_units_allowed_tables/zzz_sm0_empire						
 wh_main_emp_outpostnorsca_minor_1	wh2_dlc13_emp_inf_archers_0	0	0	192300		false
 wh_main_emp_outpostnorsca_minor_1	wh_main_emp_inf_spearmen_0	0	0	192301		false
 wh_main_emp_outpostnorsca_minor_1_coast	wh2_dlc13_emp_inf_archers_0	0	0	192302		false

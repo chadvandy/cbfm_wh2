@@ -1,3 +1,3 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/!cbf_ancillaries.loc
+#Loc PackedFile;1;text/db/!cbf_ancillaries.loc		
 ancillaries_colour_text_wh_main_anc_rune_master_rune_of_groth_one-eye	Groth One-Eye first struck this rune in the time of Kurgan Ironbeard, when the Greenskins were driven from the Badlands and the Dwarfs prospered.	true

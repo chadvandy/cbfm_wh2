@@ -1,5 +1,5 @@
 effect	icon	priority	icon_negative	category	is_positive_value_good
-#effects_tables	3	db/effects_tables/zzz_sm0_colouring
+#effects_tables;3;db/effects_tables/zzz_sm0_colouring					
 dummy_wh2_dlc09_spell_nehekhara_enable_djafs_incantation_of_cursed_blades	spell_ability.png	3	spell_ability.png	battle	true
 dummy_wh2_dlc09_spell_nehekhara_enable_nerus_incantation_of_protection	spell_ability.png	3	spell_ability.png	battle	true
 dummy_wh2_dlc09_spell_nehekhara_enable_ptras_incantation_of_righteous_smiting	spell_ability.png	3	spell_ability.png	battle	true

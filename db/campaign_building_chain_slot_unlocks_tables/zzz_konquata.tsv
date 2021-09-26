@@ -1,5 +1,5 @@
 building_chain	active_slot_count	level
-#campaign_building_chain_slot_unlocks_tables	1	db/campaign_building_chain_slot_unlocks_tables/zzz_konquata
+#campaign_building_chain_slot_unlocks_tables;1;db/campaign_building_chain_slot_unlocks_tables/zzz_konquata		
 wh2_main_special_settlement_konquata_norsca	5	4
 wh2_main_special_settlement_konquata_norsca	7	5
 wh2_dlc17_bst_special_settlement_konquata	1	1

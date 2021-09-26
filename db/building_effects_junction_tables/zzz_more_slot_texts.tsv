@@ -1,5 +1,5 @@
 building	effect	value	effect_scope	value_damaged	value_ruined
-#building_effects_junction_tables	3	db/building_effects_junction_tables/zzz_more_slot_texts
+#building_effects_junction_tables;3;db/building_effects_junction_tables/zzz_more_slot_texts					
 wh2_main_special_settlement_skavenblight_5	wh_main_effect_construction_slot_multiple_dummy	11.0	this_building	11.0	11.0
 wh2_main_special_settlement_lahmia_hef_5	wh_main_effect_construction_slot_multiple_dummy	9.0	this_building	9.0	9.0
 wh2_main_special_settlement_lahmia_hef_4	wh_main_effect_construction_slot_multiple_dummy	8.0	this_building	8.0	8.0

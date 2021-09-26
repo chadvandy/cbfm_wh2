@@ -1,4 +1,4 @@
 key	resource
-#slot_templates_tables	1	db/slot_templates_tables/zzz_resource_tt_fixes
+#slot_templates_tables;1;db/slot_templates_tables/zzz_resource_tt_fixes	
 wh2_main_special_shrine_of_sotek_minor_primary	res_location_lzd_sotek_dummy
 wh2_dlc10_special_gaean_vale_primary	res_location_elves

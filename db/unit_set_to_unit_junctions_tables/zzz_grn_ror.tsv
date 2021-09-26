@@ -1,5 +1,5 @@
 unit_set	unit_record	unit_caste	unit_category	unit_class	exclude
-#unit_set_to_unit_junctions_tables	0	db/unit_set_to_unit_junctions_tables/zzz_grn_ror
+#unit_set_to_unit_junctions_tables;0;db/unit_set_to_unit_junctions_tables/zzz_grn_ror					
 grn_all_big_uns	wh_main_grn_cav_orc_boar_boy_big_uns				false
 grn_fanatics	wh_dlc06_grn_inf_da_eight_peaks_loonies_0				false
 grn_spears	wh_main_grn_inf_night_goblin_fanatics				false

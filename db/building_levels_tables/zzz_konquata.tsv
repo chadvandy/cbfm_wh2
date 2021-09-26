@@ -1,5 +1,5 @@
 level_name	chain	level	only_in_capital	create_time	create_cost	upkeep_cost	commodity	military_prestige	naval_prestige	economic_prestige	enlightenment_prestige	faction_unique	religion_requirement	first_in_world_bundle	resource_requirement	can_convert	building_instance_key	audio_building_type	should_show_building_level_in_ui_for_technology	health_override	development_point_cost	can_be_damaged	primary_slot_building_building_level_requirement	visible_in_ui	food_cost	slave_cap_contribution
-#building_levels_tables	16	db/building_levels_tables/zzz_konquata
+#building_levels_tables;16;db/building_levels_tables/zzz_konquata																										
 wh2_dlc17_bst_special_settlement_konquata_1	wh2_dlc17_bst_special_settlement_konquata	1	false	1	0	0		0	0	0	0	false				true	wh_main_HUMAN_settlement_major_coast	wh_dlc_cam_settlement_capital_beastmen	false	0.0	0	true	0	true	0	0
 wh2_dlc17_bst_special_settlement_konquata_2	wh2_dlc17_bst_special_settlement_konquata	2	false	1	0	0		0	0	0	0	false				true	wh_main_HUMAN_settlement_major_coast	wh_dlc_cam_settlement_capital_beastmen	false	0.0	0	true	0	true	0	0
 wh2_dlc17_bst_special_settlement_konquata_3	wh2_dlc17_bst_special_settlement_konquata	3	false	1	0	0		0	0	0	0	false				true	wh_main_HUMAN_settlement_major_coast	wh_dlc_cam_settlement_capital_beastmen	false	0.0	0	true	0	true	0	0

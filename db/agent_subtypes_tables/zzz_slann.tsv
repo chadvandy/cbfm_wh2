@@ -1,5 +1,5 @@
 key	auto_generate	is_caster	small_icon	associated_unit_override	audio_voiceover_actor_group	show_in_ui	cap	has_female_name	can_gain_xp	loyalty_is_applicable	contributes_to_agent_cap	recruitment_category	magic_lore	audio_vo_culture_override	spam_click_vo_enabled
-#agent_subtypes_tables	19	db/agent_subtypes_tables/zzz_slann
+#agent_subtypes_tables;19;db/agent_subtypes_tables/zzz_slann															
 wh2_dlc13_lzd_slann_mage_priest_fire	false	true	UI/Campaign UI/Agents/wh_main_lore_fire.png	wh2_dlc13_lzd_cha_slann_mage_priest_fire_0	wh2_main_vo_actor_Lizardmen_Slann_Mage_Priest	true	-1	true	true	true	true	lzd_slann_mage_priest	wh_main_lore_fire		false
 wh2_dlc13_lzd_slann_mage_priest_fire_horde	false	true	UI/Campaign UI/Agents/wh_main_lore_fire.png	wh2_dlc13_lzd_cha_slann_mage_priest_fire_0	wh2_main_vo_actor_Lizardmen_Slann_Mage_Priest	true	-1	true	true	true	true	lzd_slann_mage_priest	wh_main_lore_fire		false
 wh2_dlc13_lzd_slann_mage_priest_high	false	true	ui/campaign ui/agents/wh2_main_lore_high_magic.png	wh2_main_lzd_cha_slann_mage_priest_high_0	wh2_main_vo_actor_Lizardmen_Slann_Mage_Priest	true	-1	true	true	true	true	lzd_slann_mage_priest	wh2_main_lore_high_magic		false

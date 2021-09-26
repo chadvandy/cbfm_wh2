@@ -1,5 +1,5 @@
 building	effect	value	effect_scope	value_damaged	value_ruined
-#building_effects_junction_tables	3	db/building_effects_junction_tables/zzz_wrong_effect_values
+#building_effects_junction_tables;3;db/building_effects_junction_tables/zzz_wrong_effect_values					
 wh_main_grn_dwf_settlement_ruin_major	wh_main_effect_force_army_campaign_siege_defend_holdout_time_hidden	0.0	region_to_region_own	0.0	0.0
 wh_main_grn_dwf_settlement_ruin_major	wh_main_effect_settlement_walls_hidden	0.0	region_to_region_own	0.0	0.0
 wh_main_special_settlement_miragliano_1_brt	wh_main_effect_construction_slot_dummy	2.0	this_building	2.0	2.0

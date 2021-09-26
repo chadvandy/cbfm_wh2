@@ -1,3 +1,3 @@
 key	primary_melee_weapon	primary_missile_weapon
-#battle_entity_stats_tables	2	db/battle_entity_stats_tables/zzz_war_wagon
+#battle_entity_stats_tables;2;db/battle_entity_stats_tables/zzz_war_wagon		
 wh2_dlc13_emp_veh_war_wagon_rider		wh2_dlc15_emp_rifle_war_wagons

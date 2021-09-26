@@ -1,3 +1,3 @@
 key	character_skill_node_set_key	character_skill_key	faction_key	campaign_key	tier	indent	subculture	points_on_creation	required_num_parents	visible_in_ui
-#character_skill_nodes_tables	5	db/character_skill_nodes_tables/zzz_sm0_repanse
+#character_skill_nodes_tables;5;db/character_skill_nodes_tables/zzz_sm0_repanse										
 wh2_dlc14_skill_node_brt_repanse_blessing	wh2_dlc14_skill_node_set_brt_repanse	wh_main_skill_brt_lord_unique_the_blessing_of_the_lady			8.0	0.0		0	0	true

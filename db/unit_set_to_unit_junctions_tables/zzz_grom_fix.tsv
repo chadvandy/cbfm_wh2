@@ -1,5 +1,5 @@
 unit_set	unit_record	unit_caste	unit_category	unit_class	exclude
-#unit_set_to_unit_junctions_tables	0	db/unit_set_to_unit_junctions_tables/zzz_grom_fix
+#unit_set_to_unit_junctions_tables;0;db/unit_set_to_unit_junctions_tables/zzz_grom_fix					
 wh2_xef_all_grom	wh2_dlc10_hef_cav_the_fireborn_ror_0				false
 wh2_xef_all_grom	wh2_dlc10_hef_cav_the_heralds_of_the_wind_ror_0				false
 wh2_xef_all_grom	wh2_dlc10_hef_cha_alarielle_the_radiant_0				false

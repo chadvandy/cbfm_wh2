@@ -1,5 +1,5 @@
 building	effect	value	effect_scope	value_damaged	value_ruined
-#building_effects_junction_tables	3	db/building_effects_junction_tables/zzz_sm0_buildings_fix
+#building_effects_junction_tables;3;db/building_effects_junction_tables/zzz_sm0_buildings_fix					
 wh_main_special_conclave_of_magic_vampires	wh_main_effect_agent_cap_increase_wizard_necromancer	2.0	faction_to_faction_own_unseen	1.0	0.0
 wh2_dlc09_tmb_growth_1	wh_main_effect_force_all_campaign_replenishment_rate	3.0	province_to_army_own	2.0	0.0
 wh2_dlc09_tmb_growth_2	wh_main_effect_force_all_campaign_replenishment_rate	4.0	province_to_army_own	2.0	0.0

@@ -1,5 +1,5 @@
 building	effect	value	effect_scope	value_damaged	value_ruined
-#building_effects_junction_tables	3	db/building_effects_junction_tables/zzz_konquata
+#building_effects_junction_tables;3;db/building_effects_junction_tables/zzz_konquata					
 wh2_main_special_settlement_konquata_norsca_1	wh_main_effect_construction_slot_dummy	1.0	this_building	1.0	1.0
 wh2_main_special_settlement_konquata_norsca_2	wh_main_effect_construction_slot_multiple_dummy	2.0	this_building	2.0	2.0
 wh2_main_special_settlement_konquata_norsca_3	wh_main_effect_construction_slot_multiple_dummy	3.0	this_building	3.0	3.0

@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/!cbf_effects__.loc
+#Loc PackedFile;1;text/db/!cbf_effects__.loc		
 effects_description_wh_main_effect_economy_trade_tariff_mod	Income from trade tariffs: %+n%	true
 effects_description_wh2_dlc11_effect_tech_ranged_armor_pierce	Armour-piercing missile damage: %+n% for Zombie Pirate Gunnery Mob and Deck Droppers units	true
 effects_description_wh2_main_diplomatic_relations_crusaders	Diplomatic relations: %+n with the factions of [[img:brt_repanse]][[/img]]Chevaliers de Lyonesse, [[img:brt_thegans_crusaders]][[/img]]Thegan's Errantry, [[img:brt_knights_of_the_flame]][[/img]]Knights of the Flame, [[img:brt_knights_of_origo]][[/img]]Knights of Origo and [[img:brt_rogue_jerrod]][[/img]]Jerrod's Errantry	true

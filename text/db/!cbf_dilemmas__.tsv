@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/!cbf_dilemmas__.loc
+#Loc PackedFile;1;text/db/!cbf_dilemmas__.loc		
 dilemmas_localised_title_wh2_dlc13_demand_return_wh2_main_solland_pfeildorf	The Golden Order Demands Region!	true
 dilemmas_localised_description_wh2_dlc13_demand_return_wh2_main_solland_pfeildorf	Historically, the region of Pfeildorf has been ruled over by The Golden Order, but is currently under the control of the Elector Count of another state.\\n\\n Balthasar Gelt, the rightful Elector Count of Soland, has asked for your help in restoring his rule over this land immediately.	true
 dilemmas_localised_title_wh2_dlc13_demand_return_wh2_main_solland_steingart	The Golden Order Demands Region!	true

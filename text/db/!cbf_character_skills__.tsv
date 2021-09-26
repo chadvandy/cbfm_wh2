@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/!cbf_character_skills__.loc
+#Loc PackedFile;1;text/db/!cbf_character_skills__.loc		
 character_skills_localised_name_wh2_dlc12_skill_lzd_red_crested_skink_chief_warriors_crest	Warrior's Crest	true
 character_skills_localised_description_wh_dlc05_skill_emp_wizard_unique_grey_wizard_warhorse	While Wizards can rarely benefit from armour, a warhorse does offer some degree of protection and manoeuvrability.	true
 character_skills_localised_description_wh2_pro07_skill_emp_wizard_unique_amethyst_wizard_warhorse	While Wizards can rarely benefit from armour, a warhorse does offer some degree of protection and manoeuvrability.	true

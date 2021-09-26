@@ -1,4 +1,4 @@
 key	ui_image	generate	prioritised	event_category
-#incidents_tables	5	db/incidents_tables/zzz_outdated_bst
+#incidents_tables;5;db/incidents_tables/zzz_outdated_bst				
 wh_dlc03_incident_bst_bloodgreed_beasts	faction	false	false	Event
 wh_dlc03_incident_bst_wandering_giants	faction	false	false	Event

@@ -1,5 +1,5 @@
 component	icon
-#campaign_payload_ui_details_tables	0	db/campaign_payload_ui_details_tables/zzz_grn_confed
+#campaign_payload_ui_details_tables;0;db/campaign_payload_ui_details_tables/zzz_grn_confed	
 dummy_confederate_wh2_dlc16_grn_creeping_death	ui/campaign ui/effect_bundles/confederation.png
 dummy_confederate_wh2_dlc16_grn_naggaroth_orcs	ui/campaign ui/effect_bundles/confederation.png
 dummy_confederate_wh2_dlc12_grn_leaf_cutterz_tribe	ui/campaign ui/effect_bundles/confederation.png

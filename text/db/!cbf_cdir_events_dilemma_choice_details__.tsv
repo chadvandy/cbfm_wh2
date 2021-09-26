@@ -1,5 +1,5 @@
 key	text	tooltip
-#Loc PackedFile	1	text/db/!cbf_cdir_events_dilemma_choice_details__.loc
+#Loc PackedFile;1;text/db/!cbf_cdir_events_dilemma_choice_details__.loc		
 cdir_events_dilemma_choice_details_localised_choice_label_wh2_dlc13_demand_return_wh2_main_solland_pfeildorfSECOND	Allow Expansion	true
 cdir_events_dilemma_choice_details_localised_choice_label_wh2_dlc13_demand_return_wh2_main_solland_pfeildorfFIRST	Demand Pfeildorf's Return	true
 cdir_events_dilemma_choice_details_localised_choice_title_wh2_dlc13_demand_return_wh2_main_solland_pfeildorfFIRST	Use your political clout to ensure the region is returned to its rightful owner.	true
