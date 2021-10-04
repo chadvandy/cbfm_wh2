@@ -70,3 +70,5 @@ effects_description_wh2_dlc17_effect_force_unit_stat_melee_attack_minotaurs_dumm
 effects_description_wh2_main_effect_physical_resistance_increase_dummy	Physical resistance: %n% (assigned unit)	true
 effects_description_wh2_dlc17_effect_force_army_battle_movement_speed_dummy	Speed: %+n% (assigned unit)	true
 effects_description_wh_main_effect_force_unit_stat_melee_damage_dummy	Weapon strength: %+n% (assigned unit)	true
+effects_description_wh2_main_effect_tech_battle_morale_increase_def_beasts	Leadership: %+n for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units	true
+effects_description_wh2_main_effect_tech_upkeep_cost_reduction_def_beasts	Upkeep: %+n% for Harpies, War Hydra, Kharibdyss, Black Dragon, Feral Manticore and Bloodwrack Medusae units	true
