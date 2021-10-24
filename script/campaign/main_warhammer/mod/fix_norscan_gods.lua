@@ -6,9 +6,11 @@ core:add_listener(
     end,
     function(context) 
         local faction_key = context:faction():name()
-        for key, data in pairs(NORSCAN_GODS[faction_key]) do
-            Check_God_Favour_Win_Conditions(faction_key, key)
-        end
+		if NORSCAN_GODS[faction_key] then 
+			for key, value in pairs(NORSCAN_GODS[faction_key]) do
+				Check_God_Favour_Win_Conditions(faction_key, key)
+			end
+		end
     end,
     true
 )
