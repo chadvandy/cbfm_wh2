@@ -1,0 +1,3 @@
+building	effect	value	effect_scope	value_damaged	value_ruined
+#building_effects_junction_tables;3;db/building_effects_junction_tables/zzz_raise_dead					
+wh2_main_vmp_raisedead	wh_main_effect_raise_dead_recruitment_cost_mod	-30.0	cbf_region_to_character_own	-15.0	0.0

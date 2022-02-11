@@ -1,0 +1,4 @@
+id	mission_key	status_key	payload_key	value
+#cdir_events_mission_payloads_tables;1;db/cdir_events_mission_payloads_tables/zzz_belegar				
+193400	wh_dlc06_grudge_belegar_eight_peaks	SUCCESS	wh_dlc06_bundle_eight_peaks_recapture	DURATION[0];GLOBAL
+193401	wh_dlc06_grudge_belegar_eight_peaks	SUCCESS	FACTION_POOLED_RESOURCE_TRANSACTION	RESOURCE[dwf_oathgold];FACTOR[wh2_main_resource_factor_missions];AMOUNT[50]

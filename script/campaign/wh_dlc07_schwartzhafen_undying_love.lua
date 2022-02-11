@@ -25,7 +25,7 @@ function add_vlad_isabella_listeners()
 		"CharacterCompletedBattle",
 		true,
 		function(context)
-			remove_undying_love_bundle(context)
+			remove_undying_love_bundle(context:character())
 		end,
 		true
 	)
@@ -34,7 +34,7 @@ function add_vlad_isabella_listeners()
 		"CharacterTurnStart",
 		true,
 		function(context)
-			remove_undying_love_bundle(context)
+			remove_undying_love_bundle(context:character())
 		end,
 		true
 	)
@@ -67,7 +67,6 @@ function add_undying_love_bundle(context)
 	
 	for i = 1, #all_attackers do
 		local current_attacker = all_attackers[i]
-		
 		if current_attacker:character_subtype_key() == vlad_character_subtype_key or current_attacker:character_subtype_key() == isablle_character_subtype_key then
 			table.insert(couple_cqi, current_attacker:military_force():command_queue_index())
 			remove_undying_love_bundle(current_attacker)
@@ -93,10 +92,9 @@ function add_undying_love_bundle(context)
 	end
 end
 
-function remove_undying_love_bundle(context)
-	local character = context:character()
+function remove_undying_love_bundle(character)
 	-- in case vlad or isabella are wounded post battle make sure the effect bundle is removed from all vampire forces
-	if character:faction():subculture() == vampire_subculture_key then
+	if character:faction():subculture() == vampire_subculture_key and character:has_military_force() then
 		local mf = character:military_force()
 			
 		if mf:has_effect_bundle(bundle_name) then

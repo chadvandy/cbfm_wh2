@@ -1,0 +1,3 @@
+effect	icon	priority	icon_negative	category	is_positive_value_good
+#effects_tables;3;db/effects_tables/zzz_volkmar					
+wh2_cbf_effect_armour_increase_clerical_units_hidden	resistance_physical.png	0	resistance_physical.png	battle	true

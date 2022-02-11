@@ -1,0 +1,3 @@
+key	auto_generate	is_caster	small_icon	associated_unit_override	audio_voiceover_actor_group	show_in_ui	cap	has_female_name	can_gain_xp	loyalty_is_applicable	contributes_to_agent_cap	recruitment_category	magic_lore	audio_vo_culture_override	spam_click_vo_enabled
+#agent_subtypes_tables;19;db/agent_subtypes_tables/zzz_sm0_unique_admiral															
+wh2_dlc11_cst_admiral_tech_04	false	true		wh2_dlc11_cst_cha_vampire_fleet_admiral_female_deeps_0	wh2_dlc11_vo_actor_VampireCoast_Fleet_Admiral_Female	true	-1	true	true	false	true	cst_legendary_admirals			false

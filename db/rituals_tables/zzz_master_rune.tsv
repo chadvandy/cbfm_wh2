@@ -1,0 +1,3 @@
+key	interruptable	cast_time	completion_payload	cooldown_time	category	slave_cost	global_cooldown_time	icon	start_payload	failure_cooldown_time	hostile	required_resources	expanded_resources	target	delay_payload_application	on_trigger_vo_event
+#rituals_tables;15;db/rituals_tables/zzz_master_rune																
+wh2_dlc17_dwf_ritual_wh_main_anc_rune_master_rune_of_valaya	false	0	wh2_dlc17_dwf_ritual_wh_main_anc_rune_master_rune_of_valaya	9001	CRAFTING_RITUAL	0	0			0	false		wh2_dlc17_dwf_rune_master		false	

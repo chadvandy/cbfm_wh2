@@ -1,0 +1,5 @@
+key	character_skill_node_set_key	character_skill_key	faction_key	campaign_key	tier	indent	subculture	points_on_creation	required_num_parents	visible_in_ui
+#character_skill_nodes_tables;5;db/character_skill_nodes_tables/zzz_unique_agent_fix										
+wh_dlc08_skill_node_nor_kihar_dummy_01	wh_dlc08_skill_node_set_nor_kihar	wh_dlc08_skill_kihar_dummy			0.0	0.0		39	0	false
+wh_dlc08_skill_node_nor_arzik_dummy_01	wh_dlc08_skill_node_set_nor_arzik	wh_dlc08_skill_arzik_dummy			0.0	0.0		39	0	false
+wh_dlc07_skill_green_knight_dummy_1	wh_dlc07_skill_node_set_brt_green_knight	wh_dlc07_skill_green_knight_dummy			0.0	0.0		39	0	false

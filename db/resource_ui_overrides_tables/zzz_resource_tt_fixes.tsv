@@ -1,0 +1,35 @@
+source_resource	target_resource	override_faction	override_subculture
+#resource_ui_overrides_tables;0;db/resource_ui_overrides_tables/zzz_resource_tt_fixes			
+res_location_elves			wh2_dlc09_sc_tmb_tomb_kings
+res_location_elves			wh2_dlc11_sc_cst_vampire_coast
+res_location_elves			wh2_main_sc_lzd_lizardmen
+res_location_elves			wh2_main_sc_skv_skaven
+res_location_elves			wh_dlc03_sc_bst_beastmen
+res_location_elves			wh_main_sc_brt_bretonnia
+res_location_elves			wh_main_sc_chs_chaos
+res_location_elves			wh_main_sc_emp_empire
+res_location_elves			wh_main_sc_grn_greenskins
+res_location_elves			wh_main_sc_nor_norsca
+res_location_elves			wh_main_sc_vmp_vampire_counts
+res_location_elves			wh_main_sc_dwf_dwarfs
+res_location_elves			wh_main_sc_grn_savage_orcs
+res_location_elves			wh_main_sc_ksl_kislev
+res_location_elves			wh_main_sc_teb_teb
+res_location_teb			wh2_dlc09_sc_tmb_tomb_kings
+res_location_teb			wh2_dlc11_sc_cst_vampire_coast
+res_location_teb			wh2_main_sc_lzd_lizardmen
+res_location_teb			wh2_main_sc_skv_skaven
+res_location_teb			wh_dlc03_sc_bst_beastmen
+res_location_teb			wh_main_sc_brt_bretonnia
+res_location_teb			wh_main_sc_chs_chaos
+res_location_teb			wh_main_sc_emp_empire
+res_location_teb			wh_main_sc_grn_greenskins
+res_location_teb			wh_main_sc_nor_norsca
+res_location_teb			wh_main_sc_vmp_vampire_counts
+res_location_teb			wh_main_sc_dwf_dwarfs
+res_location_teb			wh_main_sc_grn_savage_orcs
+res_location_teb			wh_main_sc_ksl_kislev
+res_location_teb			wh_dlc05_sc_wef_wood_elves
+res_location_teb			wh2_main_sc_hef_high_elves
+res_location_teb			wh2_main_sc_def_dark_elves
+res_location_lzd_sotek_dummy	res_location_lzd_sotek	wh2_dlc12_lzd_cult_of_sotek	

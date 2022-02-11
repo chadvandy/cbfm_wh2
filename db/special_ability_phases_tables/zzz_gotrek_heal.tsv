@@ -1,0 +1,4 @@
+id	duration	effect_type	requested_stance	unbreakable	cant_move	freeze_fatigue	fatigue_change_ratio	inspiration_aura_range_mod	ability_recharge_change	hp_change_frequency	heal_amount_duplicate	resurrect	heal_amount	damage_chance	damage_amount	max_damaged_entities	mana_regen_mod	mana_max_depletion_mod	imbue_magical	imbue_ignition	imbue_contact	phase_display	phase_audio	recharge_time	is_hidden_in_ui	affects_allies	affects_enemies	replenish_ammo	composite_scene_group
+#special_ability_phases_tables;35;db/special_ability_phases_tables/zzz_gotrek_heal																													
+wh2_pro08_character_passive_heroic_fortitude	1.0	positive		false	false	false	0.0	0.0	0.0	0.0	0	false	0	0.0	0	0	0.0	0.0	false	0				-1.0	false	true	true	0.0	
+wh2_pro08_character_passive_heroic_fortitude_miscast	2.0	positive		false	false	false	0.0	0.0	0.0	0.5	312	false	312	0.0	0	0	0.0	0.0	false	0		wh2_main_unit_passive_rebirth		-1.0	false	true	false	0.0	

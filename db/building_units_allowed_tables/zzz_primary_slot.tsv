@@ -1,0 +1,7 @@
+building	unit	xp	conditions	key	faction	enabled
+#building_units_allowed_tables;4;db/building_units_allowed_tables/zzz_primary_slot						
+wh_dlc05_special_settlement_gaean_vale_1_wef	wh_dlc05_wef_inf_glade_guard_0	0	0	193100		false
+wh_dlc05_special_settlement_gaean_vale_2_wef	wh_dlc05_wef_inf_glade_guard_0	0	0	193101		false
+wh_dlc05_special_settlement_gaean_vale_3_wef	wh_dlc05_wef_inf_glade_guard_0	0	0	193102		false
+wh_dlc05_special_settlement_gaean_vale_4_wef	wh_dlc05_wef_inf_glade_guard_0	0	0	193103		false
+wh_dlc05_special_settlement_gaean_vale_5_wef	wh_dlc05_wef_inf_glade_guard_0	0	0	193104		false

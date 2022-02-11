@@ -1,0 +1,4 @@
+key	character_skill_node_set_key	character_skill_key	faction_key	campaign_key	tier	indent	subculture	points_on_creation	required_num_parents	visible_in_ui
+#character_skill_nodes_tables;5;db/character_skill_nodes_tables/zzz_mourngul										
+wh2_dlc11_skill_node_set_cst_mourngul_innate_13	wh2_dlc11_skill_node_set_cst_mourngul	wh2_main_skill_innate_all_knowledgeable		remove_innate	13.0	6.0		0	0	false
+wh2_dlc11_skill_node_set_cst_mourngul_innate_14	wh2_dlc11_skill_node_set_cst_mourngul	wh2_main_skill_innate_all_intelligent		remove_innate	14.0	6.0		0	0	false

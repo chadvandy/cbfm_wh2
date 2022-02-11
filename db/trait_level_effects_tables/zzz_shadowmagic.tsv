@@ -1,0 +1,3 @@
+trait_level	effect	value	effect_scope
+#trait_level_effects_tables;0;db/trait_level_effects_tables/zzz_shadowmagic			
+wh2_dlc15_trait_mistwalker_shadow	wh_main_effect_military_force_winds_of_magic_depletion_mod_character	20.0	character_to_force_own_unseen

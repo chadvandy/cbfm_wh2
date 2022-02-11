@@ -1,0 +1,26 @@
+unit_set	unit_record	unit_caste	unit_category	unit_class	exclude
+#unit_set_to_unit_junctions_tables;0;db/unit_set_to_unit_junctions_tables/zzz_tiqtaqterradons					
+lzd_all	wh2_dlc12_lzd_cav_terradon_riders_0_tlaqua				false
+lzd_beasts	wh2_dlc12_lzd_cav_terradon_riders_0_tlaqua				false
+lzd_dinos	wh2_dlc12_lzd_cav_terradon_riders_0_tlaqua				false
+lzd_terradon_coldones_rank7	wh2_dlc12_lzd_cav_terradon_riders_0_tlaqua				false
+lzd_terradon_riders_0	wh2_dlc12_lzd_cav_terradon_riders_0_tlaqua				false
+lzd_terradon_ripperdactyl_coatl	wh2_dlc12_lzd_cav_terradon_riders_0_tlaqua				false
+lzd_terradon	wh2_dlc12_lzd_cav_terradon_riders_0_tlaqua				false
+lzd_vets_terradon_ripperdactyl_coatl	wh2_dlc12_lzd_cav_terradon_riders_0_tlaqua				false
+mp_cap_missile_cav_chariots	wh2_dlc12_lzd_cav_terradon_riders_0_tlaqua				false
+mp_set_360_degree_fire	wh2_dlc12_lzd_cav_terradon_riders_0_tlaqua				false
+mp_set_flying_unit	wh2_dlc12_lzd_cav_terradon_riders_0_tlaqua				false
+mp_set_lzd_cav_terradon_riders_0	wh2_dlc12_lzd_cav_terradon_riders_0_tlaqua				false
+lzd_all	wh2_dlc12_lzd_cav_terradon_riders_1_tlaqua				false
+lzd_beasts	wh2_dlc12_lzd_cav_terradon_riders_1_tlaqua				false
+lzd_dinos	wh2_dlc12_lzd_cav_terradon_riders_1_tlaqua				false
+lzd_terradon_coldones_rank7	wh2_dlc12_lzd_cav_terradon_riders_1_tlaqua				false
+lzd_terradon_riders_1	wh2_dlc12_lzd_cav_terradon_riders_1_tlaqua				false
+lzd_terradon_ripperdactyl_coatl	wh2_dlc12_lzd_cav_terradon_riders_1_tlaqua				false
+lzd_terradon	wh2_dlc12_lzd_cav_terradon_riders_1_tlaqua				false
+lzd_vets_terradon_ripperdactyl_coatl	wh2_dlc12_lzd_cav_terradon_riders_1_tlaqua				false
+mp_cap_missile_cav_chariots	wh2_dlc12_lzd_cav_terradon_riders_1_tlaqua				false
+mp_set_360_degree_fire	wh2_dlc12_lzd_cav_terradon_riders_1_tlaqua				false
+mp_set_flying_unit	wh2_dlc12_lzd_cav_terradon_riders_1_tlaqua				false
+mp_set_lzd_cav_terradon_riders_1	wh2_dlc12_lzd_cav_terradon_riders_1_tlaqua				false

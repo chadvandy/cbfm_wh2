@@ -1,0 +1,5 @@
+key	text	tooltip
+#Loc PackedFile;1;text/db/!cbf_unit_abilities__.loc		
+unit_abilities_onscreen_name_wh2_dlc15_unit_passive_death_juice	Death Juice	true
+unit_abilities_tooltip_text_wh2_dlc15_unit_passive_death_juice	If Night Goblins know one thing, it's that victory is victory, no matter; in fact, the sneakier the better.	true
+unit_abilities_tooltip_text_wh2_main_item_passive_diamond_guardian_phoenix	This ornate diamond container houses a spark from the sacred flame at Asuryan's shrine; its bearers are granted resistance to non-magical attacks.	true

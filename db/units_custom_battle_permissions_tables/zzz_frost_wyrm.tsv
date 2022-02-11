@@ -1,0 +1,4 @@
+unit	faction	general_unit	siege_unit_attacker	siege_unit_defender	general_portrait	general_uniform	set_piece_character	campaign_exclusive
+#units_custom_battle_permissions_tables;8;db/units_custom_battle_permissions_tables/zzz_frost_wyrm								
+wh_dlc08_nor_mon_frost_wyrm_ror_0	wh_dlc08_nor_norsca_mp_custom_battles_only	false	true	true				true
+wh_dlc08_nor_mon_frost_wyrm_ror_0	wh_dlc08_nor_wintertooth	false	true	true				true

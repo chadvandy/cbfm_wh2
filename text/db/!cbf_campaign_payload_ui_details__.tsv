@@ -1,0 +1,4 @@
+key	text	tooltip
+#Loc PackedFile;1;text/db/!cbf_campaign_payload_ui_details__.loc		
+campaign_payload_ui_details_description_dummy_confederate_wh2_dlc16_grn_creeping_death	Confederation formed with the Creeping Death tribe	true
+campaign_payload_ui_details_description_dummy_confederate_wh2_dlc16_grn_naggaroth_orcs	Confederation formed with the Broken Chainz tribe	true

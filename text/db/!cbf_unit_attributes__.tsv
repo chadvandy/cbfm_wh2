@@ -1,0 +1,4 @@
+key	text	tooltip
+#Loc PackedFile;1;text/db/!cbf_unit_attributes__.loc		
+unit_attributes_removed_effect_text_charge_reflector_vs_large	Removes [[img:ui/battle ui/ability_icons/charge_reflector_vs_large.png]][[/img]] Charge Defence vs Large	true
+unit_attributes_removed_effect_text_charge_reflector	Removes [[img:ui/battle ui/ability_icons/charge_reflector.png]][[/img]] Expert Charge Defence	true

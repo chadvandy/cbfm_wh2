@@ -1,0 +1,3 @@
+key	text	tooltip
+#Loc PackedFile;1;text/db/!cbf_effects_additional_tooltip_details.loc		
+effects_additional_tooltip_details_localised_description_wh2_dlc14_effect_ability_discombobulated_enable	Ambush Penalties\\nDuring the first 2 minutes of an ambush, enemy units suffer from the following penalties:\\n-5 Melee Defence\\n-15 Armour	true

@@ -1,0 +1,3 @@
+key	image_path	localised_name	localised_description	unlocked_at_rank	is_background_skill	is_female_only_background_skill	is_male_only_background_skill	background_weighting	influence_cost
+#character_skills_tables;5;db/character_skills_tables/zzz_sm0_alarielle									
+wh2_dlc10_skill_hef_alarielle_quest_1	item_enchanted_item.png	Star of Avelorn	 The Star of Avelorn was taken from the heavens by Isha and bound to a crystal. It holds the power to heal mortal wounds.	14	false	false	false	0.0	0

@@ -1,0 +1,5 @@
+key	auto_generate	is_caster	small_icon	associated_unit_override	audio_voiceover_actor_group	show_in_ui	cap	has_female_name	can_gain_xp	loyalty_is_applicable	contributes_to_agent_cap	recruitment_category	magic_lore	audio_vo_culture_override	spam_click_vo_enabled
+#agent_subtypes_tables;19;db/agent_subtypes_tables/zzz_unique_agent_fix															
+dlc08_nor_kihar	false	true	ui/campaign ui/agents/wh_main_lore_fire.png	wh_dlc08_nor_cha_kihar_0	wh_dlc08_vo_actor_Norsca_Shaman_Sorcerer	false	-1	false	false	false	false				false
+wh_dlc08_nor_arzik	false	true		wh_dlc08_nor_cha_arzik_0	wh_main_vo_actor_Chaos_LordOfChange	true	-1	false	false	false	false	nor_lord_of_change			false
+dlc07_brt_green_knight	false	false	UI/Campaign UI/Agents/wh_dlc07_brt_green_knight.png	wh_dlc07_brt_cha_green_knight_0	wh_dlc07_vo_actor_Bretonnian_Green_Knight	false	-1	false	false	false	false				false

@@ -9,7 +9,14 @@ Ruination = {
 	herdstone_key = "bst_herdstone_shard",
 	herdstone_factor = "wh2_dlc17_bst_herdstone_shard_ruination_tier_increase",
 	herdstone_upgrade_ritual_key = "wh2_dlc17_bst_ritual_herdstone_upgrade_",
-	herdstone_upgrade_ritual_progress = 1,
+	
+	herdstone_upgrade_ritual_patch = 0;
+	herdstone_upgrade_ritual_progress = {
+		["wh_dlc03_bst_beastmen"] = 1,
+		["wh2_dlc17_bst_malagor"] = 1,
+		["wh_dlc05_bst_morghur_herd"]  = 1,
+		["wh2_dlc17_bst_taurox"] = 1
+	},
 	herdstone_upgrade_ritual_cap = 4,
 	-- Effect bundles
 	army_cap = "wh2_dlc17_bst_ruination_army_capacity_",
@@ -737,23 +744,24 @@ function Ruination:herdstone_upgrade_listener()
 		"RitualCompletedEvent",
 		function(context)
 			local ritual_succeeded = context:succeeded()
-			if ritual_succeeded and context:performing_faction():is_human() and self.beastmen_factions_set[context:performing_faction():name()] then
+			local faction_name = context:performing_faction():name()
+			if ritual_succeeded and context:performing_faction():is_human() and self.beastmen_factions_set[faction_name] then
 				local ritual_key = context:ritual():ritual_key()
-				local current_tier_ritual_key = self.herdstone_upgrade_ritual_key..self.herdstone_upgrade_ritual_progress
-				return ritual_key == current_tier_ritual_key and self.herdstone_upgrade_ritual_progress <= self.herdstone_upgrade_ritual_cap
+				local current_tier_ritual_key = self.herdstone_upgrade_ritual_key..self.herdstone_upgrade_ritual_progress[faction_name];
+				return ritual_key == current_tier_ritual_key and self.herdstone_upgrade_ritual_progress[faction_name] <= self.herdstone_upgrade_ritual_cap;
 			end
 			return false
 		end,
 		function(context)
 			-- unlock herdstone building
-			local herdstone_tier = self.herdstone_upgrade_ritual_progress
-			local b_list = self.herdstone_building_list
 			local faction_name = context:performing_faction():name()
+			local herdstone_tier = self.herdstone_upgrade_ritual_progress[faction_name]
+			local b_list = self.herdstone_building_list
 
 			for i = 1, #b_list[herdstone_tier] do
 				self:unlock_building(b_list[herdstone_tier][i], faction_name)
 			end
-			self.herdstone_upgrade_ritual_progress = self.herdstone_upgrade_ritual_progress + 1
+			self.herdstone_upgrade_ritual_progress[faction_name] = self.herdstone_upgrade_ritual_progress[faction_name] + 1
 		end,
 		true
 	)
@@ -792,7 +800,8 @@ end
 cm:add_saving_game_callback(
 	function(context)
 		cm:save_named_value("BeastmenAIProgression", Ruination.beastmen_ai, context)
-		cm:save_named_value("BeastmenHerdstoneProgress", Ruination.herdstone_upgrade_ritual_progress, context)
+		cm:save_named_value("BeastmenHerdstoneProgress", herdstone_upgrade_ritual_patch, context)
+		cm:save_named_value("BeastmenHerdstoneProgressNew", Ruination.herdstone_upgrade_ritual_progress, context)
 		cm:save_named_value("BeastmenCurrentRuinTier", Ruination.current_ruin_tier, context)
 	end
 );
@@ -800,7 +809,18 @@ cm:add_saving_game_callback(
 cm:add_loading_game_callback(
 	function(context)
 		Ruination.beastmen_ai = cm:load_named_value("BeastmenAIProgression", Ruination.beastmen_ai, context)
-		Ruination.herdstone_upgrade_ritual_progress = cm:load_named_value("BeastmenHerdstoneProgress", Ruination.herdstone_upgrade_ritual_progress, context)
+		herdstone_upgrade_ritual_patch = cm:load_named_value("BeastmenHerdstoneProgress", 0, context)
+		if herdstone_upgrade_ritual_patch > 0 then
+			Ruination.herdstone_upgrade_ritual_progress = {
+				["wh_dlc03_bst_beastmen"] = herdstone_upgrade_ritual_patch,
+				["wh2_dlc17_bst_malagor"] = herdstone_upgrade_ritual_patch,
+				["wh_dlc05_bst_morghur_herd"]  = herdstone_upgrade_ritual_patch,
+				["wh2_dlc17_bst_taurox"] = herdstone_upgrade_ritual_patch
+			}
+			herdstone_upgrade_ritual_patch = 0;
+		else
+			Ruination.herdstone_upgrade_ritual_progress = cm:load_named_value("BeastmenHerdstoneProgressNew", Ruination.herdstone_upgrade_ritual_progress, context)
+		end
 		Ruination.current_ruin_tier = cm:load_named_value("BeastmenCurrentRuinTier", Ruination.current_ruin_tier, context)
 	end
 );

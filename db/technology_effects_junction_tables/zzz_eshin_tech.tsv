@@ -1,0 +1,3 @@
+technology	effect	value	effect_scope
+#technology_effects_junction_tables;0;db/technology_effects_junction_tables/zzz_eshin_tech			
+tech_dlc14_skv_2_4_eshin	wh2_cbf_effect_tech_melee_attack_decrease	-6.0	faction_to_force_own_unseen

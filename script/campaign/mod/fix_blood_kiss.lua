@@ -31,10 +31,12 @@ function vampire_bloodline_faction_leader_killed(context)
 				for i = 1, num_attackers do
 					local this_char_cqi, this_mf_cqi, current_faction_name = cm:pending_battle_cache_get_attacker(i)
 					attacker = cm:model():character_for_command_queue_index(this_char_cqi)
-					attacker_leader = attacker:is_faction_leader()
-					attacker_died = this_char_cqi == context:character():command_queue_index()
-					if attacker_died then
-						break
+					if attacker:is_null_interface() == false then
+						attacker_leader = attacker:is_faction_leader()
+						attacker_died = this_char_cqi == context:character():command_queue_index()
+						if attacker_died then
+							break
+						end
 					end
 				end
 			end
@@ -46,10 +48,12 @@ function vampire_bloodline_faction_leader_killed(context)
 				for i = 1, num_defenders do
 					local this_char_cqi, this_mf_cqi, current_faction_name = cm:pending_battle_cache_get_defender(i)
 					defender = cm:model():character_for_command_queue_index(this_char_cqi)
-					defender_leader = defender:is_faction_leader()
-					defender_died = this_char_cqi == context:character():command_queue_index()
-					if defender_died then
-						break
+					if defender:is_null_interface() == false then
+						defender_leader = defender:is_faction_leader()
+						defender_died = this_char_cqi == context:character():command_queue_index()
+						if defender_died then
+							break
+						end
 					end
 				end
 			end
