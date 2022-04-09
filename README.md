@@ -1,4 +1,4 @@
-# community_bugfix_mod
+# Community Bug Fix Mod: Warhammer II
 
 This is the [Community Bug Fix Mod's](https://steamcommunity.com/sharedfiles/filedetails/?id=1234481316) GitHub repo, to make it a little bit easier to collaborate and work together on updating the mod.
 
